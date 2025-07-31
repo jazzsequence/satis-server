@@ -8,6 +8,8 @@
 /clover.xml
 /resultCache.php
 .github/
+
+# Satis packages
 index.html
 p2/*
 include/*
