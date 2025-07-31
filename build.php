@@ -26,15 +26,15 @@ $githubToken = pantheon_get_secret('github-token');
 if ($githubToken) {
     $config = file_get_contents($satisPath);
     $config = str_replace('GITHUB_TOKEN', $githubToken, $config);
+    $satisPath = '/tmp/satis.json';
     // Check if we can actually put contents into a file. If we can't, we need to bail because the site needs to be in SFTP mode.
-    $bytesWritten = @file_put_contents($tmpConfigPath, $config);
+    $bytesWritten = @file_put_contents($satisPath, $config);
     if ($bytesWritten === false) {
         http_response_code(500);
         echo '<h1>Build Failed: Cannot write to /tmp</h1>';
         echo '<p>This environment may be in read-only Git mode. Satis cannot build in this context. Please switch to SFTP mode in the Pantheon dashboard.</p>';
         exit;
     }
-    $satisPath = '/tmp/satis.json';
 } else {
     http_response_code(500);
     exit('GitHub token not set');
