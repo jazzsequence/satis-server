@@ -25,7 +25,7 @@ putenv("COMPOSER_CACHE_DIR=$cacheDir");
 $githubToken = pantheon_get_secret('github-token');
 if ($githubToken) {
     $config = file_get_contents($satisPath);
-    $config = str_replace('PANTHEON_SECRET', $githubToken, $config);
+    $config = str_replace('GITHUB_TOKEN', $githubToken, $config);
     file_put_contents('/tmp/satis.json', $config);
     $satisPath = '/tmp/satis.json';
 } else {
