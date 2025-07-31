@@ -36,7 +36,7 @@ if ($githubToken) {
 // Run the build
 $output = [];
 $exitCode = 0;
-exec("./bin/satis build $satisPath web/ 2>&1", $output, $exitCode);
+exec("./bin/satis build $satisPath . 2>&1", $output, $exitCode);
 
 // Send a basic HTML page
 header('Content-Type: text/html; charset=utf-8');
