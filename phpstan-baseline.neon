@@ -1,0 +1,17 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Call to function is_string\\(\\) with string will always evaluate to true\\.$#"
+			count: 1
+			path: src/PackageSelection/PackageSelection.php
+
+		-
+			message: "#^AnonymousClassdd4f4d5d0a10081f3f8b9c19006facf2\\:\\:__construct\\(\\) does not call parent constructor from Composer\\\\Package\\\\Archiver\\\\ArchiveManager\\.$#"
+			count: 1
+			path: tests/Builder/ArchiveBuilderTest.php
+
+		-
+			message: "#^Offset 'url' on array\\{package\\: array\\} on left side of \\?\\? does not exist\\.$#"
+			count: 1
+			path: tests/PackageSelection/PackageSelectionTest.php
+

@@ -1,0 +1,37 @@
+{
+    "alias": "satis.phar",
+    "main": "bin/satis",
+    "output": "satis.phar",
+    "stub": true,
+    "directories": ["src", "views"],
+    "files": ["LICENSE", "res/satis-schema.json"],
+    "finder": [
+        {
+            "name": "*.php",
+            "in": "vendor"
+        },
+        {
+            "name": "completion.*",
+            "in": "vendor/symfony/console/Resources"
+        },
+        {
+            "name": "composer-schema.json",
+            "in": "vendor/composer/composer"
+        },
+        {
+            "name": "cacert.pem",
+            "in": "vendor/composer/ca-bundle"
+        },
+        {
+            "name": "*.json",
+            "in": "vendor/composer/spdx-licenses/res"
+        }
+    ],
+    "compression": "GZ",
+    "compactors": [
+        "KevinGH\\Box\\Compactor\\Json",
+        "KevinGH\\Box\\Compactor\\Php"
+    ],
+    "chmod": "0755",
+    "algorithm": "SHA1"
+}

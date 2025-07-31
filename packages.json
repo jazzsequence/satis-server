@@ -1,0 +1,12 @@
+{
+    "packages": [],
+    "includes": {
+        "include/all$f60e75cc85aada47dc4ed5cf5a5ad59f73ccf21d.json": {
+            "sha1": "f60e75cc85aada47dc4ed5cf5a5ad59f73ccf21d"
+        }
+    },
+    "metadata-url": "/p2/%package%.json",
+    "available-packages": [
+        "fair/fair-plugin"
+    ]
+}
