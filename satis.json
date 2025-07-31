@@ -4,7 +4,7 @@
 	"repositories": [
 		{
 			"type": "vcs",
-			"url": "git@github.com:fairpm/fair-plugin.git"
+			"url": "https://x-access-token:PANTHEON_SECRET@github.com/fairpm/fair-plugin.git"
 		}
 	],
 	"require-all": true
