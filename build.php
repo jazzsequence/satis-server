@@ -10,14 +10,22 @@ if (!isset($_GET['token']) || $_GET['token'] !== $expectedToken) {
     exit('Forbidden');
 }
 
-// Run Satis build
+// Run the build
 $output = [];
 $exitCode = 0;
-
-// Adjust paths as needed
-chdir(__DIR__); // or chdir('/srv/satis')
 exec('./bin/satis build satis.json web/ 2>&1', $output, $exitCode);
 
-header('Content-Type: text/plain');
-echo implode("\n", $output);
-http_response_code($exitCode === 0 ? 200 : 500);
+// Send a basic HTML page
+header('Content-Type: text/html; charset=utf-8');
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Satis Build Trigger</title>
+</head>
+<body>
+  <h1>Satis Build <?php echo $exitCode === 0 ? 'Succeeded' : 'Failed'; ?></h1>
+  <pre><?php echo htmlspecialchars(implode("\n", $output)); ?></pre>
+</body>
+</html>
