@@ -23,21 +23,31 @@ if (!is_dir($cacheDir)) {
 putenv("COMPOSER_CACHE_DIR=$cacheDir");
 
 $githubToken = pantheon_get_secret('github-token');
-if ($githubToken) {
-    $config = file_get_contents($satisPath);
-    $config = str_replace('GITHUB_TOKEN', $githubToken, $config);
-    $satisPath = '/tmp/satis.json';
-    // Check if we can actually put contents into a file. If we can't, we need to bail because the site needs to be in SFTP mode.
-    $bytesWritten = @file_put_contents($satisPath, $config);
-    if ($bytesWritten === false) {
-        http_response_code(500);
-        echo '<h1>Build Failed: Cannot write to /tmp</h1>';
-        echo '<p>This environment may be in read-only Git mode. Satis cannot build in this context. Please switch to SFTP mode in the Pantheon dashboard.</p>';
-        exit;
-    }
-} else {
+if (!$githubToken) {
     http_response_code(500);
     exit('GitHub token not set');
+}
+$dirs = ['include', 'p2', 'dist'];
+foreach ($dirs as $dir) {
+    if (!is_dir($dir)) {
+        mkdir($dir, 0775, true);
+    }
+}
+
+foreach (['.', 'include', 'p2'] as $path) {
+    echo "$path writable: " . (is_writable($path) ? 'yes' : 'no') . "<br>";
+}
+
+$config = file_get_contents($satisPath);
+$config = str_replace('GITHUB_TOKEN', $githubToken, $config);
+$satisPath = '/tmp/satis.json';
+// Check if we can actually put contents into a file. If we can't, we need to bail because the site needs to be in SFTP mode.
+$bytesWritten = @file_put_contents($satisPath, $config);
+if ($bytesWritten === false) {
+    http_response_code(500);
+    echo '<h1>Build Failed: Cannot write to /tmp</h1>';
+    echo '<p>This environment may be in read-only Git mode. Satis cannot build in this context. Please switch to SFTP mode in the Pantheon dashboard.</p>';
+    exit;
 }
 
 // Run the build
