@@ -10,10 +10,33 @@ if (!isset($_GET['token']) || $_GET['token'] !== $expectedToken) {
     exit('Forbidden');
 }
 
+$satisPath = 'satis.json';
+
+// Create /files/uploads/composer/cache directory if it doesn't exist
+$cacheDir = '/files/uploads/composer/cache';
+if (!is_dir($cacheDir)) {
+    if (!mkdir($cacheDir, 0755, true) && !is_dir($cacheDir)) {
+        http_response_code(500);
+        exit('Failed to create cache directory');
+    }
+}
+putenv("COMPOSER_CACHE_DIR=$cacheDir");
+
+$githubToken = pantheon_get_secret('github-token');
+if ($githubToken) {
+    $config = file_get_contents($satisPath);
+    $config = str_replace('PANTHEON_SECRET', $githubToken, $config);
+    file_put_contents('/tmp/satis.json', $config);
+    $satisPath = '/tmp/satis.json';
+} else {
+    http_response_code(500);
+    exit('GitHub token not set');
+}
+
 // Run the build
 $output = [];
 $exitCode = 0;
-exec('./bin/satis build satis.json web/ 2>&1', $output, $exitCode);
+exec("./bin/satis build $satisPath web/ 2>&1", $output, $exitCode);
 
 // Send a basic HTML page
 header('Content-Type: text/html; charset=utf-8');
