@@ -1,0 +1,20 @@
+{
+  "name": "jazzsequence/satis-server",
+  "description": "A Satis server for hosting Composer packages.",
+  "homepage": "https://dev-cxr-satis-server.pantheonsite.io",
+  "type": "project",
+  "license": "MIT",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require-dev": {
+    "composer/satis": "^3.0"
+  },
+  "scripts": {
+    "build-satis": "vendor/bin/satis build satis.json web/"
+  },
+  "config": {
+    "allow-plugins": {
+      "composer/satis": true
+    }
+  }
+}

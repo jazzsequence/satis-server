@@ -1,0 +1,11 @@
+{
+	"name": "jazzsequence/satis-server",
+	"homepage": "https://dev-cxr-satis-server.pantheonsite.io",
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "git@github.com:fairpm/fair-plugin.git"
+		}
+	],
+	"require-all": true
+}

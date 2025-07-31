@@ -1,0 +1,8 @@
+api_version: 1
+php_runtime_generation: 2
+php_version: 8.4
+database:
+  version: 10.6
+build_step: true
+web_docroot: true
+enforce_https: transitional
