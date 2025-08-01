@@ -48,7 +48,7 @@ jobs:
         id: deploy
         with:
           ssh_key: ${{ secrets.SSH_KEY }}
-          site: cxr-dtp-test
+          site: ${{ secrets.SITE_ID }}
           machine_token: ${{ secrets.TERMINUS_TOKEN }}
           target_env: dev
   test:
