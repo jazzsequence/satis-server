@@ -41,13 +41,6 @@ jobs:
           echo "Host *.drush.in PubkeyAcceptedKeyTypes +ssh-rsa" >> ~/.ssh/config
           echo "StrictHostKeyChecking no" >> ~/.ssh/config
 
-      - name: Pull from Pantheon
-        run: |
-          git clone ssh://codeserver.dev.${{secrets.SITE_ID}}@codeserver.dev.${{secrets.SITE_ID}}.drush.in:2222/~/repository.git pantheon-repo
-          echo "Syncing Pantheon repo with GitHub..."
-          rsync -a --ignore-existing --exclude='.git' pantheon-repo/ ./
-          rm -rf pantheon-repo/
-
       - name: Composer dependencies
         run: composer install
 
