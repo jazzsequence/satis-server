@@ -66,4 +66,3 @@ jobs:
           site: ${{ secrets.SITE_ID }}
           machine_token: ${{ secrets.TERMINUS_TOKEN }}
           target_env: dev
-          git_commit_message: "Satis build on $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
