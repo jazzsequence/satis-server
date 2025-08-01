@@ -12,6 +12,18 @@
                 "name": "fair/mini-fair-repo",
                 "version": "dev-main",
                 "type": "wordpress-plugin",
+                "description": "Self-hostable FAIR repo, designed for small-scale",
+                "license": "GPL-2.0-or-later",
+                "authors": [
+                    {
+                        "name": "FAIR Contributors",
+                        "homepage": "https://fair.pm"
+                    }
+                ],
+                "support": {
+                    "issues": "https://github.com/fairpm/mini-fair-repo/issues",
+                    "source": "https://github.com/fairpm/mini-fair-repo"
+                },
                 "source": {
                     "type": "git",
                     "url": "git@github.com:fairpm/mini-fair-repo.git",
