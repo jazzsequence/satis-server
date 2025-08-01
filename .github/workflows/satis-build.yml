@@ -1,0 +1,47 @@
+name: Satis Build
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Runs daily at midnight
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  deployments: write
+
+jobs:
+  build:
+    name: Build Satis
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          extensions: composer
+
+      - name: Install Composer dependencies
+        run: composer install --no-dev --optimize-autoloader
+
+      - name: Build Satis
+        run: composer build-satis
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.name "GitHub Actions"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git add packages.json index.html p2/ include/ dist/
+          git commit -m "Automated Satis build on $(date -u +'%Y-%m-%dT%H:%M:%SZ')" || echo "No changes to commit"
+          git push
+
+      - name: Deploy to Pantheon
+        uses: pantheon-systems/push-to-pantheon@0.7.0
+        with:
+          ssh_key: ${{ secrets.SSH_KEY }}
+          site: ${{ secrets.SITE_ID }}
+          machine_token: ${{ secrets.TERMINUS_TOKEN }}
+          target_env: dev
+          git_commit_message: "Satis build on $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
