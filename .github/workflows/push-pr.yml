@@ -1,0 +1,100 @@
+name: Deploy PR
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths-ignore:
+      - .github/**
+      - README.md
+      - .*
+      - docs/**
+      - tests/**
+      - package*.json
+      - composer.*
+      - phpstan*
+      - phpunit.xml.dist
+      - webpack.config.js
+
+permissions:
+  contents: write
+  deployments: write
+  statuses: write
+
+jobs:
+  deploy:
+    name: Push to Pantheon
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Configure SSH
+        uses: webfactory/ssh-agent@v0.9.1
+        with:
+          ssh-private-key: ${{ secrets.SSH_KEY }}
+
+      - name: Configure Pantheon Host Key
+        run: |
+          echo "Host *.drush.in HostKeyAlgorithms +ssh-rsa" >> ~/.ssh/config
+          echo "Host *.drush.in PubkeyAcceptedKeyTypes +ssh-rsa" >> ~/.ssh/config
+          echo "StrictHostKeyChecking no" >> ~/.ssh/config
+
+      - name: Pull from Pantheon
+        run: |
+          git clone ssh://codeserver.dev.${{secrets.SITE_ID}}@codeserver.dev.${{secrets.SITE_ID}}.drush.in:2222/~/repository.git pantheon-repo
+          echo "Syncing Pantheon repo with GitHub..."
+          rsync -a --ignore-existing --exclude='.git' pantheon-repo/ ./
+          rm -rf pantheon-repo/
+
+      - name: Composer dependencies
+        run: composer install
+
+      - name: Push to Pantheon
+        uses: pantheon-systems/push-to-pantheon@0.x
+        id: deploy
+        with:
+          ssh_key: ${{ secrets.SSH_KEY }}
+          site: cxr-dtp-test
+          machine_token: ${{ secrets.TERMINUS_TOKEN }}
+          target_env: pr-${{ github.event.pull_request.number }}
+
+  playwright:
+    name: Playwright Tests
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Configure SSH
+        uses: webfactory/ssh-agent@v0.9.1
+        with:
+          ssh-private-key: ${{ secrets.SSH_KEY }}
+
+      - name: Configure Pantheon Host Key
+        run: |
+          echo "Host *.drush.in HostKeyAlgorithms +ssh-rsa" >> ~/.ssh/config
+          echo "Host *.drush.in PubkeyAcceptedKeyTypes +ssh-rsa" >> ~/.ssh/config
+          echo "StrictHostKeyChecking no" >> ~/.ssh/config
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Playwright
+        run: |
+          npm install -D playwright @playwright/test
+          npx playwright install
+
+      - name: Install Terminus
+        uses: pantheon-systems/terminus-github-actions@v1.2.7
+        with:
+          pantheon-machine-token: ${{ secrets.TERMINUS_TOKEN }}
+
+      - name: Run Playwright test
+        env:
+          BASE_URL: https://pr-${{ github.event.pull_request.number }}-cxr-satis-server.pantheonsite.io
+        run: npx playwright test "${{ github.workspace }}/.github/tests/postDeploy.spec.ts"
