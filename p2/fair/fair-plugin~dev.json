@@ -58,9 +58,7 @@
                         "@coverage:merge"
                     ]
                 },
-                "license": [
-                    "gpl-2.0-only"
-                ],
+                "license": ["gpl-2.0-only"],
                 "authors": [
                     {
                         "name": "FAIR Contributors"
@@ -125,9 +123,7 @@
                         "@coverage:merge"
                     ]
                 },
-                "license": [
-                    "gpl-2.0-only"
-                ],
+                "license": ["gpl-2.0-only"],
                 "authors": [
                     {
                         "name": "FAIR Contributors"
@@ -155,12 +151,8 @@
                 "time": "2025-07-31T19:31:59+00:00",
                 "type": "wordpress-plugin",
                 "scripts": {
-                    "lint": [
-                        "@php ./vendor/bin/phpcs ."
-                    ],
-                    "format": [
-                        "@php ./vendor/bin/phpcbf ."
-                    ],
+                    "lint": ["@php ./vendor/bin/phpcs ."],
+                    "format": ["@php ./vendor/bin/phpcbf ."],
                     "test": [
                         "Composer\\Config::disableProcessTimeout",
                         "@php ./vendor/phpunit/phpunit/phpunit"
@@ -199,9 +191,7 @@
                         "@coverage:merge"
                     ]
                 },
-                "license": [
-                    "gpl-2.0-only"
-                ],
+                "license": ["gpl-2.0-only"],
                 "authors": [
                     {
                         "name": "FAIR Contributors"
@@ -266,9 +256,7 @@
                         "@coverage:merge"
                     ]
                 },
-                "license": [
-                    "gpl-2.0-only"
-                ],
+                "license": ["gpl-2.0-only"],
                 "authors": [
                     {
                         "name": "FAIR Contributors"
@@ -297,12 +285,8 @@
                 "default-branch": true,
                 "type": "wordpress-plugin",
                 "scripts": {
-                    "lint": [
-                        "@php ./vendor/bin/phpcs ."
-                    ],
-                    "format": [
-                        "@php ./vendor/bin/phpcbf ."
-                    ],
+                    "lint": ["@php ./vendor/bin/phpcs ."],
+                    "format": ["@php ./vendor/bin/phpcbf ."],
                     "test": [
                         "Composer\\Config::disableProcessTimeout",
                         "@php ./vendor/phpunit/phpunit/phpunit"
@@ -341,9 +325,7 @@
                         "@coverage:merge"
                     ]
                 },
-                "license": [
-                    "gpl-2.0-only"
-                ],
+                "license": ["gpl-2.0-only"],
                 "authors": [
                     {
                         "name": "FAIR Contributors"
