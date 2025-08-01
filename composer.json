@@ -78,7 +78,13 @@
         "phpstan": "tools/phpstan/vendor/bin/phpstan",
         "php-cs-fixer": "PHP_CS_FIXER_IGNORE_ENV=true tools/php-cs-fixer/vendor/bin/php-cs-fixer fix --dry-run --diff",
         "php-cs-fixer-fix": "PHP_CS_FIXER_IGNORE_ENV=true tools/php-cs-fixer/vendor/bin/php-cs-fixer fix",
-        "build-satis": "bin/satis build satis.json .",
+        "pre-build-satis": [
+            "./scripts/pre-build-satis.sh"
+        ],
+        "build-satis": [
+            "@pre-build-satis",
+            "bin/satis build satis.json ."
+        ],
         "post-install-cmd": [
             "@build-satis"
         ],
