@@ -44,6 +44,7 @@ jobs:
           site: ${{ secrets.SITE_ID }}
           machine_token: ${{ secrets.TERMINUS_TOKEN }}
           target_env: dev
+          git_commit_message: 🤖 Automated Build Assets - beep boop
   test:
     name: Playwright Tests
     needs: deploy
