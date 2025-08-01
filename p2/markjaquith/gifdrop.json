@@ -1,0 +1,33 @@
+{
+    "packages": {
+        "markjaquith/gifdrop": [
+            {
+                "name": "markjaquith/gifdrop",
+                "version": "master",
+                "version_normalized": "dev-master",
+                "dist": {
+                    "type": "zip",
+                    "url": "https://github.com/markjaquith/gifdrop/archive/refs/heads/master.zip",
+                    "reference": "master"
+                },
+                "type": "wordpress-plugin",
+                "license": ["GPL-2.0-or-later"],
+                "authors": [
+                    {
+                        "name": "Mark Jaquith",
+                        "homepage": "https://markjaquith.com"
+                    },
+                    {
+                        "name": "Andrew Norcross",
+                        "homepage": "https://andrewnorcross.com/"
+                    }
+                ],
+                "description": "GIF repository plugin for WordPress",
+                "support": {
+                    "issues": "https://github.com/markjaquith/gifdrop/issues",
+                    "source": "https://github.com/markjaquith/gifdrop"
+                }
+            }
+        ]
+    }
+}

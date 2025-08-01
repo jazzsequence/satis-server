@@ -1,0 +1,29 @@
+{
+    "packages": {
+        "jazzsequence/artists": [
+            {
+                "name": "jazzsequence/artists",
+                "version": "1.0.1",
+                "version_normalized": "1.0.1.0",
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:jazzsequence/artists.git",
+                    "reference": "ff352d7b8c7d302966d00b9fe0cc3c043bfaaa27"
+                },
+                "type": "wordpress-plugin",
+                "license": ["GPL-2.0-or-later"],
+                "authors": [
+                    {
+                        "name": "Chris Reynolds",
+                        "homepage": "https://jazzsequence.com"
+                    }
+                ],
+                "description": "A WordPress plugin for music artists, to be used in conjunction with Releases",
+                "support": {
+                    "issues": "https://github.com/jazzsequence/artists/issues",
+                    "source": "https://github.com/jazzsequence/artists"
+                }
+            }
+        ]
+    }
+}

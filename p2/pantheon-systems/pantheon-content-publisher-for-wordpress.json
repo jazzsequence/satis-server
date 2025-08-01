@@ -1,0 +1,35 @@
+{
+    "packages": {
+        "pantheon-systems/pantheon-content-publisher-for-wordpress": [
+            {
+                "name": "pantheon-systems/pantheon-content-publisher-for-wordpress",
+                "version": "v1.2.6",
+                "version_normalized": "1.2.6.0",
+                "source": {
+                    "type": "zip",
+                    "url": "https://github.com/pantheon-systems/pantheon-content-publisher-for-wordpress/releases/download/v1.2.6/pantheon-content-publisher-for-wordpress.zip",
+                    "reference": "9e27d468cc5a22a6252d4f66ac5274d772cbb57e"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://github.com/pantheon-systems/pantheon-content-publisher-for-wordpress/releases/download/v1.2.6/pantheon-content-publisher-for-wordpress.zip",
+                    "reference": "tags/v1.2.6"
+                },
+                "type": "wordpress-plugin",
+                "license": ["GPL-2.0"],
+                "authors": [
+                    {
+                        "name": "Pantheon",
+                        "email": "contact@pantheon.io",
+                        "homepage": "https://pantheon.io"
+                    }
+                ],
+                "description": "A plugin that connects Pantheon Content Publisher to WordPress",
+                "support": {
+                    "issues": "https://github.com/pantheon-systems/pantheon-content-publisher-for-wordpress/issues",
+                    "source": "https://github.com/pantheon-systems/pantheon-content-publisher-for-wordpress"
+                }
+            }
+        ]
+    }
+}

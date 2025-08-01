@@ -1,10 +1,18 @@
 {
     "packages": [],
     "includes": {
-        "include/all$678722749d43ef1e2a70345e82af0f942260b31a.json": {
-            "sha1": "678722749d43ef1e2a70345e82af0f942260b31a"
+        "include/all$8bdec8127d25403ddf49000c66b17bc695d989ed.json": {
+            "sha1": "8bdec8127d25403ddf49000c66b17bc695d989ed"
         }
     },
     "metadata-url": "/p2/%package%.json",
-    "available-packages": ["fair/fair-plugin", "fair/mini-fair-repo"]
+    "available-packages": [
+        "fair/fair-plugin",
+        "fair/mini-fair-repo",
+        "jazzsequence/artists",
+        "jazzsequence/releases",
+        "jazzsequence/reviews",
+        "markjaquith/gifdrop",
+        "pantheon-systems/pantheon-content-publisher-for-wordpress"
+    ]
 }

@@ -639,6 +639,141 @@
                     "source": "https://github.com/fairpm/mini-fair-repo"
                 }
             }
+        },
+        "jazzsequence/artists": {
+            "1.0.1": {
+                "name": "jazzsequence/artists",
+                "version": "1.0.1",
+                "version_normalized": "1.0.1.0",
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:jazzsequence/artists.git",
+                    "reference": "ff352d7b8c7d302966d00b9fe0cc3c043bfaaa27"
+                },
+                "type": "wordpress-plugin",
+                "license": ["GPL-2.0-or-later"],
+                "authors": [
+                    {
+                        "name": "Chris Reynolds",
+                        "homepage": "https://jazzsequence.com"
+                    }
+                ],
+                "description": "A WordPress plugin for music artists, to be used in conjunction with Releases",
+                "support": {
+                    "issues": "https://github.com/jazzsequence/artists/issues",
+                    "source": "https://github.com/jazzsequence/artists"
+                }
+            }
+        },
+        "jazzsequence/releases": {
+            "1.2.2": {
+                "name": "jazzsequence/releases",
+                "version": "1.2.2",
+                "version_normalized": "1.2.2.0",
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:jazzsequence/releases.git",
+                    "reference": "6b35688649bc0ba2f828964229c935093aa519d2"
+                },
+                "type": "wordpress-plugin",
+                "license": ["GPL-2.0-or-later"],
+                "authors": [
+                    {
+                        "name": "Chris Reynolds",
+                        "homepage": "https://jazzsequence.com"
+                    }
+                ],
+                "description": "A WordPress plugin for music releases, to be used in conjunction with Artists",
+                "support": {
+                    "issues": "https://github.com/jazzsequence/releases/issues",
+                    "source": "https://github.com/jazzsequence/releases"
+                }
+            }
+        },
+        "jazzsequence/reviews": {
+            "2.0.0": {
+                "name": "jazzsequence/reviews",
+                "version": "2.0.0",
+                "version_normalized": "2.0.0.0",
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:jazzsequence/reviews.git",
+                    "reference": "97bc893a7e30555ee7b5a277c507c06437c07958"
+                },
+                "type": "wordpress-plugin",
+                "license": ["GPL-2.0-or-later"],
+                "authors": [
+                    {
+                        "name": "Chris Reynolds",
+                        "homepage": "https://jazzsequence.com"
+                    }
+                ],
+                "description": "A WordPress plugin for music reviews, can be used in conjunction with Artists and Releases (or not)",
+                "support": {
+                    "issues": "https://github.com/jazzsequence/reviews/issues",
+                    "source": "https://github.com/jazzsequence/reviews"
+                }
+            }
+        },
+        "markjaquith/gifdrop": {
+            "master": {
+                "name": "markjaquith/gifdrop",
+                "version": "master",
+                "version_normalized": "dev-master",
+                "dist": {
+                    "type": "zip",
+                    "url": "https://github.com/markjaquith/gifdrop/archive/refs/heads/master.zip",
+                    "reference": "master"
+                },
+                "type": "wordpress-plugin",
+                "license": ["GPL-2.0-or-later"],
+                "authors": [
+                    {
+                        "name": "Mark Jaquith",
+                        "homepage": "https://markjaquith.com"
+                    },
+                    {
+                        "name": "Andrew Norcross",
+                        "homepage": "https://andrewnorcross.com/"
+                    }
+                ],
+                "description": "GIF repository plugin for WordPress",
+                "support": {
+                    "issues": "https://github.com/markjaquith/gifdrop/issues",
+                    "source": "https://github.com/markjaquith/gifdrop"
+                }
+            }
+        },
+        "pantheon-systems/pantheon-content-publisher-for-wordpress": {
+            "v1.2.6": {
+                "name": "pantheon-systems/pantheon-content-publisher-for-wordpress",
+                "version": "v1.2.6",
+                "version_normalized": "1.2.6.0",
+                "source": {
+                    "type": "zip",
+                    "url": "https://github.com/pantheon-systems/pantheon-content-publisher-for-wordpress/releases/download/v1.2.6/pantheon-content-publisher-for-wordpress.zip",
+                    "reference": "9e27d468cc5a22a6252d4f66ac5274d772cbb57e"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://github.com/pantheon-systems/pantheon-content-publisher-for-wordpress/releases/download/v1.2.6/pantheon-content-publisher-for-wordpress.zip",
+                    "reference": "tags/v1.2.6"
+                },
+                "type": "wordpress-plugin",
+                "license": ["GPL-2.0"],
+                "authors": [
+                    {
+                        "name": "Pantheon",
+                        "email": "contact@pantheon.io",
+                        "homepage": "https://pantheon.io"
+                    }
+                ],
+                "description": "A plugin that connects Pantheon Content Publisher to WordPress",
+                "support": {
+                    "issues": "https://github.com/pantheon-systems/pantheon-content-publisher-for-wordpress/issues",
+                    "source": "https://github.com/pantheon-systems/pantheon-content-publisher-for-wordpress"
+                }
+            }
         }
     }
 }

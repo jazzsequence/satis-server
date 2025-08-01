@@ -1,0 +1,29 @@
+{
+    "packages": {
+        "jazzsequence/reviews": [
+            {
+                "name": "jazzsequence/reviews",
+                "version": "2.0.0",
+                "version_normalized": "2.0.0.0",
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:jazzsequence/reviews.git",
+                    "reference": "97bc893a7e30555ee7b5a277c507c06437c07958"
+                },
+                "type": "wordpress-plugin",
+                "license": ["GPL-2.0-or-later"],
+                "authors": [
+                    {
+                        "name": "Chris Reynolds",
+                        "homepage": "https://jazzsequence.com"
+                    }
+                ],
+                "description": "A WordPress plugin for music reviews, can be used in conjunction with Artists and Releases (or not)",
+                "support": {
+                    "issues": "https://github.com/jazzsequence/reviews/issues",
+                    "source": "https://github.com/jazzsequence/reviews"
+                }
+            }
+        ]
+    }
+}
