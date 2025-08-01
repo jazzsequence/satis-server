@@ -1,5 +1,9 @@
 # jazzsequence/satis-server
 
+[![Satis Build](https://github.com/jazzsequence/satis-server/actions/workflows/satis-build.yml/badge.svg)](https://github.com/jazzsequence/satis-server/actions/workflows/satis-build.yml)
+[![Deploy to Pantheon](https://github.com/jazzsequence/satis-server/actions/workflows/push-to-pantheon.yml/badge.svg)](https://github.com/jazzsequence/satis-server/actions/workflows/push-to-pantheon.yml)
+[![phpunit](https://github.com/jazzsequence/satis-server/actions/workflows/ci.yaml/badge.svg)](https://github.com/jazzsequence/satis-server/actions/workflows/ci.yaml)
+
 A simple static Composer repository generator powered by [Satis](https://github.com/composer/satis).
 
 The production implementation of this repository is hosted at [https://packages.jazzsequence.com](https://packages.jazzsequence.com).
