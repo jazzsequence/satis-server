@@ -6,5 +6,7 @@
         }
     },
     "metadata-url": "/p2/%package%.json",
-    "available-packages": ["fair/fair-plugin"]
+    "available-packages": [
+        "fair/fair-plugin"
+    ]
 }
