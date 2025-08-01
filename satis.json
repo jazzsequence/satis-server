@@ -30,6 +30,141 @@
                     "reference": "d9b850ad6374f9167e7d69b497293b38f29365c0"
                 }
             }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "jazzsequence/artists",
+                "version": "1.0.1",
+                "type": "wordpress-plugin",
+                "description": "A WordPress plugin for music artists, to be used in conjunction with Releases",
+                "license": "GPL-2.0-or-later",
+                "authors": [
+                    {
+                        "name": "Chris Reynolds",
+                        "homepage": "https://jazzsequence.com"
+                    }
+                ],
+                "support": {
+                    "issues": "https://github.com/jazzsequence/artists/issues",
+                    "source": "https://github.com/jazzsequence/artists"
+                },
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:jazzsequence/artists.git",
+                    "reference": "ff352d7b8c7d302966d00b9fe0cc3c043bfaaa27"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "jazzsequence/releases",
+                "version": "1.2.2",
+                "type": "wordpress-plugin",
+                "description": "A WordPress plugin for music releases, to be used in conjunction with Artists",
+                "license": "GPL-2.0-or-later",
+                "authors": [
+                    {
+                        "name": "Chris Reynolds",
+                        "homepage": "https://jazzsequence.com"
+                    }
+                ],
+                "support": {
+                    "issues": "https://github.com/jazzsequence/releases/issues",
+                    "source": "https://github.com/jazzsequence/releases"
+                },
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:jazzsequence/releases.git",
+                    "reference": "6b35688649bc0ba2f828964229c935093aa519d2"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "jazzsequence/reviews",
+                "version": "2.0.0",
+                "type": "wordpress-plugin",
+                "description": "A WordPress plugin for music reviews, can be used in conjunction with Artists and Releases (or not)",
+                "license": "GPL-2.0-or-later",
+                "authors": [
+                    {
+                        "name": "Chris Reynolds",
+                        "homepage": "https://jazzsequence.com"
+                    }
+                ],
+                "support": {
+                    "issues": "https://github.com/jazzsequence/reviews/issues",
+                    "source": "https://github.com/jazzsequence/reviews"
+                },
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:jazzsequence/reviews.git",
+                    "reference": "97bc893a7e30555ee7b5a277c507c06437c07958"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "markjaquith/gifdrop",
+                "version": "master",
+                "type": "wordpress-plugin",
+                "dist": {
+                    "type": "zip",
+                    "url": "https://github.com/markjaquith/gifdrop/archive/refs/heads/master.zip",
+                    "reference": "master"
+                },
+                "description": "GIF repository plugin for WordPress",
+                "license": "GPL-2.0-or-later",
+                "authors": [
+                    {
+                        "name": "Mark Jaquith",
+                        "homepage": "https://markjaquith.com"
+                    },
+                    {
+                        "name": "Andrew Norcross",
+                        "homepage": "https://andrewnorcross.com/"
+                    }
+                ],
+                "support": {
+                    "issues": "https://github.com/markjaquith/gifdrop/issues",
+                    "source": "https://github.com/markjaquith/gifdrop"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "pantheon-systems/pantheon-content-publisher-for-wordpress",
+                "version": "v1.2.6",
+                "type": "wordpress-plugin",
+                "description": "A plugin that connects Pantheon Content Publisher to WordPress",
+                "license": "GPL-2.0",
+                "authors": [
+                    {
+                        "name": "Pantheon",
+                        "email": "contact@pantheon.io",
+                        "homepage": "https://pantheon.io"
+                    }
+                ],
+                "support": {
+                    "issues": "https://github.com/pantheon-systems/pantheon-content-publisher-for-wordpress/issues",
+                    "source": "https://github.com/pantheon-systems/pantheon-content-publisher-for-wordpress"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://github.com/pantheon-systems/pantheon-content-publisher-for-wordpress/releases/download/v1.2.6/pantheon-content-publisher-for-wordpress.zip",
+                    "reference": "tags/v1.2.6"
+                },
+                "source": {
+                    "type": "zip",
+                    "url": "https://github.com/pantheon-systems/pantheon-content-publisher-for-wordpress/releases/download/v1.2.6/pantheon-content-publisher-for-wordpress.zip",
+                    "reference": "9e27d468cc5a22a6252d4f66ac5274d772cbb57e"
+                }
+            }
         }
     ],
     "require-all": true
