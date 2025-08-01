@@ -2,12 +2,10 @@
     "devDependencies": {
         "@babel/core": "^7.28.0",
         "@babel/preset-env": "^7.28.0",
-        "@symfony/webpack-encore": "^5.1.0",
         "bootstrap": "^5.3.7",
         "date-fns": "^4.1.0",
         "eslint-webpack-plugin": "^5.0.2",
         "glob": "^11.0.3",
-        "husky": "^9.1.7",
         "lint-staged": "^16.1.2",
         "prettier": "^3.6.2",
         "purgecss-webpack-plugin": "^7.0.2",
@@ -19,11 +17,6 @@
     "license": "MIT",
     "private": true,
     "scripts": {
-        "prepare": "husky install",
-        "dev-server": "encore dev-server",
-        "dev": "encore dev",
-        "watch": "encore dev --watch",
-        "build": "encore production",
         "prettier": "prettier --write '**/*.{js,json,scss,css,md}'",
         "prettier:ci": "prettier --check '**/*.{js,json,scss,css,md}'",
         "eslint": "eslint ."
