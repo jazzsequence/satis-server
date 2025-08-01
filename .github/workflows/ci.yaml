@@ -1,6 +1,8 @@
 name: phpunit
 
 on: [push, pull_request]
+permissions:
+  contents: write
 
 jobs:
 
