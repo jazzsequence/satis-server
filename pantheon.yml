@@ -3,5 +3,5 @@ php_runtime_generation: 2
 php_version: 8.4
 database:
   version: 10.6
-build_step: true
+build_step: false
 enforce_https: transitional
