@@ -4,7 +4,20 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://x-access-token:GITHUB_TOKEN@github.com/fairpm/fair-plugin.git"
+            "url": "git@github.com:fairpm/fair-plugin.git"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "fair/mini-fair-repo",
+                "version": "dev-main",
+                "type": "wordpress-plugin",
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:fairpm/mini-fair-repo.git",
+                    "reference": "d9b850ad6374f9167e7d69b497293b38f29365c0"
+                }
+            }
         }
     ],
     "require-all": true

@@ -1,0 +1,17 @@
+{
+    "packages": {
+        "fair/mini-fair-repo": [
+            {
+                "name": "fair/mini-fair-repo",
+                "version": "dev-main",
+                "version_normalized": "dev-main",
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:fairpm/mini-fair-repo.git",
+                    "reference": "d9b850ad6374f9167e7d69b497293b38f29365c0"
+                },
+                "type": "wordpress-plugin"
+            }
+        ]
+    }
+}

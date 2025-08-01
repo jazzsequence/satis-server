@@ -7,8 +7,14 @@
                 "version_normalized": "dev-feature/multisite-avatar-config",
                 "source": {
                     "type": "git",
-                    "url": "https://x-access-token:GITHUB_TOKEN@github.com/fairpm/fair-plugin.git",
+                    "url": "https://github.com/fairpm/fair-plugin.git",
                     "reference": "0bb48e6fa1f9ae88094edf31620a24d666acbbed"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/fairpm/fair-plugin/zipball/0bb48e6fa1f9ae88094edf31620a24d666acbbed",
+                    "reference": "0bb48e6fa1f9ae88094edf31620a24d666acbbed",
+                    "shasum": ""
                 },
                 "require": {
                     "php": ">=7.4"
@@ -58,15 +64,17 @@
                         "@coverage:merge"
                     ]
                 },
-                "license": [
-                    "gpl-2.0-only"
-                ],
+                "license": ["gpl-2.0-only"],
                 "authors": [
                     {
                         "name": "FAIR Contributors"
                     }
                 ],
-                "description": "Make your site more FAIR."
+                "description": "Make your site more FAIR.",
+                "support": {
+                    "source": "https://github.com/fairpm/fair-plugin/tree/feature/multisite-avatar-config",
+                    "issues": "https://github.com/fairpm/fair-plugin/issues"
+                }
             },
             {
                 "name": "fair/fair-plugin",
@@ -74,8 +82,14 @@
                 "version_normalized": "dev-generate-missing-i18n-files",
                 "source": {
                     "type": "git",
-                    "url": "https://x-access-token:GITHUB_TOKEN@github.com/fairpm/fair-plugin.git",
+                    "url": "https://github.com/fairpm/fair-plugin.git",
                     "reference": "9c1718437095207fdb35ccb67f8c19e4057f0ee9"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/fairpm/fair-plugin/zipball/9c1718437095207fdb35ccb67f8c19e4057f0ee9",
+                    "reference": "9c1718437095207fdb35ccb67f8c19e4057f0ee9",
+                    "shasum": ""
                 },
                 "require": {
                     "php": ">=7.4"
@@ -125,15 +139,17 @@
                         "@coverage:merge"
                     ]
                 },
-                "license": [
-                    "gpl-2.0-only"
-                ],
+                "license": ["gpl-2.0-only"],
                 "authors": [
                     {
                         "name": "FAIR Contributors"
                     }
                 ],
-                "description": "Make your site more FAIR."
+                "description": "Make your site more FAIR.",
+                "support": {
+                    "source": "https://github.com/fairpm/fair-plugin/tree/generate-missing-i18n-files",
+                    "issues": "https://github.com/fairpm/fair-plugin/issues"
+                }
             },
             {
                 "name": "fair/fair-plugin",
@@ -141,8 +157,14 @@
                 "version_normalized": "dev-generate-pot",
                 "source": {
                     "type": "git",
-                    "url": "https://x-access-token:GITHUB_TOKEN@github.com/fairpm/fair-plugin.git",
+                    "url": "https://github.com/fairpm/fair-plugin.git",
                     "reference": "abdc800445de35b7245ba7b4c5e8610cdc528c83"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/fairpm/fair-plugin/zipball/abdc800445de35b7245ba7b4c5e8610cdc528c83",
+                    "reference": "abdc800445de35b7245ba7b4c5e8610cdc528c83",
+                    "shasum": ""
                 },
                 "require": {
                     "php": ">=7.4"
@@ -155,12 +177,8 @@
                 "time": "2025-07-31T19:31:59+00:00",
                 "type": "wordpress-plugin",
                 "scripts": {
-                    "lint": [
-                        "@php ./vendor/bin/phpcs ."
-                    ],
-                    "format": [
-                        "@php ./vendor/bin/phpcbf ."
-                    ],
+                    "lint": ["@php ./vendor/bin/phpcs ."],
+                    "format": ["@php ./vendor/bin/phpcbf ."],
                     "test": [
                         "Composer\\Config::disableProcessTimeout",
                         "@php ./vendor/phpunit/phpunit/phpunit"
@@ -199,15 +217,17 @@
                         "@coverage:merge"
                     ]
                 },
-                "license": [
-                    "gpl-2.0-only"
-                ],
+                "license": ["gpl-2.0-only"],
                 "authors": [
                     {
                         "name": "FAIR Contributors"
                     }
                 ],
-                "description": "Make your site more FAIR."
+                "description": "Make your site more FAIR.",
+                "support": {
+                    "source": "https://github.com/fairpm/fair-plugin/tree/generate-pot",
+                    "issues": "https://github.com/fairpm/fair-plugin/issues"
+                }
             },
             {
                 "name": "fair/fair-plugin",
@@ -215,8 +235,14 @@
                 "version_normalized": "dev-issue-42/hook-translations-api",
                 "source": {
                     "type": "git",
-                    "url": "https://x-access-token:GITHUB_TOKEN@github.com/fairpm/fair-plugin.git",
+                    "url": "https://github.com/fairpm/fair-plugin.git",
                     "reference": "2e9956d92bba462d90cd87a9f7c7ba000c91108b"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/fairpm/fair-plugin/zipball/2e9956d92bba462d90cd87a9f7c7ba000c91108b",
+                    "reference": "2e9956d92bba462d90cd87a9f7c7ba000c91108b",
+                    "shasum": ""
                 },
                 "require": {
                     "php": ">=7.4"
@@ -225,7 +251,7 @@
                     "nimut/phpunit-merger": "*",
                     "yoast/phpunit-polyfills": "*"
                 },
-                "time": "2025-06-24T15:03:49+00:00",
+                "time": "2025-06-24T15:17:37+00:00",
                 "type": "wordpress-plugin",
                 "scripts": {
                     "test": [
@@ -266,15 +292,17 @@
                         "@coverage:merge"
                     ]
                 },
-                "license": [
-                    "gpl-2.0-only"
-                ],
+                "license": ["gpl-2.0-only"],
                 "authors": [
                     {
                         "name": "FAIR Contributors"
                     }
                 ],
-                "description": "Make your site more FAIR."
+                "description": "Make your site more FAIR.",
+                "support": {
+                    "source": "https://github.com/fairpm/fair-plugin/tree/issue-42/hook-translations-api",
+                    "issues": "https://github.com/fairpm/fair-plugin/issues"
+                }
             },
             {
                 "name": "fair/fair-plugin",
@@ -282,8 +310,14 @@
                 "version_normalized": "dev-main",
                 "source": {
                     "type": "git",
-                    "url": "https://x-access-token:GITHUB_TOKEN@github.com/fairpm/fair-plugin.git",
+                    "url": "https://github.com/fairpm/fair-plugin.git",
                     "reference": "9709fde544609eb15459d4f7aeb3a6bb1b4c08e2"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/fairpm/fair-plugin/zipball/9709fde544609eb15459d4f7aeb3a6bb1b4c08e2",
+                    "reference": "9709fde544609eb15459d4f7aeb3a6bb1b4c08e2",
+                    "shasum": ""
                 },
                 "require": {
                     "php": ">=7.4"
@@ -297,12 +331,8 @@
                 "default-branch": true,
                 "type": "wordpress-plugin",
                 "scripts": {
-                    "lint": [
-                        "@php ./vendor/bin/phpcs ."
-                    ],
-                    "format": [
-                        "@php ./vendor/bin/phpcbf ."
-                    ],
+                    "lint": ["@php ./vendor/bin/phpcs ."],
+                    "format": ["@php ./vendor/bin/phpcbf ."],
                     "test": [
                         "Composer\\Config::disableProcessTimeout",
                         "@php ./vendor/phpunit/phpunit/phpunit"
@@ -341,15 +371,17 @@
                         "@coverage:merge"
                     ]
                 },
-                "license": [
-                    "gpl-2.0-only"
-                ],
+                "license": ["gpl-2.0-only"],
                 "authors": [
                     {
                         "name": "FAIR Contributors"
                     }
                 ],
-                "description": "Make your site more FAIR."
+                "description": "Make your site more FAIR.",
+                "support": {
+                    "source": "https://github.com/fairpm/fair-plugin/tree/0.4.1",
+                    "issues": "https://github.com/fairpm/fair-plugin/issues"
+                }
             }
         ]
     }
