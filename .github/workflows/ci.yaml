@@ -43,10 +43,11 @@ jobs:
           path: ${{ github.workspace }}/pr_code/${{ steps.composer-cache.outputs.directory }}
           key: php-${{ matrix.php-version }}-${{ matrix.stability }}-composer-${{ hashFiles('**/composer.lock') }}
           restore-keys: ${{ matrix.php }}-${{ matrix.stability }}-composer
-      - name: Run Composer Update
+      - name: Build Dependencies
         run: |
           cd ${{ github.workspace }}/pr_code
           composer update --${{ matrix.stability }} --prefer-dist --no-interaction
+          npm ci
       - name: Run Tests
         run: |
           cd ${{ github.workspace }}/pr_code
