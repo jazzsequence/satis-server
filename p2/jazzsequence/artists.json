@@ -11,7 +11,9 @@
                     "reference": "ff352d7b8c7d302966d00b9fe0cc3c043bfaaa27"
                 },
                 "type": "wordpress-plugin",
-                "license": ["GPL-2.0-or-later"],
+                "license": [
+                    "GPL-2.0-or-later"
+                ],
                 "authors": [
                     {
                         "name": "Chris Reynolds",
