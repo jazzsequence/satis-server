@@ -23,6 +23,11 @@ jobs:
           php-version: '8.4'
           extensions: composer
 
+      - name: Configure SSH
+        uses: webfactory/ssh-agent@v0.9.1
+        with:
+          ssh-private-key: ${{ secrets.SSH_KEY }}
+
       - name: Install Composer dependencies
         run: composer install --no-dev --optimize-autoloader
 
