@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-  pull_request:
+  pull_request_target:
     branches:
       - main
 
@@ -13,34 +13,41 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
-      matrix:
-        php: [8.4]
-        stability: [prefer-lowest, prefer-stable]
-    name: PHP ${{ matrix.php }} - ${{ matrix.stability }}
+    name: PHP Unit Tests
     steps:
       - uses: actions/checkout@v4
-      - name: setup php
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          path: pr_code
+      - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: ${{ matrix.php }}
+          php-version: 8.4
           extensions: mbstring
           coverage: xdebug
       - name: Set up SSH
         uses: webfactory/ssh-agent@v0.9.0
         with:
           ssh-private-key: ${{ secrets.SSH_KEY }}
-      - name: setup problem matchers
+      - name: Setup Problem Matchers
         run: |
           echo "::add-matcher::${{ runner.tool_cache }}/php.json"
           echo "::add-matcher::${{ runner.tool_cache }}/phpunit.json"
-      - name: determine composer cache directory
+      - name: Determine Composer Cache Directory
         id: composer-cache
-        run: "echo \"directory=$(composer config cache-dir)\" >> $GITHUB_OUTPUT"
-      - name: cache dependencies installed with composer
+        run: "echo \"directory=${{ github.workspace }}/pr_code/$(composer config cache-dir)\" >> $GITHUB_OUTPUT"
+      - name: Cache Dependencies Installed with Composer
         uses: actions/cache@v4
         with:
-          path: ${{ steps.composer-cache.outputs.directory }}
+          path: ${{ github.workspace }}/pr_code/${{ steps.composer-cache.outputs.directory }}
           key: php-${{ matrix.php-version }}-${{ matrix.stability }}-composer-${{ hashFiles('**/composer.lock') }}
           restore-keys: ${{ matrix.php }}-${{ matrix.stability }}-composer
-      - run: composer update --${{ matrix.stability }} --prefer-dist --no-interaction
-      - run: composer run test
+      - name: Run Composer Update
+        run: |
+          cd ${{ github.workspace }}/pr_code
+          composer update --${{ matrix.stability }} --prefer-dist --no-interaction
+      - name: Run Tests
+        run: |
+          cd ${{ github.workspace }}/pr_code
+          composer run test
