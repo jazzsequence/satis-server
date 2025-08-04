@@ -11,7 +11,9 @@
                     "reference": "d9b850ad6374f9167e7d69b497293b38f29365c0"
                 },
                 "type": "wordpress-plugin",
-                "license": ["GPL-2.0-or-later"],
+                "license": [
+                    "GPL-2.0-or-later"
+                ],
                 "authors": [
                     {
                         "name": "FAIR Contributors",

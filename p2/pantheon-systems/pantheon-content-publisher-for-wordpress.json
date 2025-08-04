@@ -16,7 +16,9 @@
                     "reference": "tags/v1.2.6"
                 },
                 "type": "wordpress-plugin",
-                "license": ["GPL-2.0"],
+                "license": [
+                    "GPL-2.0"
+                ],
                 "authors": [
                     {
                         "name": "Pantheon",
