@@ -1,12 +1,13 @@
 {
     "packages": [],
     "includes": {
-        "include/all$26bcbea4c75e52672efca0618756529b93195205.json": {
-            "sha1": "26bcbea4c75e52672efca0618756529b93195205"
+        "include/all$c105734c348d870fad7e0f32f9d956da62115e8e.json": {
+            "sha1": "c105734c348d870fad7e0f32f9d956da62115e8e"
         }
     },
     "metadata-url": "/p2/%package%.json",
     "available-packages": [
+        "automattic/remote-data-blocks",
         "fair/fair-plugin",
         "fair/mini-fair-repo",
         "jazzsequence/artists",

@@ -1,0 +1,2826 @@
+{
+    "packages": {
+        "automattic/remote-data-blocks": [
+            {
+                "name": "automattic/remote-data-blocks",
+                "version": "v0.10.0",
+                "version_normalized": "0.10.0.0",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/Automattic/remote-data-blocks.git",
+                    "reference": "f5cab1840a2d9275196ec5dfe2a1f74b22503748"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/Automattic/remote-data-blocks/zipball/f5cab1840a2d9275196ec5dfe2a1f74b22503748",
+                    "reference": "f5cab1840a2d9275196ec5dfe2a1f74b22503748",
+                    "shasum": ""
+                },
+                "require": {
+                    "erusev/parsedown": "^1.7",
+                    "galbar/jsonpath": "^3.0",
+                    "guzzlehttp/guzzle": "^7.8",
+                    "kevinrob/guzzle-cache-middleware": "^6.0",
+                    "php": ">=8.1",
+                    "psr/log": "^3.0",
+                    "symfony/var-exporter": "^6"
+                },
+                "require-dev": {
+                    "automattic/vipwpcs": "^3.0",
+                    "mockery/mockery": "^1.6",
+                    "php-stubs/wordpress-globals": "^0.2.0",
+                    "php-stubs/wordpress-stubs": "^6.6",
+                    "php-stubs/wordpress-tests-stubs": "^6.7",
+                    "phpcompatibility/phpcompatibility-wp": "^2.1",
+                    "phpunit/phpunit": "^9",
+                    "psalm/phar": "^6.5",
+                    "slevomat/coding-standard": "^8.15",
+                    "wp-phpunit/wp-phpunit": "^6.7",
+                    "yoast/phpunit-polyfills": "^4.0"
+                },
+                "time": "2025-03-28T18:09:03+00:00",
+                "type": "library",
+                "autoload": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\": "inc/"
+                    },
+                    "files": [
+                        "functions.php",
+                        "inc/Integrations/constants.php"
+                    ]
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\Tests\\": "tests/inc/"
+                    }
+                },
+                "scripts": {
+                    "phpcs": [
+                        "phpcs"
+                    ],
+                    "phpcs-fix": [
+                        "phpcbf"
+                    ],
+                    "psalm": [
+                        "psalm.phar --no-cache"
+                    ],
+                    "test": [
+                        "phpunit"
+                    ],
+                    "test-coverage": [
+                        "phpunit --coverage-clover ./coverage/phpunit/clover.xml"
+                    ]
+                },
+                "license": [
+                    "GPL-2.0-or-later"
+                ],
+                "authors": [
+                    {
+                        "name": "WPVIP"
+                    }
+                ],
+                "support": {
+                    "source": "https://github.com/Automattic/remote-data-blocks/tree/v0.10.0",
+                    "issues": "https://github.com/Automattic/remote-data-blocks/issues"
+                }
+            },
+            {
+                "name": "automattic/remote-data-blocks",
+                "version": "v0.11.0",
+                "version_normalized": "0.11.0.0",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/Automattic/remote-data-blocks.git",
+                    "reference": "34bb64b0acba571fb53be2d3527e4db8a4e15768"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/Automattic/remote-data-blocks/zipball/34bb64b0acba571fb53be2d3527e4db8a4e15768",
+                    "reference": "34bb64b0acba571fb53be2d3527e4db8a4e15768",
+                    "shasum": ""
+                },
+                "require": {
+                    "erusev/parsedown": "^1.7",
+                    "galbar/jsonpath": "^3.0",
+                    "guzzlehttp/guzzle": "^7.8",
+                    "kevinrob/guzzle-cache-middleware": "^6.0",
+                    "php": ">=8.1",
+                    "psr/log": "^3.0",
+                    "symfony/var-exporter": "^6"
+                },
+                "require-dev": {
+                    "automattic/vipwpcs": "^3.0",
+                    "mockery/mockery": "^1.6",
+                    "php-stubs/wordpress-globals": "^0.2.0",
+                    "php-stubs/wordpress-stubs": "^6.6",
+                    "php-stubs/wordpress-tests-stubs": "^6.7",
+                    "phpcompatibility/phpcompatibility-wp": "^2.1",
+                    "phpunit/phpunit": "^9",
+                    "psalm/phar": "^6.5",
+                    "slevomat/coding-standard": "^8.15",
+                    "wp-phpunit/wp-phpunit": "^6.7",
+                    "yoast/phpunit-polyfills": "^4.0"
+                },
+                "time": "2025-04-08T05:23:10+00:00",
+                "type": "library",
+                "autoload": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\": "inc/"
+                    },
+                    "files": [
+                        "functions.php",
+                        "inc/Integrations/constants.php"
+                    ]
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\Tests\\": "tests/inc/"
+                    }
+                },
+                "scripts": {
+                    "phpcs": [
+                        "phpcs"
+                    ],
+                    "phpcs-fix": [
+                        "phpcbf"
+                    ],
+                    "psalm": [
+                        "psalm.phar --no-cache"
+                    ],
+                    "test": [
+                        "phpunit"
+                    ],
+                    "test-coverage": [
+                        "phpunit --coverage-clover ./coverage/phpunit/clover.xml"
+                    ]
+                },
+                "license": [
+                    "GPL-2.0-or-later"
+                ],
+                "authors": [
+                    {
+                        "name": "WPVIP"
+                    }
+                ],
+                "support": {
+                    "source": "https://github.com/Automattic/remote-data-blocks/tree/v0.11.0",
+                    "issues": "https://github.com/Automattic/remote-data-blocks/issues"
+                }
+            },
+            {
+                "name": "automattic/remote-data-blocks",
+                "version": "v0.12.0",
+                "version_normalized": "0.12.0.0",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/Automattic/remote-data-blocks.git",
+                    "reference": "4964fc1450577e5ee928fa66f83d017d79d6c398"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/Automattic/remote-data-blocks/zipball/4964fc1450577e5ee928fa66f83d017d79d6c398",
+                    "reference": "4964fc1450577e5ee928fa66f83d017d79d6c398",
+                    "shasum": ""
+                },
+                "require": {
+                    "erusev/parsedown": "^1.7",
+                    "galbar/jsonpath": "^3.0",
+                    "guzzlehttp/guzzle": "^7.8",
+                    "kevinrob/guzzle-cache-middleware": "^6.0",
+                    "php": ">=8.1",
+                    "psr/log": "^3.0",
+                    "symfony/var-exporter": "^6"
+                },
+                "require-dev": {
+                    "automattic/vipwpcs": "^3.0",
+                    "mockery/mockery": "^1.6",
+                    "php-stubs/wordpress-globals": "^0.2.0",
+                    "php-stubs/wordpress-stubs": "^6.6",
+                    "php-stubs/wordpress-tests-stubs": "^6.7",
+                    "phpcompatibility/phpcompatibility-wp": "^2.1",
+                    "phpunit/phpunit": "^9",
+                    "psalm/phar": "^6.5",
+                    "slevomat/coding-standard": "^8.15",
+                    "wp-phpunit/wp-phpunit": "^6.7",
+                    "yoast/phpunit-polyfills": "^4.0"
+                },
+                "time": "2025-04-11T14:49:35+00:00",
+                "type": "library",
+                "autoload": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\": "inc/"
+                    },
+                    "files": [
+                        "functions.php",
+                        "inc/Integrations/constants.php"
+                    ]
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\Tests\\": "tests/inc/"
+                    }
+                },
+                "scripts": {
+                    "phpcs": [
+                        "phpcs"
+                    ],
+                    "phpcs-fix": [
+                        "phpcbf"
+                    ],
+                    "psalm": [
+                        "psalm.phar --no-cache"
+                    ],
+                    "test": [
+                        "phpunit"
+                    ],
+                    "test-coverage": [
+                        "phpunit --coverage-clover ./coverage/phpunit/clover.xml"
+                    ]
+                },
+                "license": [
+                    "GPL-2.0-or-later"
+                ],
+                "authors": [
+                    {
+                        "name": "WPVIP"
+                    }
+                ],
+                "support": {
+                    "source": "https://github.com/Automattic/remote-data-blocks/tree/v0.12.0",
+                    "issues": "https://github.com/Automattic/remote-data-blocks/issues"
+                }
+            },
+            {
+                "name": "automattic/remote-data-blocks",
+                "version": "v0.13.0",
+                "version_normalized": "0.13.0.0",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/Automattic/remote-data-blocks.git",
+                    "reference": "62dd309f50f3ffa8e3ced2b2185c2e0354c71031"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/Automattic/remote-data-blocks/zipball/62dd309f50f3ffa8e3ced2b2185c2e0354c71031",
+                    "reference": "62dd309f50f3ffa8e3ced2b2185c2e0354c71031",
+                    "shasum": ""
+                },
+                "require": {
+                    "erusev/parsedown": "^1.7",
+                    "galbar/jsonpath": "^3.0",
+                    "guzzlehttp/guzzle": "^7.8",
+                    "kevinrob/guzzle-cache-middleware": "^6.0",
+                    "php": ">=8.1",
+                    "psr/log": "^3.0",
+                    "symfony/var-exporter": "^6"
+                },
+                "require-dev": {
+                    "automattic/vipwpcs": "^3.0",
+                    "mockery/mockery": "^1.6",
+                    "php-stubs/wordpress-globals": "^0.2.0",
+                    "php-stubs/wordpress-stubs": "^6.6",
+                    "php-stubs/wordpress-tests-stubs": "^6.7",
+                    "phpcompatibility/phpcompatibility-wp": "^2.1",
+                    "phpunit/phpunit": "^9",
+                    "psalm/phar": "^6.5",
+                    "slevomat/coding-standard": "^8.15",
+                    "wp-phpunit/wp-phpunit": "^6.7",
+                    "yoast/phpunit-polyfills": "^4.0"
+                },
+                "time": "2025-04-24T03:14:02+00:00",
+                "type": "library",
+                "autoload": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\": "inc/"
+                    },
+                    "files": [
+                        "functions.php",
+                        "inc/Integrations/constants.php"
+                    ]
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\Tests\\": "tests/inc/"
+                    }
+                },
+                "scripts": {
+                    "phpcs": [
+                        "phpcs"
+                    ],
+                    "phpcs-fix": [
+                        "phpcbf"
+                    ],
+                    "psalm": [
+                        "psalm.phar --no-cache"
+                    ],
+                    "test": [
+                        "phpunit"
+                    ],
+                    "test-coverage": [
+                        "phpunit --coverage-clover ./coverage/phpunit/clover.xml"
+                    ]
+                },
+                "license": [
+                    "GPL-2.0-or-later"
+                ],
+                "authors": [
+                    {
+                        "name": "WPVIP"
+                    }
+                ],
+                "support": {
+                    "source": "https://github.com/Automattic/remote-data-blocks/tree/v0.13.0",
+                    "issues": "https://github.com/Automattic/remote-data-blocks/issues"
+                }
+            },
+            {
+                "name": "automattic/remote-data-blocks",
+                "version": "v0.14.0",
+                "version_normalized": "0.14.0.0",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/Automattic/remote-data-blocks.git",
+                    "reference": "1dea1063f211ae2e84542898bfa53b8ec9e4bdc4"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/Automattic/remote-data-blocks/zipball/1dea1063f211ae2e84542898bfa53b8ec9e4bdc4",
+                    "reference": "1dea1063f211ae2e84542898bfa53b8ec9e4bdc4",
+                    "shasum": ""
+                },
+                "require": {
+                    "erusev/parsedown": "^1.7",
+                    "galbar/jsonpath": "^3.0",
+                    "guzzlehttp/guzzle": "^7.8",
+                    "kevinrob/guzzle-cache-middleware": "^6.0",
+                    "php": ">=8.1",
+                    "psr/log": "^3.0",
+                    "symfony/var-exporter": "^6"
+                },
+                "require-dev": {
+                    "automattic/vipwpcs": "^3.0",
+                    "mockery/mockery": "^1.6",
+                    "php-stubs/wordpress-globals": "^0.2.0",
+                    "php-stubs/wordpress-stubs": "^6.6",
+                    "php-stubs/wordpress-tests-stubs": "^6.7",
+                    "phpcompatibility/phpcompatibility-wp": "^2.1",
+                    "phpunit/phpunit": "^9",
+                    "psalm/phar": "^6.5",
+                    "slevomat/coding-standard": "^8.15",
+                    "wp-phpunit/wp-phpunit": "^6.7",
+                    "yoast/phpunit-polyfills": "^4.0"
+                },
+                "time": "2025-04-30T21:52:00+00:00",
+                "type": "library",
+                "autoload": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\": "inc/"
+                    },
+                    "files": [
+                        "functions.php",
+                        "inc/Integrations/constants.php"
+                    ]
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\Tests\\": "tests/inc/"
+                    }
+                },
+                "scripts": {
+                    "phpcs": [
+                        "phpcs"
+                    ],
+                    "phpcs-fix": [
+                        "phpcbf"
+                    ],
+                    "psalm": [
+                        "psalm.phar --no-cache"
+                    ],
+                    "test": [
+                        "phpunit"
+                    ],
+                    "test-coverage": [
+                        "phpunit --coverage-clover ./coverage/phpunit/clover.xml"
+                    ]
+                },
+                "license": [
+                    "GPL-2.0-or-later"
+                ],
+                "authors": [
+                    {
+                        "name": "WPVIP"
+                    }
+                ],
+                "support": {
+                    "source": "https://github.com/Automattic/remote-data-blocks/tree/v0.14.0",
+                    "issues": "https://github.com/Automattic/remote-data-blocks/issues"
+                }
+            },
+            {
+                "name": "automattic/remote-data-blocks",
+                "version": "v0.15.0",
+                "version_normalized": "0.15.0.0",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/Automattic/remote-data-blocks.git",
+                    "reference": "38a5aa4e5998aab2943993d182e52497fa150c0d"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/Automattic/remote-data-blocks/zipball/38a5aa4e5998aab2943993d182e52497fa150c0d",
+                    "reference": "38a5aa4e5998aab2943993d182e52497fa150c0d",
+                    "shasum": ""
+                },
+                "require": {
+                    "erusev/parsedown": "^1.7",
+                    "galbar/jsonpath": "^3.0",
+                    "guzzlehttp/guzzle": "^7.8",
+                    "kevinrob/guzzle-cache-middleware": "^6.0",
+                    "php": ">=8.1",
+                    "symfony/var-exporter": "^6"
+                },
+                "require-dev": {
+                    "automattic/vipwpcs": "^3.0",
+                    "mockery/mockery": "^1.6",
+                    "php-stubs/wordpress-globals": "^0.2.0",
+                    "php-stubs/wordpress-stubs": "^6.6",
+                    "php-stubs/wordpress-tests-stubs": "^6.7",
+                    "phpcompatibility/phpcompatibility-wp": "^2.1",
+                    "phpunit/phpunit": "^9",
+                    "psalm/phar": "^6.5",
+                    "slevomat/coding-standard": "^8.15",
+                    "wp-phpunit/wp-phpunit": "^6.7",
+                    "yoast/phpunit-polyfills": "^4.0"
+                },
+                "time": "2025-05-03T00:22:50+00:00",
+                "type": "library",
+                "autoload": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\": "inc/"
+                    },
+                    "files": [
+                        "functions.php",
+                        "inc/Integrations/constants.php"
+                    ]
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\Tests\\": "tests/inc/"
+                    }
+                },
+                "scripts": {
+                    "phpcs": [
+                        "phpcs"
+                    ],
+                    "phpcs-fix": [
+                        "phpcbf"
+                    ],
+                    "psalm": [
+                        "psalm.phar --no-cache"
+                    ],
+                    "test": [
+                        "phpunit"
+                    ],
+                    "test-coverage": [
+                        "phpunit --coverage-clover ./coverage/phpunit/clover.xml"
+                    ]
+                },
+                "license": [
+                    "GPL-2.0-or-later"
+                ],
+                "authors": [
+                    {
+                        "name": "WPVIP"
+                    }
+                ],
+                "support": {
+                    "source": "https://github.com/Automattic/remote-data-blocks/tree/v0.15.0",
+                    "issues": "https://github.com/Automattic/remote-data-blocks/issues"
+                }
+            },
+            {
+                "name": "automattic/remote-data-blocks",
+                "version": "v0.16.0",
+                "version_normalized": "0.16.0.0",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/Automattic/remote-data-blocks.git",
+                    "reference": "617047d68c207b23dee1d50843ece78cb3deea0a"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/Automattic/remote-data-blocks/zipball/617047d68c207b23dee1d50843ece78cb3deea0a",
+                    "reference": "617047d68c207b23dee1d50843ece78cb3deea0a",
+                    "shasum": ""
+                },
+                "require": {
+                    "erusev/parsedown": "^1.7",
+                    "galbar/jsonpath": "^3.0",
+                    "guzzlehttp/guzzle": "^7.8",
+                    "kevinrob/guzzle-cache-middleware": "^6.0",
+                    "php": ">=8.1",
+                    "symfony/var-exporter": "^6"
+                },
+                "require-dev": {
+                    "automattic/vipwpcs": "^3.0",
+                    "mockery/mockery": "^1.6",
+                    "php-stubs/wordpress-globals": "^0.2.0",
+                    "php-stubs/wordpress-stubs": "^6.6",
+                    "php-stubs/wordpress-tests-stubs": "^6.7",
+                    "phpcompatibility/phpcompatibility-wp": "^2.1",
+                    "phpunit/phpunit": "^9",
+                    "psalm/phar": "^6.5",
+                    "slevomat/coding-standard": "^8.15",
+                    "wp-phpunit/wp-phpunit": "^6.7",
+                    "yoast/phpunit-polyfills": "^4.0"
+                },
+                "time": "2025-05-06T03:21:54+00:00",
+                "type": "library",
+                "autoload": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\": "inc/"
+                    },
+                    "files": [
+                        "functions.php",
+                        "inc/Integrations/constants.php"
+                    ]
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\Tests\\": "tests/inc/"
+                    }
+                },
+                "scripts": {
+                    "phpcs": [
+                        "phpcs"
+                    ],
+                    "phpcs-fix": [
+                        "phpcbf"
+                    ],
+                    "psalm": [
+                        "psalm.phar --no-cache"
+                    ],
+                    "test": [
+                        "phpunit"
+                    ],
+                    "test-coverage": [
+                        "phpunit --coverage-clover ./coverage/phpunit/clover.xml"
+                    ]
+                },
+                "license": [
+                    "GPL-2.0-or-later"
+                ],
+                "authors": [
+                    {
+                        "name": "WPVIP"
+                    }
+                ],
+                "support": {
+                    "source": "https://github.com/Automattic/remote-data-blocks/tree/v0.16.0",
+                    "issues": "https://github.com/Automattic/remote-data-blocks/issues"
+                }
+            },
+            {
+                "name": "automattic/remote-data-blocks",
+                "version": "v0.17.0",
+                "version_normalized": "0.17.0.0",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/Automattic/remote-data-blocks.git",
+                    "reference": "ff676dc4b91aad683beb8ff21cd2fe1d4fd99c01"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/Automattic/remote-data-blocks/zipball/ff676dc4b91aad683beb8ff21cd2fe1d4fd99c01",
+                    "reference": "ff676dc4b91aad683beb8ff21cd2fe1d4fd99c01",
+                    "shasum": ""
+                },
+                "require": {
+                    "erusev/parsedown": "^1.7",
+                    "galbar/jsonpath": "^3.0",
+                    "guzzlehttp/guzzle": "^7.8",
+                    "kevinrob/guzzle-cache-middleware": "^6.0",
+                    "php": ">=8.1",
+                    "symfony/var-exporter": "^6"
+                },
+                "require-dev": {
+                    "automattic/vipwpcs": "^3.0",
+                    "mockery/mockery": "^1.6",
+                    "php-stubs/wordpress-globals": "^0.2.0",
+                    "php-stubs/wordpress-stubs": "^6.6",
+                    "php-stubs/wordpress-tests-stubs": "^6.7",
+                    "phpcompatibility/phpcompatibility-wp": "^2.1",
+                    "phpunit/phpunit": "^9",
+                    "psalm/phar": "^6.5",
+                    "slevomat/coding-standard": "^8.15",
+                    "wp-phpunit/wp-phpunit": "^6.7",
+                    "yoast/phpunit-polyfills": "^4.0"
+                },
+                "time": "2025-05-16T03:35:55+00:00",
+                "type": "library",
+                "autoload": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\": "inc/"
+                    },
+                    "files": [
+                        "functions.php",
+                        "inc/Integrations/constants.php"
+                    ]
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\Tests\\": "tests/inc/"
+                    }
+                },
+                "scripts": {
+                    "phpcs": [
+                        "phpcs"
+                    ],
+                    "phpcs-fix": [
+                        "phpcbf"
+                    ],
+                    "psalm": [
+                        "psalm.phar --no-cache"
+                    ],
+                    "test": [
+                        "phpunit"
+                    ],
+                    "test-coverage": [
+                        "phpunit --coverage-clover ./coverage/phpunit/clover.xml"
+                    ]
+                },
+                "license": [
+                    "GPL-2.0-or-later"
+                ],
+                "authors": [
+                    {
+                        "name": "WPVIP"
+                    }
+                ],
+                "support": {
+                    "source": "https://github.com/Automattic/remote-data-blocks/tree/v0.17.0",
+                    "issues": "https://github.com/Automattic/remote-data-blocks/issues"
+                }
+            },
+            {
+                "name": "automattic/remote-data-blocks",
+                "version": "v0.2.1",
+                "version_normalized": "0.2.1.0",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/Automattic/remote-data-blocks.git",
+                    "reference": "9eb54c0369b23aedcb3aad452280ff06a3ed9cc0"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/Automattic/remote-data-blocks/zipball/9eb54c0369b23aedcb3aad452280ff06a3ed9cc0",
+                    "reference": "9eb54c0369b23aedcb3aad452280ff06a3ed9cc0",
+                    "shasum": ""
+                },
+                "require": {
+                    "galbar/jsonpath": "^3.0",
+                    "guzzlehttp/guzzle": "^7.8",
+                    "kevinrob/guzzle-cache-middleware": "^5.1",
+                    "php": ">=8.1",
+                    "psr/log": "^3.0"
+                },
+                "require-dev": {
+                    "automattic/vipwpcs": "^3.0",
+                    "mockery/mockery": "^1.6",
+                    "php-stubs/wordpress-stubs": "^6.6",
+                    "phpcompatibility/phpcompatibility-wp": "^2.1",
+                    "phpunit/phpunit": "^10",
+                    "psalm/phar": "^5.26",
+                    "slevomat/coding-standard": "^8.15"
+                },
+                "time": "2024-10-01T15:41:17+00:00",
+                "type": "library",
+                "autoload": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\": "inc/"
+                    },
+                    "files": [
+                        "functions.php",
+                        "inc/Integrations/constants.php"
+                    ]
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\Tests\\": "tests/inc/"
+                    }
+                },
+                "scripts": {
+                    "phpcs": [
+                        "phpcs"
+                    ],
+                    "phpcs-fix": [
+                        "phpcbf"
+                    ],
+                    "psalm": [
+                        "psalm.phar"
+                    ],
+                    "test": [
+                        "phpunit"
+                    ],
+                    "test-coverage": [
+                        "phpunit --coverage-clover ./coverage/phpunit/clover.xml"
+                    ]
+                },
+                "license": [
+                    "GPL-2.0-or-later"
+                ],
+                "authors": [
+                    {
+                        "name": "WPVIP"
+                    }
+                ],
+                "support": {
+                    "source": "https://github.com/Automattic/remote-data-blocks/tree/v0.2.1",
+                    "issues": "https://github.com/Automattic/remote-data-blocks/issues"
+                }
+            },
+            {
+                "name": "automattic/remote-data-blocks",
+                "version": "v0.2.2",
+                "version_normalized": "0.2.2.0",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/Automattic/remote-data-blocks.git",
+                    "reference": "ad7eeedf39bc77dea69cb9b1319d45236512a7ab"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/Automattic/remote-data-blocks/zipball/ad7eeedf39bc77dea69cb9b1319d45236512a7ab",
+                    "reference": "ad7eeedf39bc77dea69cb9b1319d45236512a7ab",
+                    "shasum": ""
+                },
+                "require": {
+                    "galbar/jsonpath": "^3.0",
+                    "guzzlehttp/guzzle": "^7.8",
+                    "kevinrob/guzzle-cache-middleware": "^5.1",
+                    "php": ">=8.1",
+                    "psr/log": "^3.0"
+                },
+                "require-dev": {
+                    "automattic/vipwpcs": "^3.0",
+                    "mockery/mockery": "^1.6",
+                    "php-stubs/wordpress-stubs": "^6.6",
+                    "phpcompatibility/phpcompatibility-wp": "^2.1",
+                    "phpunit/phpunit": "^10",
+                    "psalm/phar": "^5.26",
+                    "slevomat/coding-standard": "^8.15"
+                },
+                "time": "2024-10-16T14:42:27+00:00",
+                "type": "library",
+                "autoload": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\": "inc/"
+                    },
+                    "files": [
+                        "functions.php",
+                        "inc/Integrations/constants.php"
+                    ]
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\Tests\\": "tests/inc/"
+                    }
+                },
+                "scripts": {
+                    "phpcs": [
+                        "phpcs"
+                    ],
+                    "phpcs-fix": [
+                        "phpcbf"
+                    ],
+                    "psalm": [
+                        "psalm.phar"
+                    ],
+                    "test": [
+                        "phpunit"
+                    ],
+                    "test-coverage": [
+                        "phpunit --coverage-clover ./coverage/phpunit/clover.xml"
+                    ]
+                },
+                "license": [
+                    "GPL-2.0-or-later"
+                ],
+                "authors": [
+                    {
+                        "name": "WPVIP"
+                    }
+                ],
+                "support": {
+                    "source": "https://github.com/Automattic/remote-data-blocks/tree/v0.2.2",
+                    "issues": "https://github.com/Automattic/remote-data-blocks/issues"
+                }
+            },
+            {
+                "name": "automattic/remote-data-blocks",
+                "version": "v0.2.3",
+                "version_normalized": "0.2.3.0",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/Automattic/remote-data-blocks.git",
+                    "reference": "f09b462e09ff8e9eaab1e2e84d7649864b5b4b57"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/Automattic/remote-data-blocks/zipball/f09b462e09ff8e9eaab1e2e84d7649864b5b4b57",
+                    "reference": "f09b462e09ff8e9eaab1e2e84d7649864b5b4b57",
+                    "shasum": ""
+                },
+                "require": {
+                    "galbar/jsonpath": "^3.0",
+                    "guzzlehttp/guzzle": "^7.8",
+                    "kevinrob/guzzle-cache-middleware": "^5.1",
+                    "php": ">=8.1",
+                    "psr/log": "^3.0"
+                },
+                "require-dev": {
+                    "automattic/vipwpcs": "^3.0",
+                    "mockery/mockery": "^1.6",
+                    "php-stubs/wordpress-stubs": "^6.6",
+                    "phpcompatibility/phpcompatibility-wp": "^2.1",
+                    "phpunit/phpunit": "^10",
+                    "psalm/phar": "^5.26",
+                    "slevomat/coding-standard": "^8.15"
+                },
+                "time": "2024-10-17T21:43:52+00:00",
+                "type": "library",
+                "autoload": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\": "inc/"
+                    },
+                    "files": [
+                        "functions.php",
+                        "inc/Integrations/constants.php"
+                    ]
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\Tests\\": "tests/inc/"
+                    }
+                },
+                "scripts": {
+                    "phpcs": [
+                        "phpcs"
+                    ],
+                    "phpcs-fix": [
+                        "phpcbf"
+                    ],
+                    "psalm": [
+                        "psalm.phar"
+                    ],
+                    "test": [
+                        "phpunit"
+                    ],
+                    "test-coverage": [
+                        "phpunit --coverage-clover ./coverage/phpunit/clover.xml"
+                    ]
+                },
+                "license": [
+                    "GPL-2.0-or-later"
+                ],
+                "authors": [
+                    {
+                        "name": "WPVIP"
+                    }
+                ],
+                "support": {
+                    "source": "https://github.com/Automattic/remote-data-blocks/tree/v0.2.3",
+                    "issues": "https://github.com/Automattic/remote-data-blocks/issues"
+                }
+            },
+            {
+                "name": "automattic/remote-data-blocks",
+                "version": "v0.2.4",
+                "version_normalized": "0.2.4.0",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/Automattic/remote-data-blocks.git",
+                    "reference": "8b6a4f71052de874cfda98b191e7b90fa8165499"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/Automattic/remote-data-blocks/zipball/8b6a4f71052de874cfda98b191e7b90fa8165499",
+                    "reference": "8b6a4f71052de874cfda98b191e7b90fa8165499",
+                    "shasum": ""
+                },
+                "require": {
+                    "galbar/jsonpath": "^3.0",
+                    "guzzlehttp/guzzle": "^7.8",
+                    "kevinrob/guzzle-cache-middleware": "^5.1",
+                    "php": ">=8.1",
+                    "psr/log": "^3.0"
+                },
+                "require-dev": {
+                    "automattic/vipwpcs": "^3.0",
+                    "mockery/mockery": "^1.6",
+                    "php-stubs/wordpress-stubs": "^6.6",
+                    "phpcompatibility/phpcompatibility-wp": "^2.1",
+                    "phpunit/phpunit": "^10",
+                    "psalm/phar": "^5.26",
+                    "slevomat/coding-standard": "^8.15"
+                },
+                "time": "2024-10-19T01:51:03+00:00",
+                "type": "library",
+                "autoload": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\": "inc/"
+                    },
+                    "files": [
+                        "functions.php",
+                        "inc/Integrations/constants.php"
+                    ]
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\Tests\\": "tests/inc/"
+                    }
+                },
+                "scripts": {
+                    "phpcs": [
+                        "phpcs"
+                    ],
+                    "phpcs-fix": [
+                        "phpcbf"
+                    ],
+                    "psalm": [
+                        "psalm.phar"
+                    ],
+                    "test": [
+                        "phpunit"
+                    ],
+                    "test-coverage": [
+                        "phpunit --coverage-clover ./coverage/phpunit/clover.xml"
+                    ]
+                },
+                "license": [
+                    "GPL-2.0-or-later"
+                ],
+                "authors": [
+                    {
+                        "name": "WPVIP"
+                    }
+                ],
+                "support": {
+                    "source": "https://github.com/Automattic/remote-data-blocks/tree/v0.2.4",
+                    "issues": "https://github.com/Automattic/remote-data-blocks/issues"
+                }
+            },
+            {
+                "name": "automattic/remote-data-blocks",
+                "version": "v0.2.5",
+                "version_normalized": "0.2.5.0",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/Automattic/remote-data-blocks.git",
+                    "reference": "f8a6bf27cbc185db5ed53f9cab58b038dc22ec5a"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/Automattic/remote-data-blocks/zipball/f8a6bf27cbc185db5ed53f9cab58b038dc22ec5a",
+                    "reference": "f8a6bf27cbc185db5ed53f9cab58b038dc22ec5a",
+                    "shasum": ""
+                },
+                "require": {
+                    "galbar/jsonpath": "^3.0",
+                    "guzzlehttp/guzzle": "^7.8",
+                    "kevinrob/guzzle-cache-middleware": "^5.1",
+                    "php": ">=8.1",
+                    "psr/log": "^3.0"
+                },
+                "require-dev": {
+                    "automattic/vipwpcs": "^3.0",
+                    "mockery/mockery": "^1.6",
+                    "php-stubs/wordpress-stubs": "^6.6",
+                    "phpcompatibility/phpcompatibility-wp": "^2.1",
+                    "phpunit/phpunit": "^10",
+                    "psalm/phar": "^5.26",
+                    "slevomat/coding-standard": "^8.15"
+                },
+                "time": "2024-10-19T19:53:44+00:00",
+                "type": "library",
+                "autoload": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\": "inc/"
+                    },
+                    "files": [
+                        "functions.php",
+                        "inc/Integrations/constants.php"
+                    ]
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\Tests\\": "tests/inc/"
+                    }
+                },
+                "scripts": {
+                    "phpcs": [
+                        "phpcs"
+                    ],
+                    "phpcs-fix": [
+                        "phpcbf"
+                    ],
+                    "psalm": [
+                        "psalm.phar"
+                    ],
+                    "test": [
+                        "phpunit"
+                    ],
+                    "test-coverage": [
+                        "phpunit --coverage-clover ./coverage/phpunit/clover.xml"
+                    ]
+                },
+                "license": [
+                    "GPL-2.0-or-later"
+                ],
+                "authors": [
+                    {
+                        "name": "WPVIP"
+                    }
+                ],
+                "support": {
+                    "source": "https://github.com/Automattic/remote-data-blocks/tree/v0.2.5",
+                    "issues": "https://github.com/Automattic/remote-data-blocks/issues"
+                }
+            },
+            {
+                "name": "automattic/remote-data-blocks",
+                "version": "v0.2.6",
+                "version_normalized": "0.2.6.0",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/Automattic/remote-data-blocks.git",
+                    "reference": "b2ea7054cf9d63f1e420c4a7eb0fba676bfb0d3e"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/Automattic/remote-data-blocks/zipball/b2ea7054cf9d63f1e420c4a7eb0fba676bfb0d3e",
+                    "reference": "b2ea7054cf9d63f1e420c4a7eb0fba676bfb0d3e",
+                    "shasum": ""
+                },
+                "require": {
+                    "galbar/jsonpath": "^3.0",
+                    "guzzlehttp/guzzle": "^7.8",
+                    "kevinrob/guzzle-cache-middleware": "^5.1",
+                    "php": ">=8.1",
+                    "psr/log": "^3.0"
+                },
+                "require-dev": {
+                    "automattic/vipwpcs": "^3.0",
+                    "mockery/mockery": "^1.6",
+                    "php-stubs/wordpress-stubs": "^6.6",
+                    "phpcompatibility/phpcompatibility-wp": "^2.1",
+                    "phpunit/phpunit": "^10",
+                    "psalm/phar": "^5.26",
+                    "slevomat/coding-standard": "^8.15"
+                },
+                "time": "2024-10-23T16:52:40+00:00",
+                "type": "library",
+                "autoload": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\": "inc/"
+                    },
+                    "files": [
+                        "functions.php",
+                        "inc/Integrations/constants.php"
+                    ]
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\Tests\\": "tests/inc/"
+                    }
+                },
+                "scripts": {
+                    "phpcs": [
+                        "phpcs"
+                    ],
+                    "phpcs-fix": [
+                        "phpcbf"
+                    ],
+                    "psalm": [
+                        "psalm.phar"
+                    ],
+                    "test": [
+                        "phpunit"
+                    ],
+                    "test-coverage": [
+                        "phpunit --coverage-clover ./coverage/phpunit/clover.xml"
+                    ]
+                },
+                "license": [
+                    "GPL-2.0-or-later"
+                ],
+                "authors": [
+                    {
+                        "name": "WPVIP"
+                    }
+                ],
+                "support": {
+                    "source": "https://github.com/Automattic/remote-data-blocks/tree/v0.2.6",
+                    "issues": "https://github.com/Automattic/remote-data-blocks/issues"
+                }
+            },
+            {
+                "name": "automattic/remote-data-blocks",
+                "version": "v0.2.7",
+                "version_normalized": "0.2.7.0",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/Automattic/remote-data-blocks.git",
+                    "reference": "ad62e176e81f26612292374838c2d3801e5a0b0a"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/Automattic/remote-data-blocks/zipball/ad62e176e81f26612292374838c2d3801e5a0b0a",
+                    "reference": "ad62e176e81f26612292374838c2d3801e5a0b0a",
+                    "shasum": ""
+                },
+                "require": {
+                    "galbar/jsonpath": "^3.0",
+                    "guzzlehttp/guzzle": "^7.8",
+                    "kevinrob/guzzle-cache-middleware": "^5.1",
+                    "php": ">=8.1",
+                    "psr/log": "^3.0"
+                },
+                "require-dev": {
+                    "automattic/vipwpcs": "^3.0",
+                    "mockery/mockery": "^1.6",
+                    "php-stubs/wordpress-stubs": "^6.6",
+                    "phpcompatibility/phpcompatibility-wp": "^2.1",
+                    "phpunit/phpunit": "^10",
+                    "psalm/phar": "^5.26",
+                    "slevomat/coding-standard": "^8.15"
+                },
+                "time": "2024-10-23T22:26:19+00:00",
+                "type": "library",
+                "autoload": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\": "inc/"
+                    },
+                    "files": [
+                        "functions.php",
+                        "inc/Integrations/constants.php"
+                    ]
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\Tests\\": "tests/inc/"
+                    }
+                },
+                "scripts": {
+                    "phpcs": [
+                        "phpcs"
+                    ],
+                    "phpcs-fix": [
+                        "phpcbf"
+                    ],
+                    "psalm": [
+                        "psalm.phar"
+                    ],
+                    "test": [
+                        "phpunit"
+                    ],
+                    "test-coverage": [
+                        "phpunit --coverage-clover ./coverage/phpunit/clover.xml"
+                    ]
+                },
+                "license": [
+                    "GPL-2.0-or-later"
+                ],
+                "authors": [
+                    {
+                        "name": "WPVIP"
+                    }
+                ],
+                "support": {
+                    "source": "https://github.com/Automattic/remote-data-blocks/tree/v0.2.7",
+                    "issues": "https://github.com/Automattic/remote-data-blocks/issues"
+                }
+            },
+            {
+                "name": "automattic/remote-data-blocks",
+                "version": "v0.3.0",
+                "version_normalized": "0.3.0.0",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/Automattic/remote-data-blocks.git",
+                    "reference": "ee961672a36df126a3e5579a50a4f88c8c45296f"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/Automattic/remote-data-blocks/zipball/ee961672a36df126a3e5579a50a4f88c8c45296f",
+                    "reference": "ee961672a36df126a3e5579a50a4f88c8c45296f",
+                    "shasum": ""
+                },
+                "require": {
+                    "galbar/jsonpath": "^3.0",
+                    "guzzlehttp/guzzle": "^7.8",
+                    "kevinrob/guzzle-cache-middleware": "^5.1",
+                    "php": ">=8.1",
+                    "psr/log": "^3.0"
+                },
+                "require-dev": {
+                    "automattic/vipwpcs": "^3.0",
+                    "mockery/mockery": "^1.6",
+                    "php-stubs/wordpress-stubs": "^6.6",
+                    "phpcompatibility/phpcompatibility-wp": "^2.1",
+                    "phpunit/phpunit": "^10",
+                    "psalm/phar": "^5.26",
+                    "slevomat/coding-standard": "^8.15"
+                },
+                "time": "2024-11-13T19:11:43+00:00",
+                "type": "library",
+                "autoload": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\": "inc/"
+                    },
+                    "files": [
+                        "functions.php",
+                        "inc/Integrations/constants.php"
+                    ]
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\Tests\\": "tests/inc/"
+                    }
+                },
+                "scripts": {
+                    "phpcs": [
+                        "phpcs"
+                    ],
+                    "phpcs-fix": [
+                        "phpcbf"
+                    ],
+                    "psalm": [
+                        "psalm.phar --no-cache"
+                    ],
+                    "test": [
+                        "phpunit"
+                    ],
+                    "test-coverage": [
+                        "phpunit --coverage-clover ./coverage/phpunit/clover.xml"
+                    ]
+                },
+                "license": [
+                    "GPL-2.0-or-later"
+                ],
+                "authors": [
+                    {
+                        "name": "WPVIP"
+                    }
+                ],
+                "support": {
+                    "source": "https://github.com/Automattic/remote-data-blocks/tree/v0.3.0",
+                    "issues": "https://github.com/Automattic/remote-data-blocks/issues"
+                }
+            },
+            {
+                "name": "automattic/remote-data-blocks",
+                "version": "v0.3.1",
+                "version_normalized": "0.3.1.0",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/Automattic/remote-data-blocks.git",
+                    "reference": "91d7e1c4891648d075cddc906aaf6655a9b9b780"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/Automattic/remote-data-blocks/zipball/91d7e1c4891648d075cddc906aaf6655a9b9b780",
+                    "reference": "91d7e1c4891648d075cddc906aaf6655a9b9b780",
+                    "shasum": ""
+                },
+                "require": {
+                    "galbar/jsonpath": "^3.0",
+                    "guzzlehttp/guzzle": "^7.8",
+                    "kevinrob/guzzle-cache-middleware": "^5.1",
+                    "php": ">=8.1",
+                    "psr/log": "^3.0"
+                },
+                "require-dev": {
+                    "automattic/vipwpcs": "^3.0",
+                    "mockery/mockery": "^1.6",
+                    "php-stubs/wordpress-globals": "^0.2.0",
+                    "php-stubs/wordpress-stubs": "^6.6",
+                    "phpcompatibility/phpcompatibility-wp": "^2.1",
+                    "phpunit/phpunit": "^10",
+                    "psalm/phar": "^5.26",
+                    "slevomat/coding-standard": "^8.15"
+                },
+                "time": "2024-11-21T11:36:49+00:00",
+                "type": "library",
+                "autoload": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\": "inc/"
+                    },
+                    "files": [
+                        "functions.php",
+                        "inc/Integrations/constants.php"
+                    ]
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\Tests\\": "tests/inc/"
+                    }
+                },
+                "scripts": {
+                    "phpcs": [
+                        "phpcs"
+                    ],
+                    "phpcs-fix": [
+                        "phpcbf"
+                    ],
+                    "psalm": [
+                        "psalm.phar --no-cache"
+                    ],
+                    "test": [
+                        "phpunit"
+                    ],
+                    "test-coverage": [
+                        "phpunit --coverage-clover ./coverage/phpunit/clover.xml"
+                    ]
+                },
+                "license": [
+                    "GPL-2.0-or-later"
+                ],
+                "authors": [
+                    {
+                        "name": "WPVIP"
+                    }
+                ],
+                "support": {
+                    "source": "https://github.com/Automattic/remote-data-blocks/tree/v0.3.1",
+                    "issues": "https://github.com/Automattic/remote-data-blocks/issues"
+                }
+            },
+            {
+                "name": "automattic/remote-data-blocks",
+                "version": "v0.3.2",
+                "version_normalized": "0.3.2.0",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/Automattic/remote-data-blocks.git",
+                    "reference": "74ef203fec343e3fcc2fbc0d9bd0cbe3982fa647"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/Automattic/remote-data-blocks/zipball/74ef203fec343e3fcc2fbc0d9bd0cbe3982fa647",
+                    "reference": "74ef203fec343e3fcc2fbc0d9bd0cbe3982fa647",
+                    "shasum": ""
+                },
+                "require": {
+                    "galbar/jsonpath": "^3.0",
+                    "guzzlehttp/guzzle": "^7.8",
+                    "kevinrob/guzzle-cache-middleware": "^6.0",
+                    "php": ">=8.1",
+                    "psr/log": "^3.0"
+                },
+                "require-dev": {
+                    "automattic/vipwpcs": "^3.0",
+                    "mockery/mockery": "^1.6",
+                    "php-stubs/wordpress-globals": "^0.2.0",
+                    "php-stubs/wordpress-stubs": "^6.6",
+                    "phpcompatibility/phpcompatibility-wp": "^2.1",
+                    "phpunit/phpunit": "^10",
+                    "psalm/phar": "^5.26",
+                    "slevomat/coding-standard": "^8.15"
+                },
+                "time": "2024-12-13T05:23:41+00:00",
+                "type": "library",
+                "autoload": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\": "inc/"
+                    },
+                    "files": [
+                        "functions.php",
+                        "inc/Integrations/constants.php"
+                    ]
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\Tests\\": "tests/inc/"
+                    }
+                },
+                "scripts": {
+                    "phpcs": [
+                        "phpcs"
+                    ],
+                    "phpcs-fix": [
+                        "phpcbf"
+                    ],
+                    "psalm": [
+                        "psalm.phar --no-cache"
+                    ],
+                    "test": [
+                        "phpunit"
+                    ],
+                    "test-coverage": [
+                        "phpunit --coverage-clover ./coverage/phpunit/clover.xml"
+                    ]
+                },
+                "license": [
+                    "GPL-2.0-or-later"
+                ],
+                "authors": [
+                    {
+                        "name": "WPVIP"
+                    }
+                ],
+                "support": {
+                    "source": "https://github.com/Automattic/remote-data-blocks/tree/v0.3.2",
+                    "issues": "https://github.com/Automattic/remote-data-blocks/issues"
+                }
+            },
+            {
+                "name": "automattic/remote-data-blocks",
+                "version": "v0.3.3",
+                "version_normalized": "0.3.3.0",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/Automattic/remote-data-blocks.git",
+                    "reference": "88864b56e77ddcafece88164417a77d74ca27e27"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/Automattic/remote-data-blocks/zipball/88864b56e77ddcafece88164417a77d74ca27e27",
+                    "reference": "88864b56e77ddcafece88164417a77d74ca27e27",
+                    "shasum": ""
+                },
+                "require": {
+                    "galbar/jsonpath": "^3.0",
+                    "guzzlehttp/guzzle": "^7.8",
+                    "kevinrob/guzzle-cache-middleware": "^6.0",
+                    "php": ">=8.1",
+                    "psr/log": "^3.0"
+                },
+                "require-dev": {
+                    "automattic/vipwpcs": "^3.0",
+                    "mockery/mockery": "^1.6",
+                    "php-stubs/wordpress-globals": "^0.2.0",
+                    "php-stubs/wordpress-stubs": "^6.6",
+                    "phpcompatibility/phpcompatibility-wp": "^2.1",
+                    "phpunit/phpunit": "^10",
+                    "psalm/phar": "^5.26",
+                    "slevomat/coding-standard": "^8.15"
+                },
+                "time": "2024-12-14T00:31:30+00:00",
+                "type": "library",
+                "autoload": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\": "inc/"
+                    },
+                    "files": [
+                        "functions.php",
+                        "inc/Integrations/constants.php"
+                    ]
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\Tests\\": "tests/inc/"
+                    }
+                },
+                "scripts": {
+                    "phpcs": [
+                        "phpcs"
+                    ],
+                    "phpcs-fix": [
+                        "phpcbf"
+                    ],
+                    "psalm": [
+                        "psalm.phar --no-cache"
+                    ],
+                    "test": [
+                        "phpunit"
+                    ],
+                    "test-coverage": [
+                        "phpunit --coverage-clover ./coverage/phpunit/clover.xml"
+                    ]
+                },
+                "license": [
+                    "GPL-2.0-or-later"
+                ],
+                "authors": [
+                    {
+                        "name": "WPVIP"
+                    }
+                ],
+                "support": {
+                    "source": "https://github.com/Automattic/remote-data-blocks/tree/v0.3.3",
+                    "issues": "https://github.com/Automattic/remote-data-blocks/issues"
+                }
+            },
+            {
+                "name": "automattic/remote-data-blocks",
+                "version": "v0.4.0",
+                "version_normalized": "0.4.0.0",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/Automattic/remote-data-blocks.git",
+                    "reference": "be4b63dd1fc9d52da38fc45e3f56f1a1f89e23a9"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/Automattic/remote-data-blocks/zipball/be4b63dd1fc9d52da38fc45e3f56f1a1f89e23a9",
+                    "reference": "be4b63dd1fc9d52da38fc45e3f56f1a1f89e23a9",
+                    "shasum": ""
+                },
+                "require": {
+                    "erusev/parsedown": "^1.7",
+                    "galbar/jsonpath": "^3.0",
+                    "guzzlehttp/guzzle": "^7.8",
+                    "kevinrob/guzzle-cache-middleware": "^6.0",
+                    "php": ">=8.1",
+                    "psr/log": "^3.0"
+                },
+                "require-dev": {
+                    "automattic/vipwpcs": "^3.0",
+                    "mockery/mockery": "^1.6",
+                    "php-stubs/wordpress-globals": "^0.2.0",
+                    "php-stubs/wordpress-stubs": "^6.6",
+                    "phpcompatibility/phpcompatibility-wp": "^2.1",
+                    "phpunit/phpunit": "^10",
+                    "psalm/phar": "^5.26",
+                    "slevomat/coding-standard": "^8.15"
+                },
+                "time": "2025-01-06T06:30:59+00:00",
+                "type": "library",
+                "autoload": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\": "inc/"
+                    },
+                    "files": [
+                        "functions.php",
+                        "inc/Integrations/constants.php"
+                    ]
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\Tests\\": "tests/inc/"
+                    }
+                },
+                "scripts": {
+                    "phpcs": [
+                        "phpcs"
+                    ],
+                    "phpcs-fix": [
+                        "phpcbf"
+                    ],
+                    "psalm": [
+                        "psalm.phar --no-cache"
+                    ],
+                    "test": [
+                        "phpunit"
+                    ],
+                    "test-coverage": [
+                        "phpunit --coverage-clover ./coverage/phpunit/clover.xml"
+                    ]
+                },
+                "license": [
+                    "GPL-2.0-or-later"
+                ],
+                "authors": [
+                    {
+                        "name": "WPVIP"
+                    }
+                ],
+                "support": {
+                    "source": "https://github.com/Automattic/remote-data-blocks/tree/v0.4.0",
+                    "issues": "https://github.com/Automattic/remote-data-blocks/issues"
+                }
+            },
+            {
+                "name": "automattic/remote-data-blocks",
+                "version": "v0.5.0",
+                "version_normalized": "0.5.0.0",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/Automattic/remote-data-blocks.git",
+                    "reference": "e6c7f9b54d15ed20084aa3a79f99415d5466ec21"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/Automattic/remote-data-blocks/zipball/e6c7f9b54d15ed20084aa3a79f99415d5466ec21",
+                    "reference": "e6c7f9b54d15ed20084aa3a79f99415d5466ec21",
+                    "shasum": ""
+                },
+                "require": {
+                    "erusev/parsedown": "^1.7",
+                    "galbar/jsonpath": "^3.0",
+                    "guzzlehttp/guzzle": "^7.8",
+                    "kevinrob/guzzle-cache-middleware": "^6.0",
+                    "php": ">=8.1",
+                    "psr/log": "^3.0"
+                },
+                "require-dev": {
+                    "automattic/vipwpcs": "^3.0",
+                    "mockery/mockery": "^1.6",
+                    "php-stubs/wordpress-globals": "^0.2.0",
+                    "php-stubs/wordpress-stubs": "^6.6",
+                    "phpcompatibility/phpcompatibility-wp": "^2.1",
+                    "phpunit/phpunit": "^10",
+                    "psalm/phar": "^5.26",
+                    "slevomat/coding-standard": "^8.15"
+                },
+                "time": "2025-01-06T08:28:51+00:00",
+                "type": "library",
+                "autoload": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\": "inc/"
+                    },
+                    "files": [
+                        "functions.php",
+                        "inc/Integrations/constants.php"
+                    ]
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\Tests\\": "tests/inc/"
+                    }
+                },
+                "scripts": {
+                    "phpcs": [
+                        "phpcs"
+                    ],
+                    "phpcs-fix": [
+                        "phpcbf"
+                    ],
+                    "psalm": [
+                        "psalm.phar --no-cache"
+                    ],
+                    "test": [
+                        "phpunit"
+                    ],
+                    "test-coverage": [
+                        "phpunit --coverage-clover ./coverage/phpunit/clover.xml"
+                    ]
+                },
+                "license": [
+                    "GPL-2.0-or-later"
+                ],
+                "authors": [
+                    {
+                        "name": "WPVIP"
+                    }
+                ],
+                "support": {
+                    "source": "https://github.com/Automattic/remote-data-blocks/tree/v0.5.0",
+                    "issues": "https://github.com/Automattic/remote-data-blocks/issues"
+                }
+            },
+            {
+                "name": "automattic/remote-data-blocks",
+                "version": "v0.6.0",
+                "version_normalized": "0.6.0.0",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/Automattic/remote-data-blocks.git",
+                    "reference": "50988441c44b6bb091284c0e32e3db287ada32fe"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/Automattic/remote-data-blocks/zipball/50988441c44b6bb091284c0e32e3db287ada32fe",
+                    "reference": "50988441c44b6bb091284c0e32e3db287ada32fe",
+                    "shasum": ""
+                },
+                "require": {
+                    "erusev/parsedown": "^1.7",
+                    "galbar/jsonpath": "^3.0",
+                    "guzzlehttp/guzzle": "^7.8",
+                    "kevinrob/guzzle-cache-middleware": "^6.0",
+                    "php": ">=8.1",
+                    "psr/log": "^3.0"
+                },
+                "require-dev": {
+                    "automattic/vipwpcs": "^3.0",
+                    "mockery/mockery": "^1.6",
+                    "php-stubs/wordpress-globals": "^0.2.0",
+                    "php-stubs/wordpress-stubs": "^6.6",
+                    "php-stubs/wordpress-tests-stubs": "^6.7",
+                    "phpcompatibility/phpcompatibility-wp": "^2.1",
+                    "phpunit/phpunit": "^9",
+                    "psalm/phar": "^5.26",
+                    "slevomat/coding-standard": "^8.15",
+                    "wp-phpunit/wp-phpunit": "^6.7",
+                    "yoast/phpunit-polyfills": "^2.0"
+                },
+                "time": "2025-01-11T06:40:41+00:00",
+                "type": "library",
+                "autoload": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\": "inc/"
+                    },
+                    "files": [
+                        "functions.php",
+                        "inc/Integrations/constants.php"
+                    ]
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\Tests\\": "tests/inc/"
+                    }
+                },
+                "scripts": {
+                    "phpcs": [
+                        "phpcs"
+                    ],
+                    "phpcs-fix": [
+                        "phpcbf"
+                    ],
+                    "psalm": [
+                        "psalm.phar --no-cache"
+                    ],
+                    "test": [
+                        "phpunit"
+                    ],
+                    "test-coverage": [
+                        "phpunit --coverage-clover ./coverage/phpunit/clover.xml"
+                    ]
+                },
+                "license": [
+                    "GPL-2.0-or-later"
+                ],
+                "authors": [
+                    {
+                        "name": "WPVIP"
+                    }
+                ],
+                "support": {
+                    "source": "https://github.com/Automattic/remote-data-blocks/tree/v0.6.0",
+                    "issues": "https://github.com/Automattic/remote-data-blocks/issues"
+                }
+            },
+            {
+                "name": "automattic/remote-data-blocks",
+                "version": "v0.7.0",
+                "version_normalized": "0.7.0.0",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/Automattic/remote-data-blocks.git",
+                    "reference": "99d84b3a6608f2cc3c4dbbcec3cf0718b9420bf6"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/Automattic/remote-data-blocks/zipball/99d84b3a6608f2cc3c4dbbcec3cf0718b9420bf6",
+                    "reference": "99d84b3a6608f2cc3c4dbbcec3cf0718b9420bf6",
+                    "shasum": ""
+                },
+                "require": {
+                    "erusev/parsedown": "^1.7",
+                    "galbar/jsonpath": "^3.0",
+                    "guzzlehttp/guzzle": "^7.8",
+                    "kevinrob/guzzle-cache-middleware": "^6.0",
+                    "php": ">=8.1",
+                    "psr/log": "^3.0"
+                },
+                "require-dev": {
+                    "automattic/vipwpcs": "^3.0",
+                    "mockery/mockery": "^1.6",
+                    "php-stubs/wordpress-globals": "^0.2.0",
+                    "php-stubs/wordpress-stubs": "^6.6",
+                    "php-stubs/wordpress-tests-stubs": "^6.7",
+                    "phpcompatibility/phpcompatibility-wp": "^2.1",
+                    "phpunit/phpunit": "^9",
+                    "psalm/phar": "^5.26",
+                    "slevomat/coding-standard": "^8.15",
+                    "wp-phpunit/wp-phpunit": "^6.7",
+                    "yoast/phpunit-polyfills": "^3.1"
+                },
+                "time": "2025-01-18T05:05:43+00:00",
+                "type": "library",
+                "autoload": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\": "inc/"
+                    },
+                    "files": [
+                        "functions.php",
+                        "inc/Integrations/constants.php"
+                    ]
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\Tests\\": "tests/inc/"
+                    }
+                },
+                "scripts": {
+                    "phpcs": [
+                        "phpcs"
+                    ],
+                    "phpcs-fix": [
+                        "phpcbf"
+                    ],
+                    "psalm": [
+                        "psalm.phar --no-cache"
+                    ],
+                    "test": [
+                        "phpunit"
+                    ],
+                    "test-coverage": [
+                        "phpunit --coverage-clover ./coverage/phpunit/clover.xml"
+                    ]
+                },
+                "license": [
+                    "GPL-2.0-or-later"
+                ],
+                "authors": [
+                    {
+                        "name": "WPVIP"
+                    }
+                ],
+                "support": {
+                    "source": "https://github.com/Automattic/remote-data-blocks/tree/v0.7.0",
+                    "issues": "https://github.com/Automattic/remote-data-blocks/issues"
+                }
+            },
+            {
+                "name": "automattic/remote-data-blocks",
+                "version": "v0.7.1",
+                "version_normalized": "0.7.1.0",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/Automattic/remote-data-blocks.git",
+                    "reference": "2c009105297f2f17be0cb6e2b334ea31c1f3f796"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/Automattic/remote-data-blocks/zipball/2c009105297f2f17be0cb6e2b334ea31c1f3f796",
+                    "reference": "2c009105297f2f17be0cb6e2b334ea31c1f3f796",
+                    "shasum": ""
+                },
+                "require": {
+                    "erusev/parsedown": "^1.7",
+                    "galbar/jsonpath": "^3.0",
+                    "guzzlehttp/guzzle": "^7.8",
+                    "kevinrob/guzzle-cache-middleware": "^6.0",
+                    "php": ">=8.1",
+                    "psr/log": "^3.0"
+                },
+                "require-dev": {
+                    "automattic/vipwpcs": "^3.0",
+                    "mockery/mockery": "^1.6",
+                    "php-stubs/wordpress-globals": "^0.2.0",
+                    "php-stubs/wordpress-stubs": "^6.6",
+                    "php-stubs/wordpress-tests-stubs": "^6.7",
+                    "phpcompatibility/phpcompatibility-wp": "^2.1",
+                    "phpunit/phpunit": "^9",
+                    "psalm/phar": "^5.26",
+                    "slevomat/coding-standard": "^8.15",
+                    "wp-phpunit/wp-phpunit": "^6.7",
+                    "yoast/phpunit-polyfills": "^3.1"
+                },
+                "time": "2025-01-19T05:05:06+00:00",
+                "type": "library",
+                "autoload": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\": "inc/"
+                    },
+                    "files": [
+                        "functions.php",
+                        "inc/Integrations/constants.php"
+                    ]
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\Tests\\": "tests/inc/"
+                    }
+                },
+                "scripts": {
+                    "phpcs": [
+                        "phpcs"
+                    ],
+                    "phpcs-fix": [
+                        "phpcbf"
+                    ],
+                    "psalm": [
+                        "psalm.phar --no-cache"
+                    ],
+                    "test": [
+                        "phpunit"
+                    ],
+                    "test-coverage": [
+                        "phpunit --coverage-clover ./coverage/phpunit/clover.xml"
+                    ]
+                },
+                "license": [
+                    "GPL-2.0-or-later"
+                ],
+                "authors": [
+                    {
+                        "name": "WPVIP"
+                    }
+                ],
+                "support": {
+                    "source": "https://github.com/Automattic/remote-data-blocks/tree/v0.7.1",
+                    "issues": "https://github.com/Automattic/remote-data-blocks/issues"
+                }
+            },
+            {
+                "name": "automattic/remote-data-blocks",
+                "version": "v0.7.2",
+                "version_normalized": "0.7.2.0",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/Automattic/remote-data-blocks.git",
+                    "reference": "63354fba75d672c31d38bed95444056a4ae40329"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/Automattic/remote-data-blocks/zipball/63354fba75d672c31d38bed95444056a4ae40329",
+                    "reference": "63354fba75d672c31d38bed95444056a4ae40329",
+                    "shasum": ""
+                },
+                "require": {
+                    "erusev/parsedown": "^1.7",
+                    "galbar/jsonpath": "^3.0",
+                    "guzzlehttp/guzzle": "^7.8",
+                    "kevinrob/guzzle-cache-middleware": "^6.0",
+                    "php": ">=8.1",
+                    "psr/log": "^3.0"
+                },
+                "require-dev": {
+                    "automattic/vipwpcs": "^3.0",
+                    "mockery/mockery": "^1.6",
+                    "php-stubs/wordpress-globals": "^0.2.0",
+                    "php-stubs/wordpress-stubs": "^6.6",
+                    "php-stubs/wordpress-tests-stubs": "^6.7",
+                    "phpcompatibility/phpcompatibility-wp": "^2.1",
+                    "phpunit/phpunit": "^9",
+                    "psalm/phar": "^5.26",
+                    "slevomat/coding-standard": "^8.15",
+                    "wp-phpunit/wp-phpunit": "^6.7",
+                    "yoast/phpunit-polyfills": "^3.1"
+                },
+                "time": "2025-01-22T22:36:53+00:00",
+                "type": "library",
+                "autoload": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\": "inc/"
+                    },
+                    "files": [
+                        "functions.php",
+                        "inc/Integrations/constants.php"
+                    ]
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\Tests\\": "tests/inc/"
+                    }
+                },
+                "scripts": {
+                    "phpcs": [
+                        "phpcs"
+                    ],
+                    "phpcs-fix": [
+                        "phpcbf"
+                    ],
+                    "psalm": [
+                        "psalm.phar --no-cache"
+                    ],
+                    "test": [
+                        "phpunit"
+                    ],
+                    "test-coverage": [
+                        "phpunit --coverage-clover ./coverage/phpunit/clover.xml"
+                    ]
+                },
+                "license": [
+                    "GPL-2.0-or-later"
+                ],
+                "authors": [
+                    {
+                        "name": "WPVIP"
+                    }
+                ],
+                "support": {
+                    "source": "https://github.com/Automattic/remote-data-blocks/tree/v0.7.2",
+                    "issues": "https://github.com/Automattic/remote-data-blocks/issues"
+                }
+            },
+            {
+                "name": "automattic/remote-data-blocks",
+                "version": "v0.7.3",
+                "version_normalized": "0.7.3.0",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/Automattic/remote-data-blocks.git",
+                    "reference": "634a6ff4d24224d3f183868bf37f83ef55fe8dfa"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/Automattic/remote-data-blocks/zipball/634a6ff4d24224d3f183868bf37f83ef55fe8dfa",
+                    "reference": "634a6ff4d24224d3f183868bf37f83ef55fe8dfa",
+                    "shasum": ""
+                },
+                "require": {
+                    "erusev/parsedown": "^1.7",
+                    "galbar/jsonpath": "^3.0",
+                    "guzzlehttp/guzzle": "^7.8",
+                    "kevinrob/guzzle-cache-middleware": "^6.0",
+                    "php": ">=8.1",
+                    "psr/log": "^3.0"
+                },
+                "require-dev": {
+                    "automattic/vipwpcs": "^3.0",
+                    "mockery/mockery": "^1.6",
+                    "php-stubs/wordpress-globals": "^0.2.0",
+                    "php-stubs/wordpress-stubs": "^6.6",
+                    "php-stubs/wordpress-tests-stubs": "^6.7",
+                    "phpcompatibility/phpcompatibility-wp": "^2.1",
+                    "phpunit/phpunit": "^9",
+                    "psalm/phar": "^5.26",
+                    "slevomat/coding-standard": "^8.15",
+                    "wp-phpunit/wp-phpunit": "^6.7",
+                    "yoast/phpunit-polyfills": "^3.1"
+                },
+                "time": "2025-01-23T20:10:53+00:00",
+                "type": "library",
+                "autoload": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\": "inc/"
+                    },
+                    "files": [
+                        "functions.php",
+                        "inc/Integrations/constants.php"
+                    ]
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\Tests\\": "tests/inc/"
+                    }
+                },
+                "scripts": {
+                    "phpcs": [
+                        "phpcs"
+                    ],
+                    "phpcs-fix": [
+                        "phpcbf"
+                    ],
+                    "psalm": [
+                        "psalm.phar --no-cache"
+                    ],
+                    "test": [
+                        "phpunit"
+                    ],
+                    "test-coverage": [
+                        "phpunit --coverage-clover ./coverage/phpunit/clover.xml"
+                    ]
+                },
+                "license": [
+                    "GPL-2.0-or-later"
+                ],
+                "authors": [
+                    {
+                        "name": "WPVIP"
+                    }
+                ],
+                "support": {
+                    "source": "https://github.com/Automattic/remote-data-blocks/tree/v0.7.3",
+                    "issues": "https://github.com/Automattic/remote-data-blocks/issues"
+                }
+            },
+            {
+                "name": "automattic/remote-data-blocks",
+                "version": "v0.8.0",
+                "version_normalized": "0.8.0.0",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/Automattic/remote-data-blocks.git",
+                    "reference": "32c6fb59de62edf2c92f873b71a5065495c33568"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/Automattic/remote-data-blocks/zipball/32c6fb59de62edf2c92f873b71a5065495c33568",
+                    "reference": "32c6fb59de62edf2c92f873b71a5065495c33568",
+                    "shasum": ""
+                },
+                "require": {
+                    "erusev/parsedown": "^1.7",
+                    "galbar/jsonpath": "^3.0",
+                    "guzzlehttp/guzzle": "^7.8",
+                    "kevinrob/guzzle-cache-middleware": "^6.0",
+                    "php": ">=8.1",
+                    "psr/log": "^3.0",
+                    "symfony/var-exporter": "^6"
+                },
+                "require-dev": {
+                    "automattic/vipwpcs": "^3.0",
+                    "mockery/mockery": "^1.6",
+                    "php-stubs/wordpress-globals": "^0.2.0",
+                    "php-stubs/wordpress-stubs": "^6.6",
+                    "php-stubs/wordpress-tests-stubs": "^6.7",
+                    "phpcompatibility/phpcompatibility-wp": "^2.1",
+                    "phpunit/phpunit": "^9",
+                    "psalm/phar": "^6.0",
+                    "slevomat/coding-standard": "^8.15",
+                    "wp-phpunit/wp-phpunit": "^6.7",
+                    "yoast/phpunit-polyfills": "^3.1"
+                },
+                "time": "2025-02-03T13:22:22+00:00",
+                "type": "library",
+                "autoload": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\": "inc/"
+                    },
+                    "files": [
+                        "functions.php",
+                        "inc/Integrations/constants.php"
+                    ]
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\Tests\\": "tests/inc/"
+                    }
+                },
+                "scripts": {
+                    "phpcs": [
+                        "phpcs"
+                    ],
+                    "phpcs-fix": [
+                        "phpcbf"
+                    ],
+                    "psalm": [
+                        "psalm.phar --no-cache"
+                    ],
+                    "test": [
+                        "phpunit"
+                    ],
+                    "test-coverage": [
+                        "phpunit --coverage-clover ./coverage/phpunit/clover.xml"
+                    ]
+                },
+                "license": [
+                    "GPL-2.0-or-later"
+                ],
+                "authors": [
+                    {
+                        "name": "WPVIP"
+                    }
+                ],
+                "support": {
+                    "source": "https://github.com/Automattic/remote-data-blocks/tree/v0.8.0",
+                    "issues": "https://github.com/Automattic/remote-data-blocks/issues"
+                }
+            },
+            {
+                "name": "automattic/remote-data-blocks",
+                "version": "v0.9.0",
+                "version_normalized": "0.9.0.0",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/Automattic/remote-data-blocks.git",
+                    "reference": "4f6e62acc93e5218eb2417ffabd90be6812c1db0"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/Automattic/remote-data-blocks/zipball/4f6e62acc93e5218eb2417ffabd90be6812c1db0",
+                    "reference": "4f6e62acc93e5218eb2417ffabd90be6812c1db0",
+                    "shasum": ""
+                },
+                "require": {
+                    "erusev/parsedown": "^1.7",
+                    "galbar/jsonpath": "^3.0",
+                    "guzzlehttp/guzzle": "^7.8",
+                    "kevinrob/guzzle-cache-middleware": "^6.0",
+                    "php": ">=8.1",
+                    "psr/log": "^3.0",
+                    "symfony/var-exporter": "^6"
+                },
+                "require-dev": {
+                    "automattic/vipwpcs": "^3.0",
+                    "mockery/mockery": "^1.6",
+                    "php-stubs/wordpress-globals": "^0.2.0",
+                    "php-stubs/wordpress-stubs": "^6.6",
+                    "php-stubs/wordpress-tests-stubs": "^6.7",
+                    "phpcompatibility/phpcompatibility-wp": "^2.1",
+                    "phpunit/phpunit": "^9",
+                    "psalm/phar": "^6.5",
+                    "slevomat/coding-standard": "^8.15",
+                    "wp-phpunit/wp-phpunit": "^6.7",
+                    "yoast/phpunit-polyfills": "^4.0"
+                },
+                "time": "2025-02-21T13:59:22+00:00",
+                "type": "library",
+                "autoload": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\": "inc/"
+                    },
+                    "files": [
+                        "functions.php",
+                        "inc/Integrations/constants.php"
+                    ]
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\Tests\\": "tests/inc/"
+                    }
+                },
+                "scripts": {
+                    "phpcs": [
+                        "phpcs"
+                    ],
+                    "phpcs-fix": [
+                        "phpcbf"
+                    ],
+                    "psalm": [
+                        "psalm.phar --no-cache"
+                    ],
+                    "test": [
+                        "phpunit"
+                    ],
+                    "test-coverage": [
+                        "phpunit --coverage-clover ./coverage/phpunit/clover.xml"
+                    ]
+                },
+                "license": [
+                    "GPL-2.0-or-later"
+                ],
+                "authors": [
+                    {
+                        "name": "WPVIP"
+                    }
+                ],
+                "support": {
+                    "source": "https://github.com/Automattic/remote-data-blocks/tree/v0.9.0",
+                    "issues": "https://github.com/Automattic/remote-data-blocks/issues"
+                }
+            },
+            {
+                "name": "automattic/remote-data-blocks",
+                "version": "v0.9.1",
+                "version_normalized": "0.9.1.0",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/Automattic/remote-data-blocks.git",
+                    "reference": "d5260cfaff7376c80d9200b8a69846dd8817b9c4"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/Automattic/remote-data-blocks/zipball/d5260cfaff7376c80d9200b8a69846dd8817b9c4",
+                    "reference": "d5260cfaff7376c80d9200b8a69846dd8817b9c4",
+                    "shasum": ""
+                },
+                "require": {
+                    "erusev/parsedown": "^1.7",
+                    "galbar/jsonpath": "^3.0",
+                    "guzzlehttp/guzzle": "^7.8",
+                    "kevinrob/guzzle-cache-middleware": "^6.0",
+                    "php": ">=8.1",
+                    "psr/log": "^3.0",
+                    "symfony/var-exporter": "^6"
+                },
+                "require-dev": {
+                    "automattic/vipwpcs": "^3.0",
+                    "mockery/mockery": "^1.6",
+                    "php-stubs/wordpress-globals": "^0.2.0",
+                    "php-stubs/wordpress-stubs": "^6.6",
+                    "php-stubs/wordpress-tests-stubs": "^6.7",
+                    "phpcompatibility/phpcompatibility-wp": "^2.1",
+                    "phpunit/phpunit": "^9",
+                    "psalm/phar": "^6.5",
+                    "slevomat/coding-standard": "^8.15",
+                    "wp-phpunit/wp-phpunit": "^6.7",
+                    "yoast/phpunit-polyfills": "^4.0"
+                },
+                "time": "2025-02-25T19:26:04+00:00",
+                "type": "library",
+                "autoload": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\": "inc/"
+                    },
+                    "files": [
+                        "functions.php",
+                        "inc/Integrations/constants.php"
+                    ]
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\Tests\\": "tests/inc/"
+                    }
+                },
+                "scripts": {
+                    "phpcs": [
+                        "phpcs"
+                    ],
+                    "phpcs-fix": [
+                        "phpcbf"
+                    ],
+                    "psalm": [
+                        "psalm.phar --no-cache"
+                    ],
+                    "test": [
+                        "phpunit"
+                    ],
+                    "test-coverage": [
+                        "phpunit --coverage-clover ./coverage/phpunit/clover.xml"
+                    ]
+                },
+                "license": [
+                    "GPL-2.0-or-later"
+                ],
+                "authors": [
+                    {
+                        "name": "WPVIP"
+                    }
+                ],
+                "support": {
+                    "source": "https://github.com/Automattic/remote-data-blocks/tree/v0.9.1",
+                    "issues": "https://github.com/Automattic/remote-data-blocks/issues"
+                }
+            },
+            {
+                "name": "automattic/remote-data-blocks",
+                "version": "v1.0.0",
+                "version_normalized": "1.0.0.0",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/Automattic/remote-data-blocks.git",
+                    "reference": "46e8c1365da07d7cb23ac5fa973dc25eb1ee24ff"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/Automattic/remote-data-blocks/zipball/46e8c1365da07d7cb23ac5fa973dc25eb1ee24ff",
+                    "reference": "46e8c1365da07d7cb23ac5fa973dc25eb1ee24ff",
+                    "shasum": ""
+                },
+                "require": {
+                    "erusev/parsedown": "^1.7",
+                    "galbar/jsonpath": "^3.0",
+                    "guzzlehttp/guzzle": "^7.8",
+                    "kevinrob/guzzle-cache-middleware": "^6.0",
+                    "php": ">=8.1",
+                    "symfony/var-exporter": "^6"
+                },
+                "require-dev": {
+                    "automattic/vipwpcs": "^3.0",
+                    "mockery/mockery": "^1.6",
+                    "php-stubs/wordpress-globals": "^0.2.0",
+                    "php-stubs/wordpress-stubs": "^6.6",
+                    "php-stubs/wordpress-tests-stubs": "^6.7",
+                    "phpcompatibility/phpcompatibility-wp": "^2.1",
+                    "phpunit/phpunit": "^9",
+                    "psalm/phar": "^6.5",
+                    "slevomat/coding-standard": "^8.15",
+                    "wp-phpunit/wp-phpunit": "^6.7",
+                    "yoast/phpunit-polyfills": "^4.0"
+                },
+                "time": "2025-05-17T05:55:28+00:00",
+                "type": "library",
+                "autoload": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\": "inc/"
+                    },
+                    "files": [
+                        "functions.php",
+                        "inc/Integrations/constants.php"
+                    ]
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\Tests\\": "tests/inc/"
+                    }
+                },
+                "scripts": {
+                    "phpcs": [
+                        "phpcs"
+                    ],
+                    "phpcs-fix": [
+                        "phpcbf"
+                    ],
+                    "psalm": [
+                        "psalm.phar --no-cache"
+                    ],
+                    "test": [
+                        "phpunit"
+                    ],
+                    "test-coverage": [
+                        "phpunit --coverage-clover ./coverage/phpunit/clover.xml"
+                    ]
+                },
+                "license": [
+                    "GPL-2.0-or-later"
+                ],
+                "authors": [
+                    {
+                        "name": "WPVIP"
+                    }
+                ],
+                "support": {
+                    "source": "https://github.com/Automattic/remote-data-blocks/tree/v1.0.0",
+                    "issues": "https://github.com/Automattic/remote-data-blocks/issues"
+                }
+            },
+            {
+                "name": "automattic/remote-data-blocks",
+                "version": "v1.0.1",
+                "version_normalized": "1.0.1.0",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/Automattic/remote-data-blocks.git",
+                    "reference": "8ee9967a9e5f66f2a975eb6543fbe1e6f5efc834"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/Automattic/remote-data-blocks/zipball/8ee9967a9e5f66f2a975eb6543fbe1e6f5efc834",
+                    "reference": "8ee9967a9e5f66f2a975eb6543fbe1e6f5efc834",
+                    "shasum": ""
+                },
+                "require": {
+                    "erusev/parsedown": "^1.7",
+                    "galbar/jsonpath": "^3.0",
+                    "guzzlehttp/guzzle": "^7.8",
+                    "kevinrob/guzzle-cache-middleware": "^6.0",
+                    "php": ">=8.1",
+                    "symfony/var-exporter": "^6"
+                },
+                "require-dev": {
+                    "automattic/vipwpcs": "^3.0",
+                    "mockery/mockery": "^1.6",
+                    "php-stubs/wordpress-globals": "^0.2.0",
+                    "php-stubs/wordpress-stubs": "^6.6",
+                    "php-stubs/wordpress-tests-stubs": "^6.7",
+                    "phpcompatibility/phpcompatibility-wp": "^2.1",
+                    "phpunit/phpunit": "^9",
+                    "psalm/phar": "^6.5",
+                    "slevomat/coding-standard": "^8.15",
+                    "wp-phpunit/wp-phpunit": "^6.7",
+                    "yoast/phpunit-polyfills": "^4.0"
+                },
+                "time": "2025-06-04T17:38:14+00:00",
+                "type": "library",
+                "autoload": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\": "inc/"
+                    },
+                    "files": [
+                        "functions.php",
+                        "inc/Integrations/constants.php"
+                    ]
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\Tests\\": "tests/inc/"
+                    }
+                },
+                "scripts": {
+                    "phpcs": [
+                        "phpcs"
+                    ],
+                    "phpcs-fix": [
+                        "phpcbf"
+                    ],
+                    "psalm": [
+                        "psalm.phar --no-cache"
+                    ],
+                    "test": [
+                        "phpunit"
+                    ],
+                    "test-coverage": [
+                        "phpunit --coverage-clover ./coverage/phpunit/clover.xml"
+                    ]
+                },
+                "license": [
+                    "GPL-2.0-or-later"
+                ],
+                "authors": [
+                    {
+                        "name": "WPVIP"
+                    }
+                ],
+                "support": {
+                    "source": "https://github.com/Automattic/remote-data-blocks/tree/v1.0.1",
+                    "issues": "https://github.com/Automattic/remote-data-blocks/issues"
+                }
+            },
+            {
+                "name": "automattic/remote-data-blocks",
+                "version": "v1.0.2",
+                "version_normalized": "1.0.2.0",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/Automattic/remote-data-blocks.git",
+                    "reference": "b04cbea3f19862c6ff6c9c9447d009ebd55a5ddd"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/Automattic/remote-data-blocks/zipball/b04cbea3f19862c6ff6c9c9447d009ebd55a5ddd",
+                    "reference": "b04cbea3f19862c6ff6c9c9447d009ebd55a5ddd",
+                    "shasum": ""
+                },
+                "require": {
+                    "erusev/parsedown": "^1.7",
+                    "galbar/jsonpath": "^3.0",
+                    "guzzlehttp/guzzle": "^7.8",
+                    "kevinrob/guzzle-cache-middleware": "^6.0",
+                    "php": ">=8.1",
+                    "symfony/var-exporter": "^6"
+                },
+                "require-dev": {
+                    "automattic/vipwpcs": "^3.0",
+                    "mockery/mockery": "^1.6",
+                    "php-stubs/wordpress-globals": "^0.2.0",
+                    "php-stubs/wordpress-stubs": "^6.6",
+                    "php-stubs/wordpress-tests-stubs": "^6.7",
+                    "phpcompatibility/phpcompatibility-wp": "^2.1",
+                    "phpunit/phpunit": "^9",
+                    "psalm/phar": "^6.5",
+                    "slevomat/coding-standard": "^8.15",
+                    "wp-phpunit/wp-phpunit": "^6.7",
+                    "yoast/phpunit-polyfills": "^4.0"
+                },
+                "time": "2025-06-23T01:09:36+00:00",
+                "type": "library",
+                "autoload": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\": "inc/"
+                    },
+                    "files": [
+                        "functions.php",
+                        "inc/Integrations/constants.php"
+                    ]
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\Tests\\": "tests/inc/"
+                    }
+                },
+                "scripts": {
+                    "phpcs": [
+                        "phpcs"
+                    ],
+                    "phpcs-fix": [
+                        "phpcbf"
+                    ],
+                    "psalm": [
+                        "psalm.phar --no-cache"
+                    ],
+                    "test": [
+                        "phpunit"
+                    ],
+                    "test-coverage": [
+                        "phpunit --coverage-clover ./coverage/phpunit/clover.xml"
+                    ]
+                },
+                "license": [
+                    "GPL-2.0-or-later"
+                ],
+                "authors": [
+                    {
+                        "name": "WPVIP"
+                    }
+                ],
+                "support": {
+                    "source": "https://github.com/Automattic/remote-data-blocks/tree/v1.0.2",
+                    "issues": "https://github.com/Automattic/remote-data-blocks/issues"
+                }
+            },
+            {
+                "name": "automattic/remote-data-blocks",
+                "version": "v1.0.3",
+                "version_normalized": "1.0.3.0",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/Automattic/remote-data-blocks.git",
+                    "reference": "25a8b82ee2cec4cca85a74d4590d34310171acfa"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/Automattic/remote-data-blocks/zipball/25a8b82ee2cec4cca85a74d4590d34310171acfa",
+                    "reference": "25a8b82ee2cec4cca85a74d4590d34310171acfa",
+                    "shasum": ""
+                },
+                "require": {
+                    "erusev/parsedown": "^1.7",
+                    "galbar/jsonpath": "^3.0",
+                    "guzzlehttp/guzzle": "^7.8",
+                    "kevinrob/guzzle-cache-middleware": "^6.0",
+                    "php": ">=8.1",
+                    "symfony/var-exporter": "^6"
+                },
+                "require-dev": {
+                    "automattic/vipwpcs": "^3.0",
+                    "mockery/mockery": "^1.6",
+                    "php-stubs/wordpress-globals": "^0.2.0",
+                    "php-stubs/wordpress-stubs": "^6.6",
+                    "php-stubs/wordpress-tests-stubs": "^6.7",
+                    "phpcompatibility/phpcompatibility-wp": "^2.1",
+                    "phpunit/phpunit": "^9",
+                    "psalm/phar": "^6.5",
+                    "slevomat/coding-standard": "^8.15",
+                    "wp-phpunit/wp-phpunit": "^6.7",
+                    "yoast/phpunit-polyfills": "^4.0"
+                },
+                "time": "2025-07-25T05:09:40+00:00",
+                "type": "library",
+                "autoload": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\": "inc/"
+                    },
+                    "files": [
+                        "functions.php",
+                        "inc/Integrations/constants.php"
+                    ]
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\Tests\\": "tests/inc/"
+                    }
+                },
+                "scripts": {
+                    "phpcs": [
+                        "phpcs"
+                    ],
+                    "phpcs-fix": [
+                        "phpcbf"
+                    ],
+                    "psalm": [
+                        "psalm.phar --no-cache"
+                    ],
+                    "test": [
+                        "phpunit"
+                    ],
+                    "test-coverage": [
+                        "phpunit --coverage-clover ./coverage/phpunit/clover.xml"
+                    ]
+                },
+                "license": [
+                    "GPL-2.0-or-later"
+                ],
+                "authors": [
+                    {
+                        "name": "WPVIP"
+                    }
+                ],
+                "support": {
+                    "source": "https://github.com/Automattic/remote-data-blocks/tree/v1.0.3",
+                    "issues": "https://github.com/Automattic/remote-data-blocks/issues"
+                }
+            },
+            {
+                "name": "automattic/remote-data-blocks",
+                "version": "v1.0.4",
+                "version_normalized": "1.0.4.0",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/Automattic/remote-data-blocks.git",
+                    "reference": "0e301742b47671f70d87a0a71f4c13055c6f3135"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/Automattic/remote-data-blocks/zipball/0e301742b47671f70d87a0a71f4c13055c6f3135",
+                    "reference": "0e301742b47671f70d87a0a71f4c13055c6f3135",
+                    "shasum": ""
+                },
+                "require": {
+                    "erusev/parsedown": "^1.7",
+                    "galbar/jsonpath": "^3.0",
+                    "guzzlehttp/guzzle": "^7.8",
+                    "kevinrob/guzzle-cache-middleware": "^6.0",
+                    "php": ">=8.1",
+                    "symfony/var-exporter": "^6"
+                },
+                "require-dev": {
+                    "automattic/vipwpcs": "^3.0",
+                    "mockery/mockery": "^1.6",
+                    "php-stubs/wordpress-globals": "^0.2.0",
+                    "php-stubs/wordpress-stubs": "^6.6",
+                    "php-stubs/wordpress-tests-stubs": "^6.7",
+                    "phpcompatibility/phpcompatibility-wp": "^2.1",
+                    "phpunit/phpunit": "^9",
+                    "psalm/phar": "^6.5",
+                    "slevomat/coding-standard": "^8.15",
+                    "wp-phpunit/wp-phpunit": "^6.7",
+                    "yoast/phpunit-polyfills": "^4.0"
+                },
+                "time": "2025-07-25T05:36:49+00:00",
+                "type": "library",
+                "autoload": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\": "inc/"
+                    },
+                    "files": [
+                        "functions.php",
+                        "inc/Integrations/constants.php"
+                    ]
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\Tests\\": "tests/inc/"
+                    }
+                },
+                "scripts": {
+                    "phpcs": [
+                        "phpcs"
+                    ],
+                    "phpcs-fix": [
+                        "phpcbf"
+                    ],
+                    "psalm": [
+                        "psalm.phar --no-cache"
+                    ],
+                    "test": [
+                        "phpunit"
+                    ],
+                    "test-coverage": [
+                        "phpunit --coverage-clover ./coverage/phpunit/clover.xml"
+                    ]
+                },
+                "license": [
+                    "GPL-2.0-or-later"
+                ],
+                "authors": [
+                    {
+                        "name": "WPVIP"
+                    }
+                ],
+                "support": {
+                    "source": "https://github.com/Automattic/remote-data-blocks/tree/v1.0.4",
+                    "issues": "https://github.com/Automattic/remote-data-blocks/issues"
+                }
+            },
+            {
+                "name": "automattic/remote-data-blocks",
+                "version": "v1.0.5",
+                "version_normalized": "1.0.5.0",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/Automattic/remote-data-blocks.git",
+                    "reference": "d8c09a4122b62dd18240bfb2609890c3c65d8297"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/Automattic/remote-data-blocks/zipball/d8c09a4122b62dd18240bfb2609890c3c65d8297",
+                    "reference": "d8c09a4122b62dd18240bfb2609890c3c65d8297",
+                    "shasum": ""
+                },
+                "require": {
+                    "erusev/parsedown": "^1.7",
+                    "galbar/jsonpath": "^3.0",
+                    "guzzlehttp/guzzle": "^7.8",
+                    "kevinrob/guzzle-cache-middleware": "^6.0",
+                    "php": ">=8.1",
+                    "symfony/var-exporter": "^6"
+                },
+                "require-dev": {
+                    "automattic/vipwpcs": "^3.0",
+                    "mockery/mockery": "^1.6",
+                    "php-stubs/wordpress-globals": "^0.2.0",
+                    "php-stubs/wordpress-stubs": "^6.6",
+                    "php-stubs/wordpress-tests-stubs": "^6.7",
+                    "phpcompatibility/phpcompatibility-wp": "^2.1",
+                    "phpunit/phpunit": "^9",
+                    "psalm/phar": "^6.5",
+                    "slevomat/coding-standard": "^8.15",
+                    "wp-phpunit/wp-phpunit": "^6.7",
+                    "yoast/phpunit-polyfills": "^4.0"
+                },
+                "time": "2025-08-04T18:12:33+00:00",
+                "type": "library",
+                "autoload": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\": "inc/"
+                    },
+                    "files": [
+                        "functions.php",
+                        "inc/Integrations/constants.php"
+                    ]
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "RemoteDataBlocks\\Tests\\": "tests/inc/"
+                    }
+                },
+                "scripts": {
+                    "phpcs": [
+                        "phpcs"
+                    ],
+                    "phpcs-fix": [
+                        "phpcbf"
+                    ],
+                    "psalm": [
+                        "psalm.phar --no-cache"
+                    ],
+                    "test": [
+                        "phpunit"
+                    ],
+                    "test-coverage": [
+                        "phpunit --coverage-clover ./coverage/phpunit/clover.xml"
+                    ]
+                },
+                "license": [
+                    "GPL-2.0-or-later"
+                ],
+                "authors": [
+                    {
+                        "name": "Automattic"
+                    }
+                ],
+                "support": {
+                    "source": "https://github.com/Automattic/remote-data-blocks/tree/v1.0.5",
+                    "issues": "https://github.com/Automattic/remote-data-blocks/issues"
+                }
+            }
+        ]
+    }
+}
