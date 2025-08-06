@@ -8,6 +8,10 @@
             "url": "git@github.com:fairpm/fair-plugin.git"
         },
         {
+            "type": "vcs",
+            "url": "git@github.com:automattic/remote-data-blocks.git"
+        },
+        {
             "type": "package",
             "package": {
                 "name": "fair/mini-fair-repo",
