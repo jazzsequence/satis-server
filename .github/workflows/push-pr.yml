@@ -41,10 +41,11 @@ jobs:
           echo "Host *.drush.in PubkeyAcceptedKeyTypes +ssh-rsa" >> ~/.ssh/config
           echo "StrictHostKeyChecking no" >> ~/.ssh/config
 
+      - name: Configure Composer Auth
+        run: composer config -g github-oauth.github.com ${{ github.token }}
+
       - name: Composer dependencies
         run: composer install
-        env:
-          COMPOSER_AUTH: '{"github-oauth": {"github.com": "${{ github.token }}"}}'
 
       - name: Push to Pantheon
         uses: pantheon-systems/push-to-pantheon@0.7.0
