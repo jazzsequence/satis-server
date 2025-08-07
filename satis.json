@@ -27,7 +27,8 @@
         },
         "dist": {
           "type": "zip",
-          "url": "https://api.github.com/repos/Automattic/remote-data-blocks/zipball/v1.0.5"
+          "url": "https://github.com/Automattic/remote-data-blocks/releases/download/v1.0.5/remote-data-blocks.zip",
+          "reference": "v1.0.5"
         }
       }
     },
