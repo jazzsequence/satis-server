@@ -8,8 +8,29 @@
       "url": "git@github.com:fairpm/fair-plugin.git"
     },
     {
-      "type": "vcs",
-      "url": "git@github.com:automattic/remote-data-blocks.git"
+      "type": "package",
+      "package": {
+        "name": "automattic/remote-data-blocks",
+        "version": "v1.0.5",
+        "type": "wordpress-plugin",
+        "description": "Remote Data Blocks: a WordPress plugin for creating flexible, data-enriched content with remote data integration",
+        "license": "GPL-2.0",
+        "authors": [
+          {
+            "name": "Automattic",
+            "homepage": "https://automattic.com"
+          }
+        ],
+        "support": {
+          "issues": "https://github.com/automattic/remote-data-blocks/issues",
+          "source": "https://github.com/automattic/remote-data-blocks"
+        },
+        "source": {
+          "type": "git",
+          "url": "git@github.com:automattic/remote-data-blocks.git",
+          "reference": "d8c09a4122b62dd18240bfb2609890c3c65d8297"
+        }
+      }
     },
     {
       "type": "package",
