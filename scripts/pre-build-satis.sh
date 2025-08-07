@@ -33,6 +33,8 @@ function patch_satis_json_from_tag() {
     local package_name="$2"
     local tag="$3"
 
+    echo "Getting latest SHA for $package_name for $tag..."
+
     SHA=$(get_sha_from_tag "$repo_url" "$tag")
 
     jq --arg name "$package_name" \
@@ -71,10 +73,8 @@ function get_mini_fair() {
 }
 
 function get_remote_data_blocks() {
-    echo "Getting latest SHA for automattic/remote-data-blocks..."
     REPO_URL="https://github.com/automattic/remote-data-blocks"
     PACKAGE_NAME="automattic/remote-data-blocks"
-    # Get the latest tag (sorted by version, not alphabetical)
     LATEST_TAG=$(get_latest_tag "$REPO_URL")
 
     patch_satis_json_from_tag "$REPO_URL" "$PACKAGE_NAME" "$LATEST_TAG"
@@ -83,8 +83,6 @@ function get_remote_data_blocks() {
 function get_jazzsequence_artists() {
     REPO_URL="https://github.com/jazzsequence/Artists"
     PACKAGE_NAME="jazzsequence/artists"
-    echo "Getting latest SHA for jazzsequence/artists..."
-    # Get the latest tag (sorted by version, not alphabetical)
     LATEST_TAG=$(get_latest_tag "$REPO_URL")
 
     patch_satis_json_from_tag "$REPO_URL" "$PACKAGE_NAME" "$LATEST_TAG"
@@ -93,8 +91,6 @@ function get_jazzsequence_artists() {
 function get_jazzsequence_releases() {
     REPO_URL="https://github.com/jazzsequence/releases"
     PACKAGE_NAME="jazzsequence/releases"
-    echo "Getting latest SHA for jazzsequence/releases..."
-    # Get the latest tag (sorted by version, not alphabetical)
     LATEST_TAG=$(get_latest_tag "$REPO_URL")
 
     patch_satis_json_from_tag "$REPO_URL" "$PACKAGE_NAME" "$LATEST_TAG"
@@ -103,8 +99,6 @@ function get_jazzsequence_releases() {
 function get_jazzsequence_reviews() {
     REPO_URL="https://github.com/jazzsequence/reviews"
     PACKAGE_NAME="jazzsequence/reviews"
-    echo "Getting latest SHA for jazzsequence/reviews..."
-    # Get the latest tag (sorted by version, not alphabetical)
     LATEST_TAG=$(get_latest_tag "$REPO_URL")
 
     patch_satis_json_from_tag "$REPO_URL" "$PACKAGE_NAME" "$LATEST_TAG"
@@ -113,9 +107,6 @@ function get_jazzsequence_reviews() {
 function get_pantheon_content_publisher() {
     REPO_URL="https://github.com/pantheon-systems/pantheon-content-publisher-for-wordpress"
     PACKAGE_NAME="pantheon-systems/pantheon-content-publisher-for-wordpress"
-
-    echo "Getting latest SHA for pantheon-content-publisher-for-wordpress..."
-    # Get the latest tag (sorted by version, not alphabetical)
     LATEST_TAG=$(get_latest_tag "$REPO_URL")
 
     patch_satis_json_from_tag "$REPO_URL" "$PACKAGE_NAME" "$LATEST_TAG"
