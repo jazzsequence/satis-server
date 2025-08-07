@@ -5,10 +5,9 @@
                 "name": "automattic/remote-data-blocks",
                 "version": "v1.0.5",
                 "version_normalized": "1.0.5.0",
-                "source": {
-                    "type": "git",
-                    "url": "git@github.com:automattic/remote-data-blocks.git",
-                    "reference": "d8c09a4122b62dd18240bfb2609890c3c65d8297"
+                "dist": {
+                    "type": "zip",
+                    "url": "null"
                 },
                 "type": "wordpress-plugin",
                 "license": [
