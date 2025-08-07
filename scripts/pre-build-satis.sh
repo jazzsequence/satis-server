@@ -59,22 +59,41 @@ function patch_satis_json_from_github_release() {
    local repo_url="$1"
    local package_name="$2"
    local tag="$3"
+   local asset_name_pattern="$4"
 
-   echo "Getting latest release for $package_name..."
+   echo "Getting release for $package_name for tag $tag..."
 
-   RELEASE_DATA=$(curl -s "https://api.github.com/repos/$repo_url/releases/latest")
+   RELEASE_DATA=$(curl -s "https://api.github.com/repos/$repo_url/releases/tags/$tag")
+   TAG_FROM_API=$(echo "$RELEASE_DATA" | jq -r '.tag_name')
 
-   ZIP_URL=$(echo "$RELEASE_DATA" | jq -r '.zipball_url')
+   if [ -z "$asset_name_pattern" ]; then
+       # if no pattern, assume package name is the asset name
+       asset_name_pattern="${package_name##*/}.zip"
+   fi
+
+   ZIP_URL=$(echo "$RELEASE_DATA" | jq -r --arg pattern "$asset_name_pattern" '.assets[] | select(.name | test($pattern; "i")) | .browser_download_url')
+
+   if [ -z "$TAG_FROM_API" ] || [ "$TAG_FROM_API" == "null" ]; then
+       echo "No release found for tag $tag in $package_name"
+       exit 1
+   fi
+
+   if [ -z "$ZIP_URL" ] || [ "$ZIP_URL" == "null" ]; then
+       echo "No zip asset found for $package_name with pattern $asset_name_pattern"
+       exit 1
+   fi
 
    jq --arg name "$package_name" \
       --arg version "$tag" \
       --arg url "$ZIP_URL" \
+      --arg ref "$tag" \
       '
       .repositories |= map(
           if .type == "package" and .package.name == $name
           then
               .package.version = $version |
-              .package.dist.url = $url
+              .package.dist.url = $url |
+              .package.dist.reference = $ref
           else
               .
           end
@@ -101,11 +120,13 @@ function get_mini_fair() {
 }
 
 function get_remote_data_blocks() {
-    REPO_URL="https://github.com/automattic/remote-data-blocks"
+    REPO_SLUG="automattic/remote-data-blocks"
+    REPO_URL="https://github.com/$REPO_SLUG"
     PACKAGE_NAME="automattic/remote-data-blocks"
     LATEST_TAG=$(get_latest_tag "$REPO_URL")
+    echo "Getting release for $PACKAGE_NAME for $LATEST_TAG..."
 
-    patch_satis_json_from_github_release "$REPO_URL" "$PACKAGE_NAME" "$LATEST_TAG"
+    patch_satis_json_from_github_release "$REPO_SLUG" "$PACKAGE_NAME" "$LATEST_TAG" "remote-data-blocks.zip"
 }
 
 function get_jazzsequence_artists() {
@@ -133,11 +154,12 @@ function get_jazzsequence_reviews() {
 }
 
 function get_pantheon_content_publisher() {
-    REPO_URL="https://github.com/pantheon-systems/pantheon-content-publisher-for-wordpress"
-    PACKAGE_NAME="pantheon-systems/pantheon-content-publisher-for-wordpress"
+    REPO_SLUG="pantheon-systems/pantheon-content-publisher"
+    REPO_URL="https://github.com/$REPO_SLUG"
+    PACKAGE_NAME="pantheon-systems/pantheon-content-publisher"
     LATEST_TAG=$(get_latest_tag "$REPO_URL")
 
-    patch_satis_json_from_tag "$REPO_URL" "$PACKAGE_NAME" "$LATEST_TAG"
+    patch_satis_json_from_github_release "$REPO_SLUG" "$PACKAGE_NAME" "$LATEST_TAG" "pantheon-content-publisher-for-wordpress.zip"
 }
 
 function main() {
