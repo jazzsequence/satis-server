@@ -52,7 +52,35 @@ function patch_satis_json_from_tag() {
            end
        )
        ' satis.json > satis.json.tmp && mv satis.json.tmp satis.json
-       echo "satis.json updated with $PACKAGE_NAME: $LATEST_TAG ($SHA)"
+       echo "satis.json updated with $package_name: $tag ($SHA)"
+}
+
+function patch_satis_json_from_github_release() {
+   local repo_url="$1"
+   local package_name="$2"
+   local tag="$3"
+
+   echo "Getting latest release for $package_name..."
+
+   RELEASE_DATA=$(curl -s "https://api.github.com/repos/$repo_url/releases/latest")
+
+   ZIP_URL=$(echo "$RELEASE_DATA" | jq -r '.zipball_url')
+
+   jq --arg name "$package_name" \
+      --arg version "$tag" \
+      --arg url "$ZIP_URL" \
+      '
+      .repositories |= map(
+          if .type == "package" and .package.name == $name
+          then
+              .package.version = $version |
+              .package.dist.url = $url
+          else
+              .
+          end
+      )
+      ' satis.json > satis.json.tmp && mv satis.json.tmp satis.json
+      echo "satis.json updated with $package_name: $tag"
 }
 
 function get_mini_fair() {
@@ -77,7 +105,7 @@ function get_remote_data_blocks() {
     PACKAGE_NAME="automattic/remote-data-blocks"
     LATEST_TAG=$(get_latest_tag "$REPO_URL")
 
-    patch_satis_json_from_tag "$REPO_URL" "$PACKAGE_NAME" "$LATEST_TAG"
+    patch_satis_json_from_github_release "$REPO_URL" "$PACKAGE_NAME" "$LATEST_TAG"
 }
 
 function get_jazzsequence_artists() {
