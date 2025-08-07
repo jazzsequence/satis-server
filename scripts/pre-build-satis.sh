@@ -7,6 +7,52 @@ function get_sha_from_remote() {
     git ls-remote "$repo_url" "$ref" | cut -f1
 }
 
+function get_latest_tag() {
+    local repo_url="$1"
+    LATEST_TAG=$(git ls-remote --tags "$repo_url" | grep -v '\^{}' | awk '{print $2}' | sed 's|refs/tags/||' | sort -V | tail -n 1)
+    if [ -z "$LATEST_TAG" ]; then
+        echo "No tags found in $repo_url"
+        exit 1
+    fi
+    echo "$LATEST_TAG"
+}
+
+function get_sha_from_tag() {
+    local repo_url="$1"
+    local tag="$2"
+    SHA=$(get_sha_from_remote "$repo_url" "refs/tags/$tag")
+    if [ -z "$SHA" ]; then
+        echo "No SHA found for tag $tag in $repo_url"
+        exit 1
+    fi
+    echo "$SHA"
+}
+
+function patch_satis_json_from_tag() {
+    local repo_url="$1"
+    local package_name="$2"
+    local tag="$3"
+
+    SHA=$(get_sha_from_tag "$repo_url" "$tag")
+
+    jq --arg name "$package_name" \
+       --arg version "$tag" \
+       --arg url "$repo_url" \
+       --arg sha "$SHA" \
+       '
+       .repositories |= map(
+           if .type == "package" and .package.name == $name
+           then
+               .package.version = $version |
+               .package.source.reference = $sha
+           else
+               .
+           end
+       )
+       ' satis.json > satis.json.tmp && mv satis.json.tmp satis.json
+       echo "satis.json updated with $PACKAGE_NAME: $LATEST_TAG ($SHA)"
+}
+
 function get_mini_fair() {
     echo "Getting latest SHA for fair/mini-fair-repo..."
     SHA=$(get_sha_from_remote "git@github.com:fairpm/mini-fair-repo.git" "refs/heads/main")
@@ -21,7 +67,17 @@ function get_mini_fair() {
         end
     )
     ' satis.json > satis.json.tmp && mv satis.json.tmp satis.json
-    echo "satis.json updated successfully."
+    echo "satis.json updated with fair/mini-fair-repo: dev-main ($SHA)."
+}
+
+function get_remote_data_blocks() {
+    echo "Getting latest SHA for automattic/remote-data-blocks..."
+    REPO_URL="https://github.com/automattic/remote-data-blocks"
+    PACKAGE_NAME="automattic/remote-data-blocks"
+    # Get the latest tag (sorted by version, not alphabetical)
+    LATEST_TAG=$(get_latest_tag "$REPO_URL")
+
+    patch_satis_json_from_tag "$REPO_URL" "$PACKAGE_NAME" "$LATEST_TAG"
 }
 
 function get_jazzsequence_artists() {
@@ -29,28 +85,9 @@ function get_jazzsequence_artists() {
     PACKAGE_NAME="jazzsequence/artists"
     echo "Getting latest SHA for jazzsequence/artists..."
     # Get the latest tag (sorted by version, not alphabetical)
-    LATEST_TAG=$(git ls-remote --tags "$REPO_URL" | grep -v '\^{}' | awk '{print $2}' | sed 's|refs/tags/||' | sort -V | tail -n 1)
+    LATEST_TAG=$(get_latest_tag "$REPO_URL")
 
-    SHA=$(get_sha_from_remote "$REPO_URL" "refs/tags/$LATEST_TAG")
-
-    # Update satis.json (replace existing entry or inject dynamically)
-    jq --arg name "$PACKAGE_NAME" \
-    --arg version "$LATEST_TAG" \
-    --arg url "$REPO_URL" \
-    --arg sha "$SHA" \
-    '
-    .repositories |= map(
-        if .type == "package" and .package.name == $name
-        then
-        .package.version = $version |
-        .package.source.reference = $sha
-        else
-        .
-        end
-    )
-    ' satis.json > satis.json.tmp && mv satis.json.tmp satis.json
-
-    echo "satis.json updated with jazzsequence/artists: $LATEST_TAG ($SHA)"
+    patch_satis_json_from_tag "$REPO_URL" "$PACKAGE_NAME" "$LATEST_TAG"
 }
 
 function get_jazzsequence_releases() {
@@ -58,28 +95,9 @@ function get_jazzsequence_releases() {
     PACKAGE_NAME="jazzsequence/releases"
     echo "Getting latest SHA for jazzsequence/releases..."
     # Get the latest tag (sorted by version, not alphabetical)
-    LATEST_TAG=$(git ls-remote --tags "$REPO_URL" | grep -v '\^{}' | awk '{print $2}' | sed 's|refs/tags/||' | sort -V | tail -n 1)
+    LATEST_TAG=$(get_latest_tag "$REPO_URL")
 
-    SHA=$(get_sha_from_remote "$REPO_URL" "refs/tags/$LATEST_TAG")
-
-    # Update satis.json (replace existing entry or inject dynamically)
-    jq --arg name "$PACKAGE_NAME" \
-    --arg version "$LATEST_TAG" \
-    --arg url "$REPO_URL" \
-    --arg sha "$SHA" \
-    '
-    .repositories |= map(
-        if .type == "package" and .package.name == $name
-        then
-        .package.version = $version |
-        .package.source.reference = $sha
-        else
-        .
-        end
-    )
-    ' satis.json > satis.json.tmp && mv satis.json.tmp satis.json
-
-    echo "satis.json updated with jazzsequence/releases: $LATEST_TAG ($SHA)"
+    patch_satis_json_from_tag "$REPO_URL" "$PACKAGE_NAME" "$LATEST_TAG"
 }
 
 function get_jazzsequence_reviews() {
@@ -87,28 +105,9 @@ function get_jazzsequence_reviews() {
     PACKAGE_NAME="jazzsequence/reviews"
     echo "Getting latest SHA for jazzsequence/reviews..."
     # Get the latest tag (sorted by version, not alphabetical)
-    LATEST_TAG=$(git ls-remote --tags "$REPO_URL" | grep -v '\^{}' | awk '{print $2}' | sed 's|refs/tags/||' | sort -V | tail -n 1)
+    LATEST_TAG=$(get_latest_tag "$REPO_URL")
 
-    SHA=$(get_sha_from_remote "$REPO_URL" "refs/tags/$LATEST_TAG")
-
-    # Update satis.json (replace existing entry or inject dynamically)
-    jq --arg name "$PACKAGE_NAME" \
-    --arg version "$LATEST_TAG" \
-    --arg url "$REPO_URL" \
-    --arg sha "$SHA" \
-    '
-    .repositories |= map(
-        if .type == "package" and .package.name == $name
-        then
-        .package.version = $version |
-        .package.source.reference = $sha
-        else
-        .
-        end
-    )
-    ' satis.json > satis.json.tmp && mv satis.json.tmp satis.json
-
-    echo "satis.json updated with jazzsequence/reviews: $LATEST_TAG ($SHA)"
+    patch_satis_json_from_tag "$REPO_URL" "$PACKAGE_NAME" "$LATEST_TAG"
 }
 
 function get_pantheon_content_publisher() {
@@ -117,28 +116,9 @@ function get_pantheon_content_publisher() {
 
     echo "Getting latest SHA for pantheon-content-publisher-for-wordpress..."
     # Get the latest tag (sorted by version, not alphabetical)
-    LATEST_TAG=$(git ls-remote --tags "$REPO_URL" | grep -v '\^{}' | awk '{print $2}' | sed 's|refs/tags/||' | sort -V | tail -n 1)
+    LATEST_TAG=$(get_latest_tag "$REPO_URL")
 
-    SHA=$(get_sha_from_remote "$REPO_URL" "refs/tags/$LATEST_TAG")
-
-    # Update satis.json (replace existing entry or inject dynamically)
-    jq --arg name "$PACKAGE_NAME" \
-    --arg version "$LATEST_TAG" \
-    --arg url "$REPO_URL" \
-    --arg sha "$SHA" \
-    '
-    .repositories |= map(
-        if .type == "package" and .package.name == $name
-        then
-        .package.version = $version |
-        .package.source.reference = $sha
-        else
-        .
-        end
-    )
-    ' satis.json > satis.json.tmp && mv satis.json.tmp satis.json
-
-    echo "satis.json updated with pantheon-content-publisher-for-wordpress: $LATEST_TAG ($SHA)"
+    patch_satis_json_from_tag "$REPO_URL" "$PACKAGE_NAME" "$LATEST_TAG"
 }
 
 function main() {
@@ -147,6 +127,7 @@ function main() {
     get_jazzsequence_releases
     get_jazzsequence_reviews
     get_pantheon_content_publisher
+    get_remote_data_blocks
 }
 
 main
