@@ -1,14 +1,14 @@
 {
     "packages": {
         "automattic/remote-data-blocks": {
-            "v1.0.5": {
+            "v1.1.0": {
                 "name": "automattic/remote-data-blocks",
-                "version": "v1.0.5",
-                "version_normalized": "1.0.5.0",
+                "version": "v1.1.0",
+                "version_normalized": "1.1.0.0",
                 "dist": {
                     "type": "zip",
-                    "url": "https://github.com/Automattic/remote-data-blocks/releases/download/v1.0.5/remote-data-blocks.zip",
-                    "reference": "v1.0.5"
+                    "url": "https://github.com/Automattic/remote-data-blocks/releases/download/v1.1.0/remote-data-blocks.zip",
+                    "reference": "v1.1.0"
                 },
                 "type": "wordpress-plugin",
                 "license": [
@@ -897,20 +897,20 @@
                 }
             }
         },
-        "pantheon-systems/pantheon-content-publisher-for-wordpress": {
+        "pantheon-systems/pantheon-content-publisher-wordpress": {
             "v1.2.6": {
-                "name": "pantheon-systems/pantheon-content-publisher-for-wordpress",
+                "name": "pantheon-systems/pantheon-content-publisher-wordpress",
                 "version": "v1.2.6",
                 "version_normalized": "1.2.6.0",
                 "source": {
                     "type": "zip",
-                    "url": "https://github.com/pantheon-systems/pantheon-content-publisher-for-wordpress/releases/download/v1.2.6/pantheon-content-publisher-for-wordpress.zip",
+                    "url": "https://github.com/pantheon-systems/pantheon-content-publisher-wordpress/releases/download/v1.2.6/pantheon-content-publisher-for-wordpress.zip",
                     "reference": "9e27d468cc5a22a6252d4f66ac5274d772cbb57e"
                 },
                 "dist": {
                     "type": "zip",
-                    "url": "https://github.com/pantheon-systems/pantheon-content-publisher-for-wordpress/releases/download/v1.2.6/pantheon-content-publisher-for-wordpress.zip",
-                    "reference": "tags/v1.2.6"
+                    "url": "https://github.com/pantheon-systems/pantheon-content-publisher-wordpress/releases/download/v1.2.6/pantheon-content-publisher-for-wordpress.zip",
+                    "reference": "v1.2.6"
                 },
                 "type": "wordpress-plugin",
                 "license": [
@@ -925,8 +925,8 @@
                 ],
                 "description": "A plugin that connects Pantheon Content Publisher to WordPress",
                 "support": {
-                    "issues": "https://github.com/pantheon-systems/pantheon-content-publisher-for-wordpress/issues",
-                    "source": "https://github.com/pantheon-systems/pantheon-content-publisher-for-wordpress"
+                    "issues": "https://github.com/pantheon-systems/pantheon-content-publisher-wordpress/issues",
+                    "source": "https://github.com/pantheon-systems/pantheon-content-publisher-wordpress"
                 }
             }
         }

@@ -1,8 +1,8 @@
 {
     "packages": [],
     "includes": {
-        "include/all$ecb1c7c301f0afade6b8a808e853e6a674b6fa8e.json": {
-            "sha1": "ecb1c7c301f0afade6b8a808e853e6a674b6fa8e"
+        "include/all$b7b5dac7f34ba50866e2dbd7f2453f123357b454.json": {
+            "sha1": "b7b5dac7f34ba50866e2dbd7f2453f123357b454"
         }
     },
     "metadata-url": "/p2/%package%.json",
@@ -14,6 +14,6 @@
         "jazzsequence/releases",
         "jazzsequence/reviews",
         "markjaquith/gifdrop",
-        "pantheon-systems/pantheon-content-publisher-for-wordpress"
+        "pantheon-systems/pantheon-content-publisher-wordpress"
     ]
 }
