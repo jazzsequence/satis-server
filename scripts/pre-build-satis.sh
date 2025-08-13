@@ -127,13 +127,13 @@ function get_humanmade_ai() {
     echo "Updating satis.json with SHA: $SHA"
     jq --arg sha "$SHA" '
     .repositories |= map(
-        if .type == "package" and .package.name == "humanmade/ai-plugin"
+        if .type == "package" and .package.name == "humanmade/ai"
         then .package.source.reference = $sha
         else .
         end
     )
     ' satis.json > satis.json.tmp && mv satis.json.tmp satis.json
-    echo "satis.json updated with humanmade/ai-plugin: dev-main ($SHA)."
+    echo "satis.json updated with humanmade/ai: dev-main ($SHA)."
 }
 
 function get_remote_data_blocks() {
