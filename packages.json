@@ -1,8 +1,8 @@
 {
     "packages": [],
     "includes": {
-        "include/all$b7b5dac7f34ba50866e2dbd7f2453f123357b454.json": {
-            "sha1": "b7b5dac7f34ba50866e2dbd7f2453f123357b454"
+        "include/all$bd426c2b82f29c2f7b27da36964fb3d9c202e136.json": {
+            "sha1": "bd426c2b82f29c2f7b27da36964fb3d9c202e136"
         }
     },
     "metadata-url": "/p2/%package%.json",
@@ -10,6 +10,7 @@
         "automattic/remote-data-blocks",
         "fair/fair-plugin",
         "fair/mini-fair-repo",
+        "humanmade/ai",
         "jazzsequence/artists",
         "jazzsequence/releases",
         "jazzsequence/reviews",
