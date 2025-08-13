@@ -154,9 +154,9 @@ function get_jazzsequence_reviews() {
 }
 
 function get_pantheon_content_publisher() {
-    REPO_SLUG="pantheon-systems/pantheon-content-publisher"
+    REPO_SLUG="pantheon-systems/pantheon-content-publisher-wordpress"
     REPO_URL="https://github.com/$REPO_SLUG"
-    PACKAGE_NAME="pantheon-systems/pantheon-content-publisher"
+    PACKAGE_NAME="pantheon-systems/pantheon-content-publisher-wordpress"
     LATEST_TAG=$(get_latest_tag "$REPO_URL")
 
     patch_satis_json_from_github_release "$REPO_SLUG" "$PACKAGE_NAME" "$LATEST_TAG" "pantheon-content-publisher-for-wordpress.zip"
