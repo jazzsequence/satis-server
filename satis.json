@@ -1,7 +1,7 @@
 {
   "name": "jazzsequence/satis-server",
   "homepage": "https://packages.jazzsequence.com",
-  "description": "jazzsequence.com Satis Server for WordPress plugins and things.",
+  "description": "jazzsequence.com Satis Server for WordPress plugins and experimental things. It's likely not recommended to use most of this for production (non-demo) sites. Use at your own risk. ☠️",
   "repositories": [
     {
       "type": "vcs",
