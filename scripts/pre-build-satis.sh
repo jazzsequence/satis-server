@@ -119,6 +119,23 @@ function get_mini_fair() {
     echo "satis.json updated with fair/mini-fair-repo: dev-main ($SHA)."
 }
 
+function get_humanmade_ai() {
+    echo "Getting latest SHA for humanmade/ai..."
+    SHA=$(get_sha_from_remote "git@github.com:humanmade/ai-plugin.git" "refs/heads/main")
+
+    # Use jq to inject the latest SHA into satis.json
+    echo "Updating satis.json with SHA: $SHA"
+    jq --arg sha "$SHA" '
+    .repositories |= map(
+        if .type == "package" and .package.name == "humanmade/ai-plugin"
+        then .package.source.reference = $sha
+        else .
+        end
+    )
+    ' satis.json > satis.json.tmp && mv satis.json.tmp satis.json
+    echo "satis.json updated with humanmade/ai-plugin: dev-main ($SHA)."
+}
+
 function get_remote_data_blocks() {
     REPO_SLUG="automattic/remote-data-blocks"
     REPO_URL="https://github.com/$REPO_SLUG"
@@ -164,6 +181,7 @@ function get_pantheon_content_publisher() {
 
 function main() {
     get_mini_fair
+    get_humanmade_ai
     get_jazzsequence_artists
     get_jazzsequence_releases
     get_jazzsequence_reviews

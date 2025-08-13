@@ -60,6 +60,35 @@
     {
       "type": "package",
       "package": {
+        "name": "humanmade/ai",
+        "version": "dev-main",
+        "type": "wordpress-plugin",
+        "description": "An AI integration layer for WordPress",
+        "license": "GPL-2.0-or-later",
+        "authors": [
+          {
+            "name": "Human Made",
+            "homepage": "https://humanmade.com"
+          },
+          {
+            "name": "Joe Hoyle",
+            "email": "joehoyle@gmail.com"
+          }
+        ],
+        "support": {
+          "issues": "https://github.com/humanmade/ai-plugin/issues",
+          "source": "https://github.com/humanmade/ai-plugin"
+        },
+        "source": {
+          "type": "git",
+          "url": "git@github.com:humanmade/ai-plugin.git",
+          "reference": "main"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
         "name": "jazzsequence/artists",
         "version": "1.0.1",
         "type": "wordpress-plugin",
