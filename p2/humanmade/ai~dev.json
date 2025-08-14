@@ -7,7 +7,7 @@
                 "version_normalized": "dev-main",
                 "source": {
                     "type": "git",
-                    "url": "git@github.com:humanmade/ai-plugin.git",
+                    "url": "https://github.com/humanmade/ai-plugin.git",
                     "reference": "13e60218b4bf612eca5ed231353829f48aa6a874"
                 },
                 "type": "wordpress-plugin",

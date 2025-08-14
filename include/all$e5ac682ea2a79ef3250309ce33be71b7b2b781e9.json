@@ -681,8 +681,8 @@
                 "version_normalized": "dev-main",
                 "source": {
                     "type": "git",
-                    "url": "git@github.com:fairpm/mini-fair-repo.git",
-                    "reference": "43dfd29606d903303583bec4c01776a547e4032f"
+                    "url": "https://github.com/fairpm/mini-fair-repo.git",
+                    "reference": "a476268563880ddc4a10d7b90851a8d4344212af"
                 },
                 "type": "wordpress-plugin",
                 "license": [
@@ -708,7 +708,7 @@
                 "version_normalized": "dev-main",
                 "source": {
                     "type": "git",
-                    "url": "git@github.com:humanmade/ai-plugin.git",
+                    "url": "https://github.com/humanmade/ai-plugin.git",
                     "reference": "13e60218b4bf612eca5ed231353829f48aa6a874"
                 },
                 "type": "wordpress-plugin",
@@ -739,7 +739,7 @@
                 "version_normalized": "1.0.1.0",
                 "source": {
                     "type": "git",
-                    "url": "git@github.com:jazzsequence/artists.git",
+                    "url": "https://github.com/jazzsequence/artists.git",
                     "reference": "ff352d7b8c7d302966d00b9fe0cc3c043bfaaa27"
                 },
                 "type": "wordpress-plugin",
@@ -766,7 +766,7 @@
                 "version_normalized": "1.2.2.0",
                 "source": {
                     "type": "git",
-                    "url": "git@github.com:jazzsequence/releases.git",
+                    "url": "https://github.com/jazzsequence/releases.git",
                     "reference": "6b35688649bc0ba2f828964229c935093aa519d2"
                 },
                 "type": "wordpress-plugin",
@@ -793,7 +793,7 @@
                 "version_normalized": "2.0.0.0",
                 "source": {
                     "type": "git",
-                    "url": "git@github.com:jazzsequence/reviews.git",
+                    "url": "https://github.com/jazzsequence/reviews.git",
                     "reference": "97bc893a7e30555ee7b5a277c507c06437c07958"
                 },
                 "type": "wordpress-plugin",

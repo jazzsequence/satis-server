@@ -7,7 +7,7 @@
                 "version_normalized": "1.2.2.0",
                 "source": {
                     "type": "git",
-                    "url": "git@github.com:jazzsequence/releases.git",
+                    "url": "https://github.com/jazzsequence/releases.git",
                     "reference": "6b35688649bc0ba2f828964229c935093aa519d2"
                 },
                 "type": "wordpress-plugin",
