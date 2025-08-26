@@ -3,8 +3,8 @@
         "pantheon-systems/pantheon-content-publisher-wordpress": [
             {
                 "name": "pantheon-systems/pantheon-content-publisher-wordpress",
-                "version": "v1.2.6",
-                "version_normalized": "1.2.6.0",
+                "version": "v1.2.7",
+                "version_normalized": "1.2.7.0",
                 "source": {
                     "type": "zip",
                     "url": "https://github.com/pantheon-systems/pantheon-content-publisher-wordpress/releases/download/v1.2.6/pantheon-content-publisher-for-wordpress.zip",
@@ -12,8 +12,8 @@
                 },
                 "dist": {
                     "type": "zip",
-                    "url": "https://github.com/pantheon-systems/pantheon-content-publisher-wordpress/releases/download/v1.2.6/pantheon-content-publisher-for-wordpress.zip",
-                    "reference": "v1.2.6"
+                    "url": "https://github.com/pantheon-systems/pantheon-content-publisher-wordpress/releases/download/v1.2.7/pantheon-content-publisher-for-wordpress.zip",
+                    "reference": "v1.2.7"
                 },
                 "type": "wordpress-plugin",
                 "license": [
