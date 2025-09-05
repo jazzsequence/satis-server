@@ -246,12 +246,12 @@
                 "source": {
                     "type": "git",
                     "url": "https://github.com/fairpm/fair-plugin.git",
-                    "reference": "0aa355b54d6ba5c189a7f4ae21f3ac3581478441"
+                    "reference": "8b283126468dbaa23e1bd818f4a73629bd20a5bf"
                 },
                 "dist": {
                     "type": "zip",
-                    "url": "https://api.github.com/repos/fairpm/fair-plugin/zipball/0aa355b54d6ba5c189a7f4ae21f3ac3581478441",
-                    "reference": "0aa355b54d6ba5c189a7f4ae21f3ac3581478441",
+                    "url": "https://api.github.com/repos/fairpm/fair-plugin/zipball/8b283126468dbaa23e1bd818f4a73629bd20a5bf",
+                    "reference": "8b283126468dbaa23e1bd818f4a73629bd20a5bf",
                     "shasum": ""
                 },
                 "require": {
@@ -262,7 +262,7 @@
                     "nimut/phpunit-merger": "*",
                     "yoast/phpunit-polyfills": "*"
                 },
-                "time": "2025-08-23T00:00:10+00:00",
+                "time": "2025-09-04T03:49:14+00:00",
                 "type": "wordpress-plugin",
                 "scripts": {
                     "lint": [
@@ -407,12 +407,12 @@
                 "source": {
                     "type": "git",
                     "url": "https://github.com/fairpm/fair-plugin.git",
-                    "reference": "3bef1caf08375b9061dcb085da10d2aa071df934"
+                    "reference": "689c728237049c145bce620a164e4d5bd459f883"
                 },
                 "dist": {
                     "type": "zip",
-                    "url": "https://api.github.com/repos/fairpm/fair-plugin/zipball/3bef1caf08375b9061dcb085da10d2aa071df934",
-                    "reference": "3bef1caf08375b9061dcb085da10d2aa071df934",
+                    "url": "https://api.github.com/repos/fairpm/fair-plugin/zipball/689c728237049c145bce620a164e4d5bd459f883",
+                    "reference": "689c728237049c145bce620a164e4d5bd459f883",
                     "shasum": ""
                 },
                 "require": {
@@ -423,7 +423,7 @@
                     "nimut/phpunit-merger": "*",
                     "yoast/phpunit-polyfills": "*"
                 },
-                "time": "2025-08-22T23:59:54+00:00",
+                "time": "2025-09-04T03:48:56+00:00",
                 "default-branch": true,
                 "type": "wordpress-plugin",
                 "scripts": {
