@@ -6,7 +6,7 @@
         "date-fns": "^4.1.0",
         "eslint-webpack-plugin": "^5.0.2",
         "glob": "^11.0.3",
-        "lint-staged": "^16.1.4",
+        "lint-staged": "^16.2.3",
         "prettier": "^3.6.2",
         "purgecss-webpack-plugin": "^7.0.2",
         "sass": "^1.89.2",
