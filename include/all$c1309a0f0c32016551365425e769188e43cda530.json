@@ -1,14 +1,14 @@
 {
     "packages": {
         "automattic/remote-data-blocks": {
-            "v1.3.0": {
+            "v1.4.0": {
                 "name": "automattic/remote-data-blocks",
-                "version": "v1.3.0",
-                "version_normalized": "1.3.0.0",
+                "version": "v1.4.0",
+                "version_normalized": "1.4.0.0",
                 "dist": {
                     "type": "zip",
-                    "url": "https://github.com/Automattic/remote-data-blocks/releases/download/v1.3.0/remote-data-blocks.zip",
-                    "reference": "v1.3.0"
+                    "url": "https://github.com/Automattic/remote-data-blocks/releases/download/v1.4.0/remote-data-blocks.zip",
+                    "reference": "v1.4.0"
                 },
                 "type": "wordpress-plugin",
                 "license": [
@@ -35,7 +35,7 @@
                 "source": {
                     "type": "git",
                     "url": "https://github.com/fairpm/mini-fair-repo.git",
-                    "reference": "619cc7e0e248f5e2adf88e42061c17b9e39e897a"
+                    "reference": "0938d5f4aa49668905659329ed379909108e17a7"
                 },
                 "type": "wordpress-plugin",
                 "license": [
@@ -799,12 +799,12 @@
                 "source": {
                     "type": "git",
                     "url": "https://github.com/fairpm/fair-plugin.git",
-                    "reference": "b015e89f67453b4205d992e932328f2ac62e290b"
+                    "reference": "3e444329a8c3d547fdac21b902a390ee141e8e5a"
                 },
                 "dist": {
                     "type": "zip",
-                    "url": "https://api.github.com/repos/fairpm/fair-plugin/zipball/b015e89f67453b4205d992e932328f2ac62e290b",
-                    "reference": "b015e89f67453b4205d992e932328f2ac62e290b",
+                    "url": "https://api.github.com/repos/fairpm/fair-plugin/zipball/3e444329a8c3d547fdac21b902a390ee141e8e5a",
+                    "reference": "3e444329a8c3d547fdac21b902a390ee141e8e5a",
                     "shasum": ""
                 },
                 "require": {
@@ -815,95 +815,8 @@
                     "nimut/phpunit-merger": "*",
                     "yoast/phpunit-polyfills": "*"
                 },
-                "time": "2025-10-31T00:49:27+00:00",
+                "time": "2025-11-03T18:44:51+00:00",
                 "default-branch": true,
-                "type": "wordpress-plugin",
-                "scripts": {
-                    "lint": [
-                        "@php ./vendor/bin/phpcs ."
-                    ],
-                    "format": [
-                        "@php ./vendor/bin/phpcbf ."
-                    ],
-                    "test": [
-                        "Composer\\Config::disableProcessTimeout",
-                        "@php ./vendor/phpunit/phpunit/phpunit"
-                    ],
-                    "test:multisite": [
-                        "Composer\\Config::disableProcessTimeout",
-                        "@php ./vendor/phpunit/phpunit/phpunit -c tests/phpunit/multisite.xml"
-                    ],
-                    "coverage:merge": [
-                        "Composer\\Config::disableProcessTimeout",
-                        "@putenv XDEBUG_MODE=coverage",
-                        "@php ./vendor/bin/phpunit-merger coverage tests/phpunit/coverage/php --html tests/phpunit/coverage/html/full tests/phpunit/cache/full-cache.xml"
-                    ],
-                    "coverage:single": [
-                        "Composer\\Config::disableProcessTimeout",
-                        "@putenv XDEBUG_MODE=off",
-                        "@putenv WP_TESTS_SKIP_INSTALL=0",
-                        "@test --filter prime_test_suite",
-                        "@putenv XDEBUG_MODE=coverage",
-                        "@putenv WP_TESTS_SKIP_INSTALL=1",
-                        "@test"
-                    ],
-                    "coverage:multisite": [
-                        "Composer\\Config::disableProcessTimeout",
-                        "@putenv XDEBUG_MODE=off",
-                        "@putenv WP_TESTS_SKIP_INSTALL=0",
-                        "@test:multisite --filter prime_test_suite",
-                        "@putenv XDEBUG_MODE=coverage",
-                        "@putenv WP_TESTS_SKIP_INSTALL=1",
-                        "@test:multisite"
-                    ],
-                    "coverage:full": [
-                        "Composer\\Config::disableProcessTimeout",
-                        "@coverage:single",
-                        "@coverage:multisite",
-                        "@coverage:merge"
-                    ]
-                },
-                "license": [
-                    "gpl-2.0-only"
-                ],
-                "authors": [
-                    {
-                        "name": "FAIR Contributors",
-                        "email": "operations@fair.pm",
-                        "homepage": "https://fair.pm"
-                    }
-                ],
-                "description": "Make your site more FAIR.",
-                "support": {
-                    "issues": "https://github.com/fairpm/fair-plugin/issues",
-                    "source": "https://github.com/fairpm/fair-plugin",
-                    "docs": "https://github.com/fairpm/fair-plugin/blob/main/README.md"
-                }
-            },
-            "dev-update-browserslist": {
-                "name": "fairpm/fair-plugin",
-                "version": "dev-update-browserslist",
-                "version_normalized": "dev-update-browserslist",
-                "source": {
-                    "type": "git",
-                    "url": "https://github.com/fairpm/fair-plugin.git",
-                    "reference": "4dbf4780ddf019ad2d00caedb130e483d543f268"
-                },
-                "dist": {
-                    "type": "zip",
-                    "url": "https://api.github.com/repos/fairpm/fair-plugin/zipball/4dbf4780ddf019ad2d00caedb130e483d543f268",
-                    "reference": "4dbf4780ddf019ad2d00caedb130e483d543f268",
-                    "shasum": ""
-                },
-                "require": {
-                    "php": ">=7.4"
-                },
-                "require-dev": {
-                    "humanmade/coding-standards": "^1.2",
-                    "nimut/phpunit-merger": "*",
-                    "yoast/phpunit-polyfills": "*"
-                },
-                "time": "2025-11-03T00:13:48+00:00",
                 "type": "wordpress-plugin",
                 "scripts": {
                     "lint": [
