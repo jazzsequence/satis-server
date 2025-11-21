@@ -8,7 +8,7 @@
                 "source": {
                     "type": "git",
                     "url": "https://github.com/fairpm/mini-fair-repo.git",
-                    "reference": "0938d5f4aa49668905659329ed379909108e17a7"
+                    "reference": "bad7b3ae3d29678e14a8233bfb93daa1af689c3d"
                 },
                 "type": "wordpress-plugin",
                 "license": [
