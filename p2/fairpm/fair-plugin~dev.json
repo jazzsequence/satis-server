@@ -588,12 +588,12 @@
                 "source": {
                     "type": "git",
                     "url": "https://github.com/fairpm/fair-plugin.git",
-                    "reference": "29deded727128e2754e05da5845bccd9e5b6b805"
+                    "reference": "43bf8c0ce3a076b1bf0da0bd2e0ec69e1c47a3df"
                 },
                 "dist": {
                     "type": "zip",
-                    "url": "https://api.github.com/repos/fairpm/fair-plugin/zipball/29deded727128e2754e05da5845bccd9e5b6b805",
-                    "reference": "29deded727128e2754e05da5845bccd9e5b6b805",
+                    "url": "https://api.github.com/repos/fairpm/fair-plugin/zipball/43bf8c0ce3a076b1bf0da0bd2e0ec69e1c47a3df",
+                    "reference": "43bf8c0ce3a076b1bf0da0bd2e0ec69e1c47a3df",
                     "shasum": ""
                 },
                 "require": {
@@ -604,7 +604,7 @@
                     "nimut/phpunit-merger": "*",
                     "yoast/phpunit-polyfills": "*"
                 },
-                "time": "2025-11-24T00:14:16+00:00",
+                "time": "2025-12-01T00:16:31+00:00",
                 "type": "wordpress-plugin",
                 "scripts": {
                     "lint": [
