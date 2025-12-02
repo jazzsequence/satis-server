@@ -1,14 +1,14 @@
 {
     "packages": [],
     "includes": {
-        "include/all$bdbb7b4d42eccdf0059c80edcdcbd6da8db0d394.json": {
-            "sha1": "bdbb7b4d42eccdf0059c80edcdcbd6da8db0d394"
+        "include/all$f8e3aedaaa9cbe189a10de8ff4976b914a0cb889.json": {
+            "sha1": "f8e3aedaaa9cbe189a10de8ff4976b914a0cb889"
         }
     },
     "metadata-url": "/p2/%package%.json",
     "available-packages": [
         "automattic/remote-data-blocks",
-        "fair/mini-fair-repo",
+        "fairpm/fair-beacon",
         "fairpm/fair-plugin",
         "humanmade/ai",
         "jazzsequence/artists",

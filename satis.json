@@ -11,7 +11,7 @@
       "type": "package",
       "package": {
         "name": "automattic/remote-data-blocks",
-        "version": "v1.1.0",
+        "version": "v1.4.2",
         "type": "wordpress-plugin",
         "description": "Remote Data Blocks: a WordPress plugin for creating flexible, data-enriched content with remote data integration",
         "license": "GPL-2.0",
@@ -27,15 +27,15 @@
         },
         "dist": {
           "type": "zip",
-          "url": "https://github.com/Automattic/remote-data-blocks/releases/download/v1.1.0/remote-data-blocks.zip",
-          "reference": "v1.1.0"
+          "url": "https://github.com/Automattic/remote-data-blocks/releases/download/v1.4.2/remote-data-blocks.zip",
+          "reference": "v1.4.2"
         }
       }
     },
     {
       "type": "package",
       "package": {
-        "name": "fair/mini-fair-repo",
+        "name": "fairpm/fair-beacon",
         "version": "dev-main",
         "type": "wordpress-plugin",
         "description": "Self-hostable FAIR repo, designed for small-scale",
@@ -47,12 +47,12 @@
           }
         ],
         "support": {
-          "issues": "https://github.com/fairpm/mini-fair-repo/issues",
-          "source": "https://github.com/fairpm/mini-fair-repo"
+          "issues": "https://github.com/fairpm/fair-beacon/issues",
+          "source": "https://github.com/fairpm/fair-beacon"
         },
         "source": {
           "type": "git",
-          "url": "https://github.com/fairpm/mini-fair-repo.git",
+          "url": "https://github.com/fairpm/fair-beacon.git",
           "reference": "a476268563880ddc4a10d7b90851a8d4344212af"
         }
       }
@@ -194,7 +194,6 @@
       "type": "package",
       "package": {
         "name": "pantheon-systems/pantheon-content-publisher-wordpress",
-        "version": "v1.2.6",
         "type": "wordpress-plugin",
         "description": "A plugin that connects Pantheon Content Publisher to WordPress",
         "license": "GPL-2.0",
@@ -209,15 +208,11 @@
           "issues": "https://github.com/pantheon-systems/pantheon-content-publisher-wordpress/issues",
           "source": "https://github.com/pantheon-systems/pantheon-content-publisher-wordpress"
         },
+        "version": "v1.3.0",
         "dist": {
           "type": "zip",
-          "url": "https://github.com/pantheon-systems/pantheon-content-publisher-wordpress/releases/download/v1.2.6/pantheon-content-publisher-for-wordpress.zip",
-          "reference": "v1.2.6"
-        },
-        "source": {
-          "type": "zip",
-          "url": "https://github.com/pantheon-systems/pantheon-content-publisher-wordpress/releases/download/v1.2.6/pantheon-content-publisher-for-wordpress.zip",
-          "reference": "9e27d468cc5a22a6252d4f66ac5274d772cbb57e"
+          "url": "https://github.com/pantheon-systems/pantheon-content-publisher-wordpress/releases/download/v1.3.0/pantheon-content-publisher-for-wordpress.zip",
+          "reference": "v1.3.0"
         }
       }
     }

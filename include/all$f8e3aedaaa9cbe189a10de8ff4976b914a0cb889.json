@@ -27,15 +27,15 @@
                 }
             }
         },
-        "fair/mini-fair-repo": {
+        "fairpm/fair-beacon": {
             "dev-main": {
-                "name": "fair/mini-fair-repo",
+                "name": "fairpm/fair-beacon",
                 "version": "dev-main",
                 "version_normalized": "dev-main",
                 "source": {
                     "type": "git",
-                    "url": "https://github.com/fairpm/mini-fair-repo.git",
-                    "reference": "ba19aa10e08af48a870ca1a0dbd2d034e8851305"
+                    "url": "https://github.com/fairpm/fair-beacon.git",
+                    "reference": "a476268563880ddc4a10d7b90851a8d4344212af"
                 },
                 "type": "wordpress-plugin",
                 "license": [
@@ -49,8 +49,8 @@
                 ],
                 "description": "Self-hostable FAIR repo, designed for small-scale",
                 "support": {
-                    "issues": "https://github.com/fairpm/mini-fair-repo/issues",
-                    "source": "https://github.com/fairpm/mini-fair-repo"
+                    "issues": "https://github.com/fairpm/fair-beacon/issues",
+                    "source": "https://github.com/fairpm/fair-beacon"
                 }
             }
         },
@@ -1377,11 +1377,6 @@
                 "name": "pantheon-systems/pantheon-content-publisher-wordpress",
                 "version": "v1.3.0",
                 "version_normalized": "1.3.0.0",
-                "source": {
-                    "type": "zip",
-                    "url": "https://github.com/pantheon-systems/pantheon-content-publisher-wordpress/releases/download/v1.2.6/pantheon-content-publisher-for-wordpress.zip",
-                    "reference": "9e27d468cc5a22a6252d4f66ac5274d772cbb57e"
-                },
                 "dist": {
                     "type": "zip",
                     "url": "https://github.com/pantheon-systems/pantheon-content-publisher-wordpress/releases/download/v1.3.0/pantheon-content-publisher-for-wordpress.zip",

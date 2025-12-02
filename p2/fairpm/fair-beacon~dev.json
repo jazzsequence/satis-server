@@ -1,0 +1,31 @@
+{
+    "packages": {
+        "fairpm/fair-beacon": [
+            {
+                "name": "fairpm/fair-beacon",
+                "version": "dev-main",
+                "version_normalized": "dev-main",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/fairpm/fair-beacon.git",
+                    "reference": "a476268563880ddc4a10d7b90851a8d4344212af"
+                },
+                "type": "wordpress-plugin",
+                "license": [
+                    "GPL-2.0-or-later"
+                ],
+                "authors": [
+                    {
+                        "name": "FAIR Contributors",
+                        "homepage": "https://fair.pm"
+                    }
+                ],
+                "description": "Self-hostable FAIR repo, designed for small-scale",
+                "support": {
+                    "issues": "https://github.com/fairpm/fair-beacon/issues",
+                    "source": "https://github.com/fairpm/fair-beacon"
+                }
+            }
+        ]
+    }
+}
