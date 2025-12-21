@@ -1,14 +1,14 @@
 {
     "packages": {
         "automattic/remote-data-blocks": {
-            "v1.4.3": {
+            "v1.5.0": {
                 "name": "automattic/remote-data-blocks",
-                "version": "v1.4.3",
-                "version_normalized": "1.4.3.0",
+                "version": "v1.5.0",
+                "version_normalized": "1.5.0.0",
                 "dist": {
                     "type": "zip",
-                    "url": "https://github.com/Automattic/remote-data-blocks/releases/download/v1.4.3/remote-data-blocks.zip",
-                    "reference": "v1.4.3"
+                    "url": "https://github.com/Automattic/remote-data-blocks/releases/download/v1.5.0/remote-data-blocks.zip",
+                    "reference": "v1.5.0"
                 },
                 "type": "wordpress-plugin",
                 "license": [
