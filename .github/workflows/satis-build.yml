@@ -39,7 +39,7 @@ jobs:
         run: ${{ github.workspace }}/scripts/commit-and-push.sh
 
       - name: Deploy to Pantheon
-        uses: pantheon-systems/push-to-pantheon@0.7.0
+        uses: pantheon-systems/push-to-pantheon@0.8.0
         with:
           ssh_key: ${{ secrets.SSH_KEY }}
           site: ${{ secrets.SITE_ID }}
