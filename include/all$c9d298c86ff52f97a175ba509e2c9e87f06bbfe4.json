@@ -996,6 +996,93 @@
                     "docs": "https://github.com/fairpm/fair-plugin/blob/main/README.md"
                 }
             },
+            "1.3.0-RC4": {
+                "name": "fairpm/fair-plugin",
+                "version": "1.3.0-RC4",
+                "version_normalized": "1.3.0.0-RC4",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/fairpm/fair-plugin.git",
+                    "reference": "401719a11db8ebc9bace1a8f6badf5ed989bd533"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/fairpm/fair-plugin/zipball/401719a11db8ebc9bace1a8f6badf5ed989bd533",
+                    "reference": "401719a11db8ebc9bace1a8f6badf5ed989bd533",
+                    "shasum": ""
+                },
+                "require": {
+                    "php": ">=7.4"
+                },
+                "require-dev": {
+                    "humanmade/coding-standards": "^1.2",
+                    "nimut/phpunit-merger": "*",
+                    "yoast/phpunit-polyfills": "*"
+                },
+                "time": "2026-02-16T18:50:27+00:00",
+                "type": "wordpress-plugin",
+                "scripts": {
+                    "lint": [
+                        "@php ./vendor/bin/phpcs ."
+                    ],
+                    "format": [
+                        "@php ./vendor/bin/phpcbf ."
+                    ],
+                    "test": [
+                        "Composer\\Config::disableProcessTimeout",
+                        "@php ./vendor/phpunit/phpunit/phpunit"
+                    ],
+                    "test:multisite": [
+                        "Composer\\Config::disableProcessTimeout",
+                        "@php ./vendor/phpunit/phpunit/phpunit -c tests/phpunit/multisite.xml"
+                    ],
+                    "coverage:merge": [
+                        "Composer\\Config::disableProcessTimeout",
+                        "@putenv XDEBUG_MODE=coverage",
+                        "@php ./vendor/bin/phpunit-merger coverage tests/phpunit/coverage/php --html tests/phpunit/coverage/html/full tests/phpunit/cache/full-cache.xml"
+                    ],
+                    "coverage:single": [
+                        "Composer\\Config::disableProcessTimeout",
+                        "@putenv XDEBUG_MODE=off",
+                        "@putenv WP_TESTS_SKIP_INSTALL=0",
+                        "@test --filter prime_test_suite",
+                        "@putenv XDEBUG_MODE=coverage",
+                        "@putenv WP_TESTS_SKIP_INSTALL=1",
+                        "@test"
+                    ],
+                    "coverage:multisite": [
+                        "Composer\\Config::disableProcessTimeout",
+                        "@putenv XDEBUG_MODE=off",
+                        "@putenv WP_TESTS_SKIP_INSTALL=0",
+                        "@test:multisite --filter prime_test_suite",
+                        "@putenv XDEBUG_MODE=coverage",
+                        "@putenv WP_TESTS_SKIP_INSTALL=1",
+                        "@test:multisite"
+                    ],
+                    "coverage:full": [
+                        "Composer\\Config::disableProcessTimeout",
+                        "@coverage:single",
+                        "@coverage:multisite",
+                        "@coverage:merge"
+                    ]
+                },
+                "license": [
+                    "gpl-2.0-only"
+                ],
+                "authors": [
+                    {
+                        "name": "FAIR Contributors",
+                        "email": "operations@fair.pm",
+                        "homepage": "https://fair.pm"
+                    }
+                ],
+                "description": "Make your site more FAIR.",
+                "support": {
+                    "issues": "https://github.com/fairpm/fair-plugin/issues",
+                    "source": "https://github.com/fairpm/fair-plugin",
+                    "docs": "https://github.com/fairpm/fair-plugin/blob/main/README.md"
+                }
+            },
             "dev-bugfix/bash-spaces": {
                 "name": "fairpm/fair-plugin",
                 "version": "dev-bugfix/bash-spaces",
@@ -1177,12 +1264,12 @@
                 "source": {
                     "type": "git",
                     "url": "https://github.com/fairpm/fair-plugin.git",
-                    "reference": "c9a2984224fd7467a78c66f863ff485fddaa462a"
+                    "reference": "9f0fc156a9755704c1bb420beb222684bdf81018"
                 },
                 "dist": {
                     "type": "zip",
-                    "url": "https://api.github.com/repos/fairpm/fair-plugin/zipball/c9a2984224fd7467a78c66f863ff485fddaa462a",
-                    "reference": "c9a2984224fd7467a78c66f863ff485fddaa462a",
+                    "url": "https://api.github.com/repos/fairpm/fair-plugin/zipball/9f0fc156a9755704c1bb420beb222684bdf81018",
+                    "reference": "9f0fc156a9755704c1bb420beb222684bdf81018",
                     "shasum": ""
                 },
                 "require": {
@@ -1193,7 +1280,7 @@
                     "nimut/phpunit-merger": "*",
                     "yoast/phpunit-polyfills": "*"
                 },
-                "time": "2026-02-11T19:38:39+00:00",
+                "time": "2026-02-16T19:20:19+00:00",
                 "type": "wordpress-plugin",
                 "scripts": {
                     "lint": [
@@ -1421,6 +1508,93 @@
                     "issues": "https://github.com/fairpm/fair-plugin/issues"
                 }
             },
+            "dev-generate-pot": {
+                "name": "fairpm/fair-plugin",
+                "version": "dev-generate-pot",
+                "version_normalized": "dev-generate-pot",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/fairpm/fair-plugin.git",
+                    "reference": "ef4a4c9c9fa80ede3703baef6e3c352a2229aa6e"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/fairpm/fair-plugin/zipball/ef4a4c9c9fa80ede3703baef6e3c352a2229aa6e",
+                    "reference": "ef4a4c9c9fa80ede3703baef6e3c352a2229aa6e",
+                    "shasum": ""
+                },
+                "require": {
+                    "php": ">=7.4"
+                },
+                "require-dev": {
+                    "humanmade/coding-standards": "^1.2",
+                    "nimut/phpunit-merger": "*",
+                    "yoast/phpunit-polyfills": "*"
+                },
+                "time": "2026-02-16T17:56:00+00:00",
+                "type": "wordpress-plugin",
+                "scripts": {
+                    "lint": [
+                        "@php ./vendor/bin/phpcs ."
+                    ],
+                    "format": [
+                        "@php ./vendor/bin/phpcbf ."
+                    ],
+                    "test": [
+                        "Composer\\Config::disableProcessTimeout",
+                        "@php ./vendor/phpunit/phpunit/phpunit"
+                    ],
+                    "test:multisite": [
+                        "Composer\\Config::disableProcessTimeout",
+                        "@php ./vendor/phpunit/phpunit/phpunit -c tests/phpunit/multisite.xml"
+                    ],
+                    "coverage:merge": [
+                        "Composer\\Config::disableProcessTimeout",
+                        "@putenv XDEBUG_MODE=coverage",
+                        "@php ./vendor/bin/phpunit-merger coverage tests/phpunit/coverage/php --html tests/phpunit/coverage/html/full tests/phpunit/cache/full-cache.xml"
+                    ],
+                    "coverage:single": [
+                        "Composer\\Config::disableProcessTimeout",
+                        "@putenv XDEBUG_MODE=off",
+                        "@putenv WP_TESTS_SKIP_INSTALL=0",
+                        "@test --filter prime_test_suite",
+                        "@putenv XDEBUG_MODE=coverage",
+                        "@putenv WP_TESTS_SKIP_INSTALL=1",
+                        "@test"
+                    ],
+                    "coverage:multisite": [
+                        "Composer\\Config::disableProcessTimeout",
+                        "@putenv XDEBUG_MODE=off",
+                        "@putenv WP_TESTS_SKIP_INSTALL=0",
+                        "@test:multisite --filter prime_test_suite",
+                        "@putenv XDEBUG_MODE=coverage",
+                        "@putenv WP_TESTS_SKIP_INSTALL=1",
+                        "@test:multisite"
+                    ],
+                    "coverage:full": [
+                        "Composer\\Config::disableProcessTimeout",
+                        "@coverage:single",
+                        "@coverage:multisite",
+                        "@coverage:merge"
+                    ]
+                },
+                "license": [
+                    "gpl-2.0-only"
+                ],
+                "authors": [
+                    {
+                        "name": "FAIR Contributors",
+                        "email": "operations@fair.pm",
+                        "homepage": "https://fair.pm"
+                    }
+                ],
+                "description": "Make your site more FAIR.",
+                "support": {
+                    "issues": "https://github.com/fairpm/fair-plugin/issues",
+                    "source": "https://github.com/fairpm/fair-plugin",
+                    "docs": "https://github.com/fairpm/fair-plugin/blob/main/README.md"
+                }
+            },
             "dev-issue-42/hook-translations-api": {
                 "name": "fairpm/fair-plugin",
                 "version": "dev-issue-42/hook-translations-api",
@@ -1498,19 +1672,19 @@
                     "issues": "https://github.com/fairpm/fair-plugin/issues"
                 }
             },
-            "dev-main": {
+            "dev-issue434/update-release-doc": {
                 "name": "fairpm/fair-plugin",
-                "version": "dev-main",
-                "version_normalized": "dev-main",
+                "version": "dev-issue434/update-release-doc",
+                "version_normalized": "dev-issue434/update-release-doc",
                 "source": {
                     "type": "git",
                     "url": "https://github.com/fairpm/fair-plugin.git",
-                    "reference": "8f3ab3c0b18a166771db10d1f58f466dfd5b2f33"
+                    "reference": "ea37f79bf948be1029907d9ac5fb0ead765d617b"
                 },
                 "dist": {
                     "type": "zip",
-                    "url": "https://api.github.com/repos/fairpm/fair-plugin/zipball/8f3ab3c0b18a166771db10d1f58f466dfd5b2f33",
-                    "reference": "8f3ab3c0b18a166771db10d1f58f466dfd5b2f33",
+                    "url": "https://api.github.com/repos/fairpm/fair-plugin/zipball/ea37f79bf948be1029907d9ac5fb0ead765d617b",
+                    "reference": "ea37f79bf948be1029907d9ac5fb0ead765d617b",
                     "shasum": ""
                 },
                 "require": {
@@ -1521,7 +1695,94 @@
                     "nimut/phpunit-merger": "*",
                     "yoast/phpunit-polyfills": "*"
                 },
-                "time": "2026-01-07T22:20:08+00:00",
+                "time": "2026-02-16T19:09:46+00:00",
+                "type": "wordpress-plugin",
+                "scripts": {
+                    "lint": [
+                        "@php ./vendor/bin/phpcs ."
+                    ],
+                    "format": [
+                        "@php ./vendor/bin/phpcbf ."
+                    ],
+                    "test": [
+                        "Composer\\Config::disableProcessTimeout",
+                        "@php ./vendor/phpunit/phpunit/phpunit"
+                    ],
+                    "test:multisite": [
+                        "Composer\\Config::disableProcessTimeout",
+                        "@php ./vendor/phpunit/phpunit/phpunit -c tests/phpunit/multisite.xml"
+                    ],
+                    "coverage:merge": [
+                        "Composer\\Config::disableProcessTimeout",
+                        "@putenv XDEBUG_MODE=coverage",
+                        "@php ./vendor/bin/phpunit-merger coverage tests/phpunit/coverage/php --html tests/phpunit/coverage/html/full tests/phpunit/cache/full-cache.xml"
+                    ],
+                    "coverage:single": [
+                        "Composer\\Config::disableProcessTimeout",
+                        "@putenv XDEBUG_MODE=off",
+                        "@putenv WP_TESTS_SKIP_INSTALL=0",
+                        "@test --filter prime_test_suite",
+                        "@putenv XDEBUG_MODE=coverage",
+                        "@putenv WP_TESTS_SKIP_INSTALL=1",
+                        "@test"
+                    ],
+                    "coverage:multisite": [
+                        "Composer\\Config::disableProcessTimeout",
+                        "@putenv XDEBUG_MODE=off",
+                        "@putenv WP_TESTS_SKIP_INSTALL=0",
+                        "@test:multisite --filter prime_test_suite",
+                        "@putenv XDEBUG_MODE=coverage",
+                        "@putenv WP_TESTS_SKIP_INSTALL=1",
+                        "@test:multisite"
+                    ],
+                    "coverage:full": [
+                        "Composer\\Config::disableProcessTimeout",
+                        "@coverage:single",
+                        "@coverage:multisite",
+                        "@coverage:merge"
+                    ]
+                },
+                "license": [
+                    "gpl-2.0-only"
+                ],
+                "authors": [
+                    {
+                        "name": "FAIR Contributors",
+                        "email": "operations@fair.pm",
+                        "homepage": "https://fair.pm"
+                    }
+                ],
+                "description": "Make your site more FAIR.",
+                "support": {
+                    "issues": "https://github.com/fairpm/fair-plugin/issues",
+                    "source": "https://github.com/fairpm/fair-plugin",
+                    "docs": "https://github.com/fairpm/fair-plugin/blob/main/README.md"
+                }
+            },
+            "dev-main": {
+                "name": "fairpm/fair-plugin",
+                "version": "dev-main",
+                "version_normalized": "dev-main",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/fairpm/fair-plugin.git",
+                    "reference": "74e9364bbcd2193cd10f4e35a3e55029b81ac481"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/fairpm/fair-plugin/zipball/74e9364bbcd2193cd10f4e35a3e55029b81ac481",
+                    "reference": "74e9364bbcd2193cd10f4e35a3e55029b81ac481",
+                    "shasum": ""
+                },
+                "require": {
+                    "php": ">=7.4"
+                },
+                "require-dev": {
+                    "humanmade/coding-standards": "^1.2",
+                    "nimut/phpunit-merger": "*",
+                    "yoast/phpunit-polyfills": "*"
+                },
+                "time": "2026-02-16T18:02:14+00:00",
                 "default-branch": true,
                 "type": "wordpress-plugin",
                 "scripts": {
@@ -1593,12 +1854,12 @@
                 "source": {
                     "type": "git",
                     "url": "https://github.com/fairpm/fair-plugin.git",
-                    "reference": "c9a2984224fd7467a78c66f863ff485fddaa462a"
+                    "reference": "401719a11db8ebc9bace1a8f6badf5ed989bd533"
                 },
                 "dist": {
                     "type": "zip",
-                    "url": "https://api.github.com/repos/fairpm/fair-plugin/zipball/c9a2984224fd7467a78c66f863ff485fddaa462a",
-                    "reference": "c9a2984224fd7467a78c66f863ff485fddaa462a",
+                    "url": "https://api.github.com/repos/fairpm/fair-plugin/zipball/401719a11db8ebc9bace1a8f6badf5ed989bd533",
+                    "reference": "401719a11db8ebc9bace1a8f6badf5ed989bd533",
                     "shasum": ""
                 },
                 "require": {
@@ -1609,7 +1870,7 @@
                     "nimut/phpunit-merger": "*",
                     "yoast/phpunit-polyfills": "*"
                 },
-                "time": "2026-02-11T19:38:39+00:00",
+                "time": "2026-02-16T18:50:27+00:00",
                 "type": "wordpress-plugin",
                 "scripts": {
                     "lint": [
@@ -1680,12 +1941,12 @@
                 "source": {
                     "type": "git",
                     "url": "https://github.com/fairpm/fair-plugin.git",
-                    "reference": "e9dd5d280565e01e0471198084de0f5069685d14"
+                    "reference": "eb70d70830e3ec51a3fb272980362045526ec8f4"
                 },
                 "dist": {
                     "type": "zip",
-                    "url": "https://api.github.com/repos/fairpm/fair-plugin/zipball/e9dd5d280565e01e0471198084de0f5069685d14",
-                    "reference": "e9dd5d280565e01e0471198084de0f5069685d14",
+                    "url": "https://api.github.com/repos/fairpm/fair-plugin/zipball/eb70d70830e3ec51a3fb272980362045526ec8f4",
+                    "reference": "eb70d70830e3ec51a3fb272980362045526ec8f4",
                     "shasum": ""
                 },
                 "require": {
@@ -1696,7 +1957,7 @@
                     "nimut/phpunit-merger": "*",
                     "yoast/phpunit-polyfills": "*"
                 },
-                "time": "2026-02-12T22:08:33+00:00",
+                "time": "2026-02-16T18:02:59+00:00",
                 "type": "wordpress-plugin",
                 "scripts": {
                     "lint": [
