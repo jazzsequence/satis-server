@@ -202,30 +202,49 @@
                 "source": {
                     "type": "git",
                     "url": "https://github.com/fairpm/fair-plugin.git",
-                    "reference": "9f0fc156a9755704c1bb420beb222684bdf81018"
+                    "reference": "301839df9c4d9d09ee9c6a9e97685a12cdf055e9"
                 },
                 "dist": {
                     "type": "zip",
-                    "url": "https://api.github.com/repos/fairpm/fair-plugin/zipball/9f0fc156a9755704c1bb420beb222684bdf81018",
-                    "reference": "9f0fc156a9755704c1bb420beb222684bdf81018",
+                    "url": "https://api.github.com/repos/fairpm/fair-plugin/zipball/301839df9c4d9d09ee9c6a9e97685a12cdf055e9",
+                    "reference": "301839df9c4d9d09ee9c6a9e97685a12cdf055e9",
                     "shasum": ""
                 },
                 "require": {
-                    "php": ">=7.4"
+                    "fairpm/did-manager-wordpress": "0.0.4-a",
+                    "php": ">=8.0"
                 },
                 "require-dev": {
                     "humanmade/coding-standards": "^1.2",
                     "nimut/phpunit-merger": "*",
+                    "szepeviktor/phpstan-wordpress": "^2.0",
                     "yoast/phpunit-polyfills": "*"
                 },
-                "time": "2026-02-16T19:20:19+00:00",
+                "time": "2026-04-13T17:48:30+00:00",
                 "type": "wordpress-plugin",
                 "scripts": {
+                    "lint:phpcs": [
+                        "phpcs . --warning-severity=0"
+                    ],
+                    "lint:phpstan": [
+                        "phpstan analyse --verbose --memory-limit=2G"
+                    ],
                     "lint": [
-                        "@php ./vendor/bin/phpcs ."
+                        "@lint:phpcs",
+                        "@lint:phpstan"
+                    ],
+                    "format:phpcs": [
+                        "phpcbf ."
+                    ],
+                    "format:phpstan": [
+                        "phpstan analyse --fix --memory-limit=2G"
                     ],
                     "format": [
-                        "@php ./vendor/bin/phpcbf ."
+                        "@format:phpcs",
+                        "@format:phpstan"
+                    ],
+                    "phpstan-baseline": [
+                        "phpstan analyse --generate-baseline=tests/phpstan-baseline.neon --memory-limit=2G"
                     ],
                     "test": [
                         "Composer\\Config::disableProcessTimeout",
@@ -987,17 +1006,16 @@
                 "source": {
                     "type": "git",
                     "url": "https://github.com/fairpm/fair-plugin.git",
-                    "reference": "d87ce326996b3613c40749573470cecc1a433123"
+                    "reference": "06a7eb30cb3d5ff7aba684855b7e48385224044c"
                 },
                 "dist": {
                     "type": "zip",
-                    "url": "https://api.github.com/repos/fairpm/fair-plugin/zipball/d87ce326996b3613c40749573470cecc1a433123",
-                    "reference": "d87ce326996b3613c40749573470cecc1a433123",
+                    "url": "https://api.github.com/repos/fairpm/fair-plugin/zipball/06a7eb30cb3d5ff7aba684855b7e48385224044c",
+                    "reference": "06a7eb30cb3d5ff7aba684855b7e48385224044c",
                     "shasum": ""
                 },
                 "require": {
-                    "fairpm/did-manager": "^0.0.3",
-                    "fairpm/did-manager-wordpress": "^0.0.1",
+                    "fairpm/did-manager-wordpress": "0.0.4-a",
                     "php": ">=8.0"
                 },
                 "require-dev": {
@@ -1006,7 +1024,7 @@
                     "szepeviktor/phpstan-wordpress": "^2.0",
                     "yoast/phpunit-polyfills": "*"
                 },
-                "time": "2026-04-09T15:13:21+00:00",
+                "time": "2026-04-13T17:47:40+00:00",
                 "type": "wordpress-plugin",
                 "scripts": {
                     "lint:phpcs": [
