@@ -202,12 +202,12 @@
                 "source": {
                     "type": "git",
                     "url": "https://github.com/fairpm/fair-plugin.git",
-                    "reference": "8a483f48b3de3c7c6760b8113f1bcd674c20f872"
+                    "reference": "4058b9b6e433ed06cf2c2001514ef09b9c43a2d9"
                 },
                 "dist": {
                     "type": "zip",
-                    "url": "https://api.github.com/repos/fairpm/fair-plugin/zipball/8a483f48b3de3c7c6760b8113f1bcd674c20f872",
-                    "reference": "8a483f48b3de3c7c6760b8113f1bcd674c20f872",
+                    "url": "https://api.github.com/repos/fairpm/fair-plugin/zipball/4058b9b6e433ed06cf2c2001514ef09b9c43a2d9",
+                    "reference": "4058b9b6e433ed06cf2c2001514ef09b9c43a2d9",
                     "shasum": ""
                 },
                 "require": {
@@ -220,7 +220,7 @@
                     "szepeviktor/phpstan-wordpress": "^2.0",
                     "yoast/phpunit-polyfills": "*"
                 },
-                "time": "2026-04-16T15:45:42+00:00",
+                "time": "2026-04-20T16:05:48+00:00",
                 "type": "wordpress-plugin",
                 "scripts": {
                     "lint:phpcs": [
@@ -1006,12 +1006,12 @@
                 "source": {
                     "type": "git",
                     "url": "https://github.com/fairpm/fair-plugin.git",
-                    "reference": "5a6496859ba6d3708d9f3a0956e3a73572f36547"
+                    "reference": "9d7146d5c0803a94efbe242ec4e0216872129171"
                 },
                 "dist": {
                     "type": "zip",
-                    "url": "https://api.github.com/repos/fairpm/fair-plugin/zipball/5a6496859ba6d3708d9f3a0956e3a73572f36547",
-                    "reference": "5a6496859ba6d3708d9f3a0956e3a73572f36547",
+                    "url": "https://api.github.com/repos/fairpm/fair-plugin/zipball/9d7146d5c0803a94efbe242ec4e0216872129171",
+                    "reference": "9d7146d5c0803a94efbe242ec4e0216872129171",
                     "shasum": ""
                 },
                 "require": {
@@ -1024,7 +1024,7 @@
                     "szepeviktor/phpstan-wordpress": "^2.0",
                     "yoast/phpunit-polyfills": "*"
                 },
-                "time": "2026-04-16T15:43:31+00:00",
+                "time": "2026-04-20T16:04:10+00:00",
                 "type": "wordpress-plugin",
                 "scripts": {
                     "lint:phpcs": [
