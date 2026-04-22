@@ -25,11 +25,11 @@ test.describe('Does the site still work?', () => {
 	expect(content).not.toMatch(/^(Fatal error|Warning:|Notice:)/im);
   });
 
-  test('fair/fair-plugin loads', async ({ page }) => {
-    const res = await page.goto(`${BASE_URL}/#fair/fair-plugin`);
+  test('fairpm/fair-plugin loads', async ({ page }) => {
+    const res = await page.goto(`${BASE_URL}/#fairpm/fair-plugin`);
     expect(res?.status()).toBe(200);
     await page.waitForLoadState('networkidle');
-    await expect(page.locator('body')).toContainText(/fair\/fair-plugin/i);
+    await expect(page.locator('body')).toContainText(/fairpm\/fair-plugin/i);
 	const content = await page.content();
 	expect(content).not.toMatch(/^(Fatal error|Warning:|Notice:)/im);
   });
