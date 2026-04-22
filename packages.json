@@ -1,8 +1,8 @@
 {
     "packages": [],
     "includes": {
-        "include/all$2cb96cc2e3fd19ad2f96810b4c6e20298f46d367.json": {
-            "sha1": "2cb96cc2e3fd19ad2f96810b4c6e20298f46d367"
+        "include/all$edd780b7601437f3f030a38463ae4294748186ca.json": {
+            "sha1": "edd780b7601437f3f030a38463ae4294748186ca"
         }
     },
     "metadata-url": "/p2/%package%.json",
@@ -10,11 +10,9 @@
         "automattic/remote-data-blocks",
         "fairpm/fair-beacon",
         "fairpm/fair-plugin",
-        "humanmade/ai",
         "jazzsequence/artists",
         "jazzsequence/releases",
         "jazzsequence/reviews",
-        "markjaquith/gifdrop",
-        "pantheon-systems/pantheon-content-publisher-wordpress"
+        "markjaquith/gifdrop"
     ]
 }

@@ -2912,37 +2912,6 @@
                 }
             }
         },
-        "humanmade/ai": {
-            "dev-main": {
-                "name": "humanmade/ai",
-                "version": "dev-main",
-                "version_normalized": "dev-main",
-                "source": {
-                    "type": "git",
-                    "url": "https://github.com/humanmade/ai-plugin.git",
-                    "reference": "13e60218b4bf612eca5ed231353829f48aa6a874"
-                },
-                "type": "wordpress-plugin",
-                "license": [
-                    "GPL-2.0-or-later"
-                ],
-                "authors": [
-                    {
-                        "name": "Human Made",
-                        "homepage": "https://humanmade.com"
-                    },
-                    {
-                        "name": "Joe Hoyle",
-                        "email": "joehoyle@gmail.com"
-                    }
-                ],
-                "description": "An AI integration layer for WordPress",
-                "support": {
-                    "issues": "https://github.com/humanmade/ai-plugin/issues",
-                    "source": "https://github.com/humanmade/ai-plugin"
-                }
-            }
-        },
         "jazzsequence/artists": {
             "1.0.1": {
                 "name": "jazzsequence/artists",
@@ -3052,34 +3021,6 @@
                 "support": {
                     "issues": "https://github.com/markjaquith/gifdrop/issues",
                     "source": "https://github.com/markjaquith/gifdrop"
-                }
-            }
-        },
-        "pantheon-systems/pantheon-content-publisher-wordpress": {
-            "v1.3.0": {
-                "name": "pantheon-systems/pantheon-content-publisher-wordpress",
-                "version": "v1.3.0",
-                "version_normalized": "1.3.0.0",
-                "dist": {
-                    "type": "zip",
-                    "url": "https://github.com/pantheon-systems/pantheon-content-publisher-wordpress/releases/download/v1.3.0/pantheon-content-publisher-for-wordpress.zip",
-                    "reference": "v1.3.0"
-                },
-                "type": "wordpress-plugin",
-                "license": [
-                    "GPL-2.0"
-                ],
-                "authors": [
-                    {
-                        "name": "Pantheon",
-                        "email": "contact@pantheon.io",
-                        "homepage": "https://pantheon.io"
-                    }
-                ],
-                "description": "A plugin that connects Pantheon Content Publisher to WordPress",
-                "support": {
-                    "issues": "https://github.com/pantheon-systems/pantheon-content-publisher-wordpress/issues",
-                    "source": "https://github.com/pantheon-systems/pantheon-content-publisher-wordpress"
                 }
             }
         }
