@@ -15,8 +15,8 @@ jobs:
       fail-fast: false
     name: PHP Unit Tests
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
+      - uses: actions/checkout@v6
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           path: pr_code
