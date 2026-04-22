@@ -181,11 +181,9 @@ function get_pantheon_content_publisher() {
 
 function main() {
     get_mini_fair
-    get_humanmade_ai
     get_jazzsequence_artists
     get_jazzsequence_releases
     get_jazzsequence_reviews
-    get_pantheon_content_publisher
     get_remote_data_blocks
 }
 
