@@ -91,7 +91,7 @@ jobs:
           npx playwright install
 
       - name: Install Terminus
-        uses: pantheon-systems/terminus-github-actions@v1.2.7
+        uses: pantheon-systems/terminus-github-actions@v1.2.8
         with:
           pantheon-machine-token: ${{ secrets.TERMINUS_TOKEN }}
 
