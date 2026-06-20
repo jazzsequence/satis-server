@@ -110,112 +110,6 @@
             },
             {
                 "name": "fairpm/fair-plugin",
-                "version": "dev-backport/validate-alias-and-pick-release",
-                "version_normalized": "dev-backport/validate-alias-and-pick-release",
-                "source": {
-                    "type": "git",
-                    "url": "https://github.com/fairpm/fair-plugin.git",
-                    "reference": "a71328dc51a4250307133fcdb6d2f7ea1b5a87f7"
-                },
-                "dist": {
-                    "type": "zip",
-                    "url": "https://api.github.com/repos/fairpm/fair-plugin/zipball/a71328dc51a4250307133fcdb6d2f7ea1b5a87f7",
-                    "reference": "a71328dc51a4250307133fcdb6d2f7ea1b5a87f7",
-                    "shasum": ""
-                },
-                "require": {
-                    "fairpm/did-manager-wordpress": "^0.0.8",
-                    "php": ">=8.0"
-                },
-                "require-dev": {
-                    "humanmade/coding-standards": "^1.2",
-                    "nimut/phpunit-merger": "*",
-                    "szepeviktor/phpstan-wordpress": "^2.0",
-                    "yoast/phpunit-polyfills": "*"
-                },
-                "time": "2026-06-10T05:22:43+00:00",
-                "type": "wordpress-plugin",
-                "scripts": {
-                    "lint:phpcs": [
-                        "phpcs . --warning-severity=0"
-                    ],
-                    "lint:phpstan": [
-                        "phpstan analyse --verbose --memory-limit=2G"
-                    ],
-                    "lint": [
-                        "@lint:phpcs",
-                        "@lint:phpstan"
-                    ],
-                    "format:phpcs": [
-                        "phpcbf ."
-                    ],
-                    "format:phpstan": [
-                        "phpstan analyse --fix --memory-limit=2G"
-                    ],
-                    "format": [
-                        "@format:phpcs",
-                        "@format:phpstan"
-                    ],
-                    "phpstan-baseline": [
-                        "phpstan analyse --generate-baseline=tests/phpstan-baseline.neon --memory-limit=2G"
-                    ],
-                    "test": [
-                        "Composer\\Config::disableProcessTimeout",
-                        "@php ./vendor/phpunit/phpunit/phpunit"
-                    ],
-                    "test:multisite": [
-                        "Composer\\Config::disableProcessTimeout",
-                        "@php ./vendor/phpunit/phpunit/phpunit -c tests/phpunit/multisite.xml"
-                    ],
-                    "coverage:merge": [
-                        "Composer\\Config::disableProcessTimeout",
-                        "@putenv XDEBUG_MODE=coverage",
-                        "@php ./vendor/bin/phpunit-merger coverage tests/phpunit/coverage/php --html tests/phpunit/coverage/html/full tests/phpunit/cache/full-cache.xml"
-                    ],
-                    "coverage:single": [
-                        "Composer\\Config::disableProcessTimeout",
-                        "@putenv XDEBUG_MODE=off",
-                        "@putenv WP_TESTS_SKIP_INSTALL=0",
-                        "@test --filter prime_test_suite",
-                        "@putenv XDEBUG_MODE=coverage",
-                        "@putenv WP_TESTS_SKIP_INSTALL=1",
-                        "@test"
-                    ],
-                    "coverage:multisite": [
-                        "Composer\\Config::disableProcessTimeout",
-                        "@putenv XDEBUG_MODE=off",
-                        "@putenv WP_TESTS_SKIP_INSTALL=0",
-                        "@test:multisite --filter prime_test_suite",
-                        "@putenv XDEBUG_MODE=coverage",
-                        "@putenv WP_TESTS_SKIP_INSTALL=1",
-                        "@test:multisite"
-                    ],
-                    "coverage:full": [
-                        "Composer\\Config::disableProcessTimeout",
-                        "@coverage:single",
-                        "@coverage:multisite",
-                        "@coverage:merge"
-                    ]
-                },
-                "license": [
-                    "gpl-2.0-only"
-                ],
-                "authors": [
-                    {
-                        "name": "FAIR Contributors",
-                        "email": "operations@fair.pm",
-                        "homepage": "https://fair.pm"
-                    }
-                ],
-                "description": "Make your site more FAIR.",
-                "support": {
-                    "issues": "https://github.com/fairpm/fair-plugin/issues",
-                    "source": "https://github.com/fairpm/fair-plugin",
-                    "docs": "https://github.com/fairpm/fair-plugin/blob/main/README.md"
-                }
-            },
-            {
-                "name": "fairpm/fair-plugin",
                 "version": "dev-bump-did-manager-wordpress-0.0.8",
                 "version_normalized": "dev-bump-did-manager-wordpress-0.0.8",
                 "source": {
@@ -1857,12 +1751,12 @@
                 "source": {
                     "type": "git",
                     "url": "https://github.com/fairpm/fair-plugin.git",
-                    "reference": "ff99b01e9c6f09bfd8031ebbe9aee14ac1fed2b5"
+                    "reference": "1f2ab55ae26eaab54874c5abf25f5468ba89e199"
                 },
                 "dist": {
                     "type": "zip",
-                    "url": "https://api.github.com/repos/fairpm/fair-plugin/zipball/ff99b01e9c6f09bfd8031ebbe9aee14ac1fed2b5",
-                    "reference": "ff99b01e9c6f09bfd8031ebbe9aee14ac1fed2b5",
+                    "url": "https://api.github.com/repos/fairpm/fair-plugin/zipball/1f2ab55ae26eaab54874c5abf25f5468ba89e199",
+                    "reference": "1f2ab55ae26eaab54874c5abf25f5468ba89e199",
                     "shasum": ""
                 },
                 "require": {
@@ -1875,7 +1769,7 @@
                     "szepeviktor/phpstan-wordpress": "^2.0",
                     "yoast/phpunit-polyfills": "*"
                 },
-                "time": "2026-06-01T16:47:29+00:00",
+                "time": "2026-06-12T12:07:48+00:00",
                 "type": "wordpress-plugin",
                 "scripts": {
                     "lint:phpcs": [
