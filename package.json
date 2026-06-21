@@ -8,7 +8,7 @@
         "glob": "^11.0.3",
         "lint-staged": "^16.2.7",
         "prettier": "^3.7.3",
-        "purgecss-webpack-plugin": "^7.0.2",
+        "purgecss-webpack-plugin": "^8.0.0",
         "sass": "^1.93.2",
         "sass-loader": "^16.0.7",
         "webpack": "^5.106.2",
