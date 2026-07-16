@@ -1858,6 +1858,106 @@
                     "source": "https://github.com/fairpm/fair-plugin",
                     "docs": "https://github.com/fairpm/fair-plugin/blob/main/README.md"
                 }
+            },
+            {
+                "name": "fairpm/fair-plugin",
+                "version": "1.4.1-RC1",
+                "version_normalized": "1.4.1.0-RC1",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/fairpm/fair-plugin.git",
+                    "reference": "c569ddf212bf4df12268d34014985cbf9f83f5e7"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/fairpm/fair-plugin/zipball/c569ddf212bf4df12268d34014985cbf9f83f5e7",
+                    "reference": "c569ddf212bf4df12268d34014985cbf9f83f5e7",
+                    "shasum": ""
+                },
+                "require": {
+                    "fairpm/did-manager-wordpress": "^0.0.8",
+                    "php": ">=8.0"
+                },
+                "require-dev": {
+                    "humanmade/coding-standards": "^1.2",
+                    "nimut/phpunit-merger": "^1.1",
+                    "phpunit/phpunit": "^9.0",
+                    "szepeviktor/phpstan-wordpress": "^2.0",
+                    "wp-cli/wp-cli-bundle": "^2.12",
+                    "yoast/phpunit-polyfills": "^4.0"
+                },
+                "time": "2026-07-14T14:33:18+00:00",
+                "type": "wordpress-plugin",
+                "scripts": {
+                    "lint:phpcs": [
+                        "phpcs ."
+                    ],
+                    "lint:phpstan": [
+                        "phpstan analyse --verbose --memory-limit=2G"
+                    ],
+                    "lint": [
+                        "@lint:phpcs",
+                        "@lint:phpstan"
+                    ],
+                    "format:phpcs": [
+                        "phpcbf ."
+                    ],
+                    "format:phpstan": [
+                        "phpstan analyse --fix --memory-limit=2G"
+                    ],
+                    "format": [
+                        "@format:phpcs",
+                        "@format:phpstan"
+                    ],
+                    "phpstan-baseline": [
+                        "phpstan analyse --generate-baseline=tests/phpstan-baseline.neon --memory-limit=2G"
+                    ],
+                    "test": [
+                        "Composer\\Config::disableProcessTimeout",
+                        "phpunit"
+                    ],
+                    "test:multisite": [
+                        "Composer\\Config::disableProcessTimeout",
+                        "phpunit -c phpunit-multisite.xml.dist"
+                    ],
+                    "coverage:merge": [
+                        "Composer\\Config::disableProcessTimeout",
+                        "@putenv XDEBUG_MODE=coverage",
+                        "phpunit-merger coverage tests/phpunit/coverage/php --html tests/phpunit/coverage/html/full tests/phpunit/cache/full-cache.xml"
+                    ],
+                    "coverage:single": [
+                        "Composer\\Config::disableProcessTimeout",
+                        "@putenv XDEBUG_MODE=coverage",
+                        "@test"
+                    ],
+                    "coverage:multisite": [
+                        "Composer\\Config::disableProcessTimeout",
+                        "@putenv XDEBUG_MODE=coverage",
+                        "@test:multisite"
+                    ],
+                    "coverage:full": [
+                        "Composer\\Config::disableProcessTimeout",
+                        "@coverage:single",
+                        "@coverage:multisite",
+                        "@coverage:merge"
+                    ]
+                },
+                "license": [
+                    "gpl-2.0-only"
+                ],
+                "authors": [
+                    {
+                        "name": "FAIR Contributors",
+                        "email": "operations@fair.pm",
+                        "homepage": "https://fair.pm"
+                    }
+                ],
+                "description": "Make your site more FAIR.",
+                "support": {
+                    "issues": "https://github.com/fairpm/fair-plugin/issues",
+                    "source": "https://github.com/fairpm/fair-plugin",
+                    "docs": "https://github.com/fairpm/fair-plugin/blob/main/README.md"
+                }
             }
         ]
     }
