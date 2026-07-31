@@ -11,7 +11,7 @@
       "type": "package",
       "package": {
         "name": "automattic/remote-data-blocks",
-        "version": "v1.5.0",
+        "version": "v1.7.0",
         "type": "wordpress-plugin",
         "description": "Remote Data Blocks: a WordPress plugin for creating flexible, data-enriched content with remote data integration",
         "license": "GPL-2.0",
@@ -27,8 +27,38 @@
         },
         "dist": {
           "type": "zip",
-          "url": "https://github.com/Automattic/remote-data-blocks/releases/download/v1.5.0/remote-data-blocks.zip",
-          "reference": "v1.5.0"
+          "url": "https://github.com/Automattic/remote-data-blocks/releases/download/v1.7.0/remote-data-blocks.zip",
+          "reference": "v1.7.0"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "10up/elasticpress-labs",
+        "version": "2.5.1",
+        "type": "wordpress-plugin",
+        "description": "ElasticPress Labs: a WordPress plugin for experimental ElasticPress features",
+        "license": "GPL-2.0",
+        "authors": [
+          {
+            "name": "10up",
+            "homepage": "https://10up.com"
+          }
+        ],
+        "support": {
+          "issues": "https://github.com/10up/ElasticPressLabs/issues",
+          "source": "https://github.com/10up/ElasticPressLabs"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://github.com/10up/ElasticPressLabs/releases/tag/2.5.1",
+          "reference": "v2.5.1"
+        },
+        "source": {
+          "type": "git",
+          "url": "https://github.com/10up/ElasticPressLabs.git",
+          "reference": "f28942f804556297130c571890eb59edd73de8ff"
         }
       }
     },
