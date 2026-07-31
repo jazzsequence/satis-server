@@ -46,7 +46,7 @@ jobs:
       - name: Build Dependencies
         run: |
           cd ${{ github.workspace }}/pr_code
-          composer update --${{ matrix.stability }} --prefer-dist --no-interaction
+          composer update --${{ matrix.stability }} --prefer-dist --no-interaction --no-scripts
           npm ci
       - name: Run Tests
         run: |
