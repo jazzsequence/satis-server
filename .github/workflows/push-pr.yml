@@ -47,7 +47,9 @@ jobs:
           echo "StrictHostKeyChecking no" >> ~/.ssh/config
 
       - name: Configure Composer Auth
-        run: composer config -g github-oauth.github.com ${{ github.token }}
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: composer config -g github-oauth.github.com "$GITHUB_TOKEN"
 
       - name: Composer dependencies
         run: composer install
