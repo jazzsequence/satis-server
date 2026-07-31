@@ -10,11 +10,6 @@
                     "url": "https://github.com/10up/ElasticPressLabs.git",
                     "reference": "f28942f804556297130c571890eb59edd73de8ff"
                 },
-                "dist": {
-                    "type": "zip",
-                    "url": "https://github.com/10up/ElasticPressLabs/releases/tag/2.5.1",
-                    "reference": "v2.5.1"
-                },
                 "type": "wordpress-plugin",
                 "license": [
                     "GPL-2.0"
