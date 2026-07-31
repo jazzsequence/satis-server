@@ -136,6 +136,15 @@ function get_humanmade_ai() {
     echo "satis.json updated with humanmade/ai: dev-main ($SHA)."
 }
 
+function get_elasticpress_labs() {
+    REPO_SLUG="10up/ElasticPressLabs"
+    REPO_URL="https://github.com/$REPO_SLUG"
+    PACKAGE_NAME="10up/elasticpress-labs"
+    LATEST_TAG=$(get_latest_tag "$REPO_URL")
+
+    patch_satis_json_from_tag "$REPO_URL" "$PACKAGE_NAME" "$LATEST_TAG" "$LATEST_TAG.zip"
+}
+
 function get_remote_data_blocks() {
     REPO_SLUG="automattic/remote-data-blocks"
     REPO_URL="https://github.com/$REPO_SLUG"
@@ -185,6 +194,7 @@ function main() {
     get_jazzsequence_releases
     get_jazzsequence_reviews
     get_remote_data_blocks
+    get_elasticpress_labs
 }
 
 main
