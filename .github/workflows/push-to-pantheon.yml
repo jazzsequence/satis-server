@@ -25,8 +25,8 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: 8.4      
-      
+          php-version: 8.4
+
       - name: Configure SSH
         uses: webfactory/ssh-agent@v0.10.0
         with:
@@ -41,7 +41,7 @@ jobs:
       - name: Configure Composer Auth
         env:
           GITHUB_TOKEN: ${{ github.token }}
-        run: composer config -g github-oauth.github.com "$GITHUB_TOKEN"
+        run: composer config -g github-oauth.github.com "$(printf '%s' "$GITHUB_TOKEN" | tr -d '[:space:]')"
 
       - name: Composer dependencies
         run: composer install
