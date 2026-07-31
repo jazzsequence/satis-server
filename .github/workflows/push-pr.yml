@@ -46,10 +46,17 @@ jobs:
           echo "Host *.drush.in PubkeyAcceptedKeyTypes +ssh-rsa" >> ~/.ssh/config
           echo "StrictHostKeyChecking no" >> ~/.ssh/config
 
-      - name: Configure Composer Auth
+      - name: Configure Git Auth for Composer
         env:
           GITHUB_TOKEN: ${{ github.token }}
-        run: composer config -g github-oauth.github.com "$(printf '%s' "$GITHUB_TOKEN" | tr -d '[:space:]')"
+        # This runner's github.token contains '-' characters. Composer's github-oauth
+        # validator (^[.A-Za-z0-9_]+$) rejects hyphens and aborts bin/satis build with
+        # "contains invalid characters" — even though the token is valid. So authenticate
+        # git operations via URL rewriting (git doesn't validate token format) and remove
+        # the github-oauth entry setup-php wrote, so Composer has no invalid token to check.
+        run: |
+          git config --global url."https://x-access-token:${GITHUB_TOKEN}@github.com/".insteadOf "https://github.com/"
+          composer config -g --unset github-oauth.github.com 2>/dev/null || true
 
       - name: Composer dependencies
         run: composer install

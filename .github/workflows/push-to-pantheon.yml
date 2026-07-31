@@ -39,22 +39,17 @@ jobs:
           echo "Host *.drush.in PubkeyAcceptedKeyTypes +ssh-rsa" >> ~/.ssh/config
           echo "StrictHostKeyChecking no" >> ~/.ssh/config
 
-      - name: Configure Composer Auth
+      - name: Configure Git Auth for Composer
         env:
           GITHUB_TOKEN: ${{ github.token }}
+        # This runner's github.token contains '-' characters. Composer's github-oauth
+        # validator (^[.A-Za-z0-9_]+$) rejects hyphens and aborts bin/satis build with
+        # "contains invalid characters" — even though the token is valid. So authenticate
+        # git operations via URL rewriting (git doesn't validate token format) and remove
+        # the github-oauth entry setup-php wrote, so Composer has no invalid token to check.
         run: |
-          CLEAN="$(printf '%s' "$GITHUB_TOKEN" | tr -d '[:space:]')"
-          # DEBUG: reveal token SHAPE only (alnum -> x, cat -A shows newlines as $). No secret leaks.
-          echo "== raw github.token shape ==";  printf '%s' "$GITHUB_TOKEN" | sed 's/[A-Za-z0-9]/x/g' | cat -A
-          echo "== cleaned shape ==";           printf '%s' "$CLEAN"        | sed 's/[A-Za-z0-9]/x/g' | cat -A
-          # Remove any existing entry (setup-php may have written a newlined one) then set the cleaned token.
+          git config --global url."https://x-access-token:${GITHUB_TOKEN}@github.com/".insteadOf "https://github.com/"
           composer config -g --unset github-oauth.github.com 2>/dev/null || true
-          composer config -g github-oauth.github.com "$CLEAN"
-          echo "== stored github-oauth shape =="; composer config -g github-oauth.github.com | sed 's/[A-Za-z0-9]/x/g' | cat -A
-          HOME_DIR="$(composer config -g home)"; echo "COMPOSER_HOME: $HOME_DIR"
-          for f in "$HOME_DIR/auth.json" "$HOME_DIR/config.json"; do
-            echo "== $f =="; [ -f "$f" ] && sed 's/[A-Za-z0-9]/x/g' "$f" | cat -A || echo "(absent)"
-          done
 
       - name: Composer dependencies
         run: composer install
