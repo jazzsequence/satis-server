@@ -52,6 +52,7 @@ jobs:
         run: |
           git config --global url."https://x-access-token:${GITHUB_TOKEN}@github.com/".insteadOf "https://github.com/"
           composer config -g --unset github-oauth.github.com 2>/dev/null || true
+          composer config -g use-github-api false
 
       - name: Composer dependencies
         run: composer install
