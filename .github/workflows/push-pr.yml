@@ -28,7 +28,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
@@ -36,7 +36,7 @@ jobs:
           php-version: 8.4      
       
       - name: Configure SSH
-        uses: webfactory/ssh-agent@v0.9.1
+        uses: webfactory/ssh-agent@v0.10.0
         with:
           ssh-private-key: ${{ secrets.SSH_KEY }}
 
@@ -55,7 +55,7 @@ jobs:
         run: composer install
 
       - name: Push to Pantheon
-        uses: pantheon-systems/push-to-pantheon@0.9.0
+        uses: pantheon-systems/push-to-pantheon@0.9.2
         id: deploy
         with:
           ssh_key: ${{ secrets.SSH_KEY }}
@@ -69,10 +69,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Configure SSH
-        uses: webfactory/ssh-agent@v0.9.1
+        uses: webfactory/ssh-agent@v0.10.0
         with:
           ssh-private-key: ${{ secrets.SSH_KEY }}
 
@@ -93,7 +93,7 @@ jobs:
           npx playwright install
 
       - name: Install Terminus
-        uses: pantheon-systems/terminus-github-actions@v1.2.7
+        uses: pantheon-systems/terminus-github-actions@v1.2.8
         with:
           pantheon-machine-token: ${{ secrets.TERMINUS_TOKEN }}
 

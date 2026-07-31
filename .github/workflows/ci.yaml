@@ -15,8 +15,8 @@ jobs:
       fail-fast: false
     name: PHP Unit Tests
     steps:
-      - uses: actions/checkout@v6
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
+      - uses: actions/checkout@v7
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           path: pr_code
@@ -27,7 +27,7 @@ jobs:
           extensions: mbstring
           coverage: xdebug
       - name: Set up SSH
-        uses: webfactory/ssh-agent@v0.9.1
+        uses: webfactory/ssh-agent@v0.10.0
         with:
           ssh-private-key: ${{ secrets.SSH_KEY }}
       - name: Setup Problem Matchers
