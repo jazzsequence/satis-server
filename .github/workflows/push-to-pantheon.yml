@@ -42,11 +42,6 @@ jobs:
       - name: Configure Git Auth for Composer
         env:
           GITHUB_TOKEN: ${{ github.token }}
-        # This runner's github.token contains '-' characters. Composer's github-oauth
-        # validator (^[.A-Za-z0-9_]+$) rejects hyphens and aborts bin/satis build with
-        # "contains invalid characters" — even though the token is valid. So authenticate
-        # git operations via URL rewriting (git doesn't validate token format) and remove
-        # the github-oauth entry setup-php wrote, so Composer has no invalid token to check.
         run: |
           git config --global url."https://x-access-token:${GITHUB_TOKEN}@github.com/".insteadOf "https://github.com/"
           composer config -g --unset github-oauth.github.com 2>/dev/null || true
