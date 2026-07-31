@@ -1,12 +1,13 @@
 {
     "packages": [],
     "includes": {
-        "include/all$708e104d66af974f4c7491c29d823b6748046a77.json": {
-            "sha1": "708e104d66af974f4c7491c29d823b6748046a77"
+        "include/all$6e44c0e669073d6eb1e1aac8e9f7c84ee39465b8.json": {
+            "sha1": "6e44c0e669073d6eb1e1aac8e9f7c84ee39465b8"
         }
     },
     "metadata-url": "/p2/%package%.json",
     "available-packages": [
+        "10up/elasticpress-labs",
         "automattic/remote-data-blocks",
         "fairpm/fair-beacon",
         "fairpm/fair-plugin",

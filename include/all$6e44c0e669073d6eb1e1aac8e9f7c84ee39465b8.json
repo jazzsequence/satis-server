@@ -1,5 +1,37 @@
 {
     "packages": {
+        "10up/elasticpress-labs": {
+            "2.5.1": {
+                "name": "10up/elasticpress-labs",
+                "version": "2.5.1",
+                "version_normalized": "2.5.1.0",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/10up/ElasticPressLabs.git",
+                    "reference": "f28942f804556297130c571890eb59edd73de8ff"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://github.com/10up/ElasticPressLabs/releases/tag/2.5.1",
+                    "reference": "v2.5.1"
+                },
+                "type": "wordpress-plugin",
+                "license": [
+                    "GPL-2.0"
+                ],
+                "authors": [
+                    {
+                        "name": "10up",
+                        "homepage": "https://10up.com"
+                    }
+                ],
+                "description": "ElasticPress Labs: a WordPress plugin for experimental ElasticPress features",
+                "support": {
+                    "issues": "https://github.com/10up/ElasticPressLabs/issues",
+                    "source": "https://github.com/10up/ElasticPressLabs"
+                }
+            }
+        },
         "automattic/remote-data-blocks": {
             "v1.7.0": {
                 "name": "automattic/remote-data-blocks",
