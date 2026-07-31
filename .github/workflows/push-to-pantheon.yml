@@ -41,7 +41,19 @@ jobs:
       - name: Configure Composer Auth
         env:
           GITHUB_TOKEN: ${{ github.token }}
-        run: composer config -g github-oauth.github.com "$(printf '%s' "$GITHUB_TOKEN" | tr -d '[:space:]')"
+        run: |
+          CLEAN="$(printf '%s' "$GITHUB_TOKEN" | tr -d '[:space:]')"
+          # DEBUG: reveal token SHAPE only (alnum -> x, cat -A shows newlines as $). No secret leaks.
+          echo "== raw github.token shape ==";  printf '%s' "$GITHUB_TOKEN" | sed 's/[A-Za-z0-9]/x/g' | cat -A
+          echo "== cleaned shape ==";           printf '%s' "$CLEAN"        | sed 's/[A-Za-z0-9]/x/g' | cat -A
+          # Remove any existing entry (setup-php may have written a newlined one) then set the cleaned token.
+          composer config -g --unset github-oauth.github.com 2>/dev/null || true
+          composer config -g github-oauth.github.com "$CLEAN"
+          echo "== stored github-oauth shape =="; composer config -g github-oauth.github.com | sed 's/[A-Za-z0-9]/x/g' | cat -A
+          HOME_DIR="$(composer config -g home)"; echo "COMPOSER_HOME: $HOME_DIR"
+          for f in "$HOME_DIR/auth.json" "$HOME_DIR/config.json"; do
+            echo "== $f =="; [ -f "$f" ] && sed 's/[A-Za-z0-9]/x/g' "$f" | cat -A || echo "(absent)"
+          done
 
       - name: Composer dependencies
         run: composer install
