@@ -3,12 +3,12 @@
         "10up/elasticpress-labs": [
             {
                 "name": "10up/elasticpress-labs",
-                "version": "2.5.1",
-                "version_normalized": "2.5.1.0",
+                "version": "2.5.2",
+                "version_normalized": "2.5.2.0",
                 "source": {
                     "type": "git",
                     "url": "https://github.com/10up/ElasticPressLabs.git",
-                    "reference": "f28942f804556297130c571890eb59edd73de8ff"
+                    "reference": "baf3eec140f67b8300c8c69ef69423a6e649b2ba"
                 },
                 "type": "wordpress-plugin",
                 "license": [
