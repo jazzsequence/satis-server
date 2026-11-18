@@ -1,8 +1,8 @@
 {
     "packages": [],
     "includes": {
-        "include/all$f249b6d36a746adcb3aa28ef749400231a888359.json": {
-            "sha1": "f249b6d36a746adcb3aa28ef749400231a888359"
+        "include/all$60bd699532a8d141b1cf2697df58682e50c41ec9.json": {
+            "sha1": "60bd699532a8d141b1cf2697df58682e50c41ec9"
         }
     },
     "metadata-url": "/p2/%package%.json",
@@ -10,7 +10,7 @@
         "10up/elasticpress-labs",
         "automattic/remote-data-blocks",
         "fairpm/fair-beacon",
-        "fairpm/fair-plugin",
+        "fairpm/fair-connect",
         "jazzsequence/artists",
         "jazzsequence/releases",
         "jazzsequence/reviews",
